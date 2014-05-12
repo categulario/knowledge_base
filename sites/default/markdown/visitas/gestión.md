@@ -1,0 +1,24 @@
+# Gestión de Visitas
+
+Ya que tiene una visita creada puede ser que necesite modificarla.
+
+Para ello, elija el botón de Más Información * (??). Se le presentarán
+varias opciones de gestión:
+
+<dl>
+  <dt><strong>Asignar agente</strong></dt>
+  <dd>Si la visita no tiene un agente asignado, se lo asigna. De lo contrario, hace una nueva
+  copia de la visita pero con el nuevo agente, cancelando la original si estaba pendiente o disponible.</dd>
+  <dt><strong>Supervisar visita</strong></dt>
+  <dd>Crea una nueva visita de supervisión relacionada con la visita en cuestión.</dd>
+  <dt><strong>Cancelar visita</strong></dt>
+  <dd>Retira la visita de la lista de visitas por realizar del agente relacionado.</dd>
+  <dt><strong>Eliminar</strong></dt>
+  <dd>Elimina por completo la información de la visita.</dd>
+</dl>
+
+# Artículos Relacionados
+
+* [Lista de los artículos](/..)
+* [relacionados con el tema](/../template)
+* [que podrían ayudar](http://gestii.com)

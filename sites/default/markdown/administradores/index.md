@@ -1,8 +1,10 @@
-# Plantilla
+# Administradores
 
-Aquí podría ir una breve introducción al tema. Probablemente en algunos
-de los Knowledge Points no se necesitaría mas que esta sección. La idea
-es explicar la cuestión clara y concisamente.
+Los administradores son los usuarios de la interfaz web. Pueden
+crear y gestionar visitas, cuestionarios, reportes, y a otros administradores.
+
+Usted puede dar sólo ciertos permisos a los administradores, de tal manera
+que sólo puedan gestionar una parte de Gestii.
 
 # Artículos Relacionados
 

@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    {{ if .IsHome }}
+    {{ if .IsHome  }}
 
 <!--
       <div class="hero-unit">
