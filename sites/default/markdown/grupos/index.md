@@ -1,8 +1,11 @@
-# Plantilla
+# Grupos
 
-Aquí podría ir una breve introducción al tema. Probablemente en algunos
-de los Knowledge Points no se necesitaría mas que esta sección. La idea
-es explicar la cuestión clara y concisamente.
+Un grupo es una colección de usuarios (es decir, agentes y administradores)
+y visitas que permite gestionar a sus elementos en conjunto y organizarlos
+lógicamente.
+
+?? Falta mucho en esta sección, pero esa parte del UI no tiene mucho
+de qué hablar.
 
 # Artículos Relacionados
 

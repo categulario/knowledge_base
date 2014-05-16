@@ -1,7 +1,7 @@
 # Visitas
 
 Las visitas son fundamentales para Gestii. Otros sistemas las conocen como
-órdenes de trabajo o ??? (cuál era el nombre en la versión pasada?).
+órdenes de trabajo o cuentas.
 A los agentes se les asignan las visitas, las cuales consisten en una
 dirección, un cuestionario y un número de folio único.
 
@@ -16,7 +16,7 @@ agente, o solicitar su supervisión.
 La página de visitas le muestra las visitas ordenadas por la fecha en la
 que fueron modificadas, junto con más información de estas visitas, como el
 agente al que fue asignada, su status, el grupo al que pertenece, el
-el cuestionario y dirección relacionadas, y el cluster al que pertenece.
+cuestionario y dirección relacionadas, y el cluster al que pertenece.
 
 # Artículos Relacionados
 

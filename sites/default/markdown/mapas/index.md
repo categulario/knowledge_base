@@ -1,8 +1,11 @@
-# Plantilla
+# Mapas
 
-Aquí podría ir una breve introducción al tema. Probablemente en algunos
-de los Knowledge Points no se necesitaría mas que esta sección. La idea
-es explicar la cuestión clara y concisamente.
+La sección de mapas le permite ubicar gráficamente a sus agentes y las
+visitas que han realizado durante el día.
+
+Inicialmente el mapa muestra a los agentes que han estado activos durante el día
+y su localización, así como un color que corresponde a su estatus actual. Si hace
+click sobre alguno de los agentes, se mostrará su ruta.
 
 # Artículos Relacionados
 

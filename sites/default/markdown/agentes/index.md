@@ -1,8 +1,11 @@
-# Plantilla
+# Agentes
 
-Aquí podría ir una breve introducción al tema. Probablemente en algunos
-de los Knowledge Points no se necesitaría mas que esta sección. La idea
-es explicar la cuestión clara y concisamente.
+Los agentes son los usuarios de la interfaz móvil de Gestii, encargados de realizar
+las visitas que se les asignan y registrar las respuestas de sus cuestionarios.
+
+Mediante la interfaz móvil de Gestii pueden consultar la información de las próximas
+visitas que se les han asignado y completar el cuestionario de su visita actual,
+enviando el resultado inmediatamente utilizando la conexión a internet de su móvil.
 
 # Artículos Relacionados
 

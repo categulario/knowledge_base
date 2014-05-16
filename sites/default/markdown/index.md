@@ -2,6 +2,7 @@
 
 * [Visitas](visitas)
 * [Administradores](administradores)
+* [Mapas](mapas)
 * [Misc](misc)
 
 * [Clicky here for the regular template](template)

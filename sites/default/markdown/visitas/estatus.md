@@ -1,6 +1,6 @@
-# ¿Qué status puede tener una visita?
+# ¿Qué estatus puede tener una visita?
 
-Las visitas pueden tener los status:
+Las visitas pueden tener los estatus:
 
 <dl>
   <dt><strong>Pendiente</strong></dt>
