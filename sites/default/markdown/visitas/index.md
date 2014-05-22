@@ -6,7 +6,7 @@ A los agentes se les asignan las visitas, las cuales consisten en una
 dirección, un cuestionario y un número de folio único.
 
 Al terminar una visita, el agente guarda las respuestas del cuestionario
-usando su móvil y la marca como terminada para poder comenzar con la
+usando su celular y la marca como terminada para poder comenzar con la
 siguiente visita.
 
 Como administrador usted puede gestionar las visitas, es decir, asignarlas

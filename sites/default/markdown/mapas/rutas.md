@@ -12,7 +12,7 @@ Hay distintos tipos de eventos para los agentes:
   <dt><strong>Fin de sesión</strong></dt>
   <dd>Marca cuando el agente cerró su conexión con Gestii por el día.</dd>
   <dt><strong>Actualizaciones periódicas</strong></dt>
-  <dd>Marcan cualquier conexión del móvil del agente con Gestii.</dd>
+  <dd>Marcan cualquier conexión del celular del agente con Gestii.</dd>
   <dt><strong>Visita</strong></dt>
   <dd>Marca la realización de una visita.</dd>
 </dl>

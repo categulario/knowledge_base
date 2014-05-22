@@ -1,4 +1,4 @@
-# ¿Qué estatus puede tener una visita?
+# ¿Qué estatus puede tener un agente?
 
 Los agentes pueden tener los estatus:
 
@@ -6,7 +6,7 @@ Los agentes pueden tener los estatus:
   <dt><strong>Disponible</strong></dt>
   <dd>El agente tiene una sesión activa.</dd>
   <dt><strong>Ausente</strong></dt>
-  <dd>El agente tiene una sesión activa pero su móvil no se ha conectado a Gestii en los últimos 30 minutos.</dd>
+  <dd>El agente tiene una sesión activa pero su celular no se ha conectado a Gestii en los últimos 30 minutos.</dd>
   <dt><strong>Desconectado</strong></dt>
   <dd>El agente tiene cerrada su sesión.</dd>
 </dl>

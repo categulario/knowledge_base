@@ -4,8 +4,9 @@ Las encuestas son un tipo especial de visita en las que a un agente
 se le asigna un cuestionario para que lo realize varias veces sin necesitar
 que un administrador le asigne una visita para cada realización.
 
-Para cada respuesta de la encuesta el agente, utilizando su móvil,
-registra la dirección en la que se realizó. Gestii creará una visita simple
+Para cada respuesta de la encuesta el agente
+registra la dirección en la que se realizó utilizando su celular.
+Gestii creará una visita simple
 para cada realización.
 
 Para asignar una encuesta, vaya a la pestaña de Agentes y seleccione el botón

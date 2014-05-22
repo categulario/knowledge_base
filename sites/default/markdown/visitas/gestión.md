@@ -8,13 +8,14 @@ varias opciones de gestión:
 <dl>
   <dt><strong>Asignar agente</strong></dt>
   <dd>Si la visita no tiene un agente asignado, se lo asigna. De lo contrario, hace una nueva
-  copia de la visita pero con el nuevo agente, cancelando la original si estaba pendiente o disponible.</dd>
+  copia de la visita pero con el nuevo agente, y si la original estaba pendiente o disponible la cancela.</dd>
   <dt><strong>Supervisar visita</strong></dt>
-  <dd>Crea una nueva visita de supervisión relacionada con la visita en cuestión.</dd>
+  <dd>Crea una nueva visita de supervisión relacionada con la visita en cuestión. Sólo se pueden supervisar visitas simples.</dd>
   <dt><strong>Cancelar visita</strong></dt>
   <dd>Retira la visita de la lista de visitas por realizar del agente relacionado.</dd>
   <dt><strong>Eliminar</strong></dt>
-  <dd>Elimina por completo la información de la visita.</dd>
+  <dd>Elimina por completo la información de la visita. No recomendamos
+  eliminar visitas porque perderá permanentemente el historial relacionado con ella.</dd>
 </dl>
 
 # Artículos Relacionados

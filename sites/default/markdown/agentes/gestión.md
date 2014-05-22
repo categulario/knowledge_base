@@ -7,7 +7,7 @@ de gestión de agentes:
   <dt><strong>Editar</strong></dt>
   <dd>Puede cambiar el nombre, contraseña, teléfono o grupo del agente.</dd>
   <dt><strong>Generar nuevo token</strong></dt>
-  <dd>Genera un token para conectar un nuevo móvil a la cuenta del agente.</dd>
+  <dd>Genera un token para conectar un nuevo celular a la cuenta del agente.</dd>
   <dt><strong>Asignar encuestas</strong></dt>
   <dd>Permite seleccionar un cuestionario para que el agente lo aplique como encuesta.</dd>
   <dt><strong>Ver ruta del día</strong></dt>

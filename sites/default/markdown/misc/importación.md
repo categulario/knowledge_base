@@ -1,19 +1,7 @@
-# Importación
+# Importación avanzada
 
-En varios lugares de Gestii puede encontrar un botón de Importar.
-Esta opción permite subir un archivo que contenga uno o varios elementos
-importables a Gestii para no tenerlos que crear manualmente uno por uno
-utilizando la interfaz web.
-
-Usted puede importar por archivo a Gestii:
-
-* Visitas
-* Agentes
-* Administradores (??)
-* (??)
-
-Para obtener un ejemplo de cómo deben de ser los archivos para
-importación usted puede descargar una plantilla.
+Al importar visitas se puede anexar más información de la que incluye
+la plantilla. Si 
 
 # Artículos Relacionados
 

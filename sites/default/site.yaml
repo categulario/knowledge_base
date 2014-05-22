@@ -23,8 +23,12 @@ page:
 
     # Top navigation bar.
     menu:
-      - { text: "Documentation", url: "http://luminos.menteslibres.org/getting-started" }
-      - { text: "Source code", url: "https://github.com/xiam/luminos" }
+      - { text: "Visitas", url: "/visitas" }
+      - { text: "Cuestionarios", url: "/cuestionarios" }
+      - { text: "Administradores", url: "/administradores" }
+      - { text: "Mapas", url: "/mapas" }
+      - { text: "Grupos", url: "/grupos" }
+      - { text: "Misc", url: "/misc" }
 
     # Top-right navigation helper.
     menu_pull:

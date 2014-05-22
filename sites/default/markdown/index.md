@@ -1,12 +1,11 @@
 # Index page feo.
 
 * [Visitas](visitas)
+* [Cuestionarios](cuestionarios)
 * [Administradores](administradores)
 * [Mapas](mapas)
+* [Grupos](grupos)
 * [Misc](misc)
-
-* [Clicky here for the regular template](template)
-* [Clicky here for the recipe template](recipetemplate)
 
 Cosas por hacer en el futuro no muy lejano:
 
