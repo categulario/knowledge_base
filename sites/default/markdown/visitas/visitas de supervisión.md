@@ -11,6 +11,4 @@ de detalles de la visita de supervisión qué campos fueron sobreescritos.
 
 # Artículos Relacionados
 
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Tipos de visitas](tipos de visitas)

@@ -14,9 +14,3 @@ que ingrese un token. Para generar un token para un agente basta con seleccionar
 botón de Más Información (??) y posteriormente *Generar nuevo token...*. El nuevo
 token aparecerá en la fila correspondiente al agente en cuestión en la columna de
 Token.
-
-# Artículos Relacionados
-
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)

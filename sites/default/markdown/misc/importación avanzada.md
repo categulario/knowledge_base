@@ -8,6 +8,4 @@ visita.
 
 # Artículos Relacionados
 
-* [Plantillas](plantillas)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Importación](importación)

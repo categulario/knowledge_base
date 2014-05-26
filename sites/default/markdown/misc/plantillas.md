@@ -11,6 +11,5 @@ propio, por favor comuníquese con nosotros.
 
 # Artículos Relacionados
 
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Importación](importación)
+* [Importación Avanzada](importación avanzada)

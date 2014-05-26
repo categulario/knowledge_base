@@ -26,6 +26,5 @@ de editar su cuestionario para publicar los cambios a Gestii.
 
 # Artículos Relacionados
 
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Tipos de campos](/tipos de campos)
+* [Propiedades de campos](/propiedades)

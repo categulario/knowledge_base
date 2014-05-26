@@ -90,6 +90,6 @@ Los distintos campos también tienen propiedades particulares para cada uno.
 
 # Artículos Relacionados
 
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Edición](/edición)
+* [Extras](/extras)
+* [Dependencias](/dependencias)

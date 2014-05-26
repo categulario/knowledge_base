@@ -9,6 +9,4 @@ click sobre alguno de los agentes, se mostrará su ruta.
 
 # Artículos Relacionados
 
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Estatus de un agente](/agentes/estatus)

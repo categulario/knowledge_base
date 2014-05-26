@@ -7,9 +7,3 @@ activo simultáneamente.
 
 Los administradores no requieren licencia, por lo que usted puede
 tener la cantidad que necesite sin incurrir en un cargo adicional.
-
-# Artículos Relacionados
-
-* [Activar y desactivar un agente](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)

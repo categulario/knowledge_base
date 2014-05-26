@@ -14,6 +14,4 @@ eliminar a agentes previamente desactivados.
 
 # Artículos Relacionados
 
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Licencias](/misc/licencias)

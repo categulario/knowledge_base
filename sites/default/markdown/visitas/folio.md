@@ -23,6 +23,4 @@ juntas si filtra por folio o si busca el historial de un folio.
 
 # Artículos Relacionados
 
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Filtros](/misc/filtros)

@@ -17,8 +17,3 @@ La página de visitas le muestra las visitas ordenadas por la fecha en la
 que fueron modificadas, junto con más información de estas visitas, como el
 agente al que fue asignada, su status, el grupo al que pertenece, el
 cuestionario y dirección relacionadas, y el cluster al que pertenece.
-
-# Artículos Relacionados
-
-* [Cuestionarios](/../cuestionarios)
-* [Agentes](/../agentes)

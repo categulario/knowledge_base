@@ -16,6 +16,4 @@ importación puede descargar una plantilla.
 
 # Artículos Relacionados
 
-* [Plantillas](plantillas)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Importación avanzada](importación avanzada)

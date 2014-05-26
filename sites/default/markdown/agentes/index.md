@@ -10,9 +10,3 @@ enviando el resultado inmediatamente utilizando la conexión a internet de su ce
 En la pestaña de agentes usted puede ver un resumen de cada agente: su status, nombre,
 grupo, cuándo fue su primera y última conexión de hoy, cuántas visitas ha completado hoy,
 el porcentaje de batería que le queda a su celular y su token.
-
-# Artículos Relacionados
-
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)

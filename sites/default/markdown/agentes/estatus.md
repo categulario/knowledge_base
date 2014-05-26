@@ -10,9 +10,3 @@ Los agentes pueden tener los estatus:
   <dt><strong>Desconectado</strong></dt>
   <dd>El agente tiene cerrada su sesión.</dd>
 </dl>
-
-# Artículos Relacionados
-
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)

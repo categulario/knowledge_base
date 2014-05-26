@@ -8,9 +8,3 @@ adicionales.
 
 Usted puede dar sólo ciertos permisos a los administradores, de tal manera
 que sólo puedan administrar una parte de Gestii.
-
-# Artículos Relacionados
-
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)

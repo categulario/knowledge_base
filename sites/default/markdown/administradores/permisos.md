@@ -11,6 +11,4 @@ quiera que tenga el administrador seleccionado.
 
 # Artículos Relacionados
 
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Grupos](/grupos)

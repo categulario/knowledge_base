@@ -8,9 +8,3 @@ una, o generar reportes colectivos de éstas.
 Es sencillo crear cuestionarios nuevos. Además, Gestii soporta cuestionarios
 dinámicos, es decir, puede hacer cuestionarios cuyas preguntas dependen de
 las respuestas a preguntas anteriores.
-
-# Artículos Relacionados
-
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)

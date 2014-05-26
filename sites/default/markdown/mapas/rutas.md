@@ -16,9 +16,3 @@ Hay distintos tipos de eventos para los agentes:
   <dt><strong>Visita</strong></dt>
   <dd>Marca la realización de una visita.</dd>
 </dl>
-
-# Artículos Relacionados
-
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)

@@ -12,7 +12,7 @@ Generar Reporte. Después de algunos minutos podrá descargarlo desde la
 pestaña de notificaciones.
 
 Si necesita un reporte de sólo ciertas visitas, utilize el botón
-de Filtro * para seleccionar sólo las visitas que requiere y
+de Filtro (??) para seleccionar sólo las visitas que requiere y
 posteriormente utilize el botón de Generar Reporte.
 
 Si la información de las visitas incluye imágenes, éstas serán
@@ -20,6 +20,4 @@ incluidas junto con el archivo del reporte.
 
 # Artículos Relacionados
 
-* [Filtros](/../misc/filtros)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Filtros](/misc/filtros)

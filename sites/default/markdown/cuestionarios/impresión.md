@@ -1,7 +1,7 @@
 # Impresión
 
 Los campos de impresión permiten a los agentes conectarse a una impresora
-Bluetooth mientras realizan una encuesta. Las opciones de este campo las
+Bluetooth mientras realizan una visita. Las opciones de este campo las
 puede ver en el artículo de [propiedades](propiedades).
 
 El cuerpo de la impresión puede tener secuencias especiales que le permiten
@@ -30,6 +30,4 @@ Las variables especiales disponibles son:
 
 # Artículos Relacionados
 
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
+* [Importación](/misc/importación)

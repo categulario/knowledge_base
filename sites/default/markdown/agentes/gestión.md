@@ -19,9 +19,3 @@ de gestión de agentes:
   <dt><strong>Eliminar</strong></dt>
   <dd>Elimina por completo la información del agente. Sólo aparece cuando el agente está desactivado.</dd>
 </dl>
-
-# Artículos Relacionados
-
-* [Lista de los artículos](/..)
-* [relacionados con el tema](/../template)
-* [que podrían ayudar](http://gestii.com)
