@@ -21,3 +21,4 @@ varias opciones de gestión:
 # Artículos Relacionados
 
 * [Estatus de las visitas](estatus)
+* [Ciclo de vida de las visitas](ciclo de vida)
