@@ -1,4 +1,4 @@
-# Index page feo.
+# Gestii Knowledge Base
 
 * [Visitas](visitas)
 * [Cuestionarios](cuestionarios)
