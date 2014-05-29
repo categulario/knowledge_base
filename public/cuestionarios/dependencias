@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    
+      
+        <title>
+          Dependencias  - Gestii Knowledge Base </title>
+      
+    
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//menteslibres.net/static/normalize/normalize.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/highlightjs/styles/solarized_dark.css">
+    <script src="//menteslibres.net/static/highlightjs/highlight.pack.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+		<style type="text/css">
+			body {
+				font-family: 'PT Sans';
+				font-size: large;
+			}
+			code {
+				font-family: 'Source Code Pro';
+			}
+			img.textsize {
+				height: 1.5em;
+			}
+		</style>
+
+  </head>
+
+  <body>
+
+    <div class="container" id="container">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="brand" href="/">Gestii Knowledge Base</a>
+
+          <div class="nav-collapse">
+            
+              <ul id="nav" class="nav menu">
+                
+                  <li><a href="/visitas">Visitas</a></li>
+                
+                  <li><a href="/cuestionarios">Cuestionarios</a></li>
+                
+                  <li><a href="/administradores">Administradores</a></li>
+                
+                  <li><a href="/mapas">Mapas</a></li>
+                
+                  <li><a href="/grupos">Grupos</a></li>
+                
+                  <li><a href="/misc">Misc</a></li>
+                
+              </ul>
+            
+            
+              <ul id="nav" class="nav pull-right menu">
+                
+                  <li><a target="_blank" href="http://gestii.com">Gestii</a></li>
+                
+              </ul>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+      
+        <ul class="breadcrumb menu">
+          
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+          
+            <li><a href="/cuestionarios/">Cuestionarios</a> <span class="divider">/</span></li>
+          
+        </ul>
+      
+
+      <div class="container-fluid">
+
+        <div class="row">
+          
+            
+              <div class="span3">
+                  <ul class="nav nav-list menu">
+                    
+                      <li>
+                        <a href="/cuestionarios/creacion">Creacion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/dependencias">Dependencias</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/edicion">Edicion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/extras">Extras</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/impresion">Impresion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/propiedades">Propiedades</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/tipos%20de%20campos">Tipos de campos</a>
+                      </li>
+                    
+                  </ul>
+              </div>
+              <div class="span8">
+                
+
+                <h1>Dependencias</h1>
+
+<p>Las dependencias son condiciones que definen cuándo se debe mostrar u
+ocultar un campo. El campo puede consultar varias condiciones y sólo
+mostrarse el campo cuando todas se cumplan o si al menos una de ellas se
+cumplen.</p>
+
+<p>Para agregar una condición, eliga un campo e introduzca el valor al que
+requiere que sea igual. Puede agregar tantas condiciones como necesite.
+Para eliminar una condición seleccione el botón de eliminar junto a ella.</p>
+
+<p>Al terminar de agregar condiciones, seleccione en la sección de Lógica
+cuándo quiere que aparezca el campo: cuando todas las condiciones se
+cumplan, o cuando una o más se cumplan.</p>
+
+<h1>Artículos Relacionados</h1>
+
+<ul>
+<li><a href="/edicion">Edición</a></li>
+</ul>
+
+
+                
+              </div>
+            
+          
+        </div>
+
+      </div>
+
+    
+
+    <hr />
+
+
+
+    
+
+  </body>
+</html>

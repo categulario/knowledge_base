@@ -14,5 +14,5 @@ asignados.
 
 # Artículos Relacionados
 
-* [Visitas de supervisión](visitas de supervisión)
+* [Visitas de supervisión](visitas de supervision)
 * [Visitas de encuesta](encuestas)

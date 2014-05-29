@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+rm -rf public
+wget -m localhost:9000
+mv localhost:9000 public
+#find localhost:9000 -exec sh -c "mv \"{}\" \"`echo \"{}\" | node urldecode.js`\"" \;
+#find localhost:9000 -name "*%*" -delete
+#rm ~/Dropbox/gestii_dev/kb.zip 
+#zip -r ~/Dropbox/gestii_dev/kb.zip 

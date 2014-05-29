@@ -11,5 +11,5 @@ propio, por favor comuníquese con nosotros.
 
 # Artículos Relacionados
 
-* [Importación](importación)
-* [Importación Avanzada](importación avanzada)
+* [Importación](importacion)
+* [Importación Avanzada](importacion avanzada)

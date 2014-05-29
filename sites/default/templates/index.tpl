@@ -44,6 +44,9 @@
 			code {
 				font-family: 'Source Code Pro';
 			}
+			img.textsize {
+				height: 1.5em;
+			}
 		</style>
 
   </head>

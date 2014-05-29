@@ -16,4 +16,4 @@ importación puede descargar una plantilla.
 
 # Artículos Relacionados
 
-* [Importación avanzada](importación avanzada)
+* [Importación avanzada](importacion avanzada)

@@ -30,4 +30,4 @@ Mientras que una visita está como Pendiente o Disponible:
 # Artículos Relacionados
 
 * [Estatus](estatus)
-* [Gestión](gestión)
+* [Gestión](gestion)

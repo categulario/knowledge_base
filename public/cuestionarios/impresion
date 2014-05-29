@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    
+      
+        <title>
+          Impresión  - Gestii Knowledge Base </title>
+      
+    
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//menteslibres.net/static/normalize/normalize.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/highlightjs/styles/solarized_dark.css">
+    <script src="//menteslibres.net/static/highlightjs/highlight.pack.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+		<style type="text/css">
+			body {
+				font-family: 'PT Sans';
+				font-size: large;
+			}
+			code {
+				font-family: 'Source Code Pro';
+			}
+			img.textsize {
+				height: 1.5em;
+			}
+		</style>
+
+  </head>
+
+  <body>
+
+    <div class="container" id="container">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="brand" href="/">Gestii Knowledge Base</a>
+
+          <div class="nav-collapse">
+            
+              <ul id="nav" class="nav menu">
+                
+                  <li><a href="/visitas">Visitas</a></li>
+                
+                  <li><a href="/cuestionarios">Cuestionarios</a></li>
+                
+                  <li><a href="/administradores">Administradores</a></li>
+                
+                  <li><a href="/mapas">Mapas</a></li>
+                
+                  <li><a href="/grupos">Grupos</a></li>
+                
+                  <li><a href="/misc">Misc</a></li>
+                
+              </ul>
+            
+            
+              <ul id="nav" class="nav pull-right menu">
+                
+                  <li><a target="_blank" href="http://gestii.com">Gestii</a></li>
+                
+              </ul>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+      
+        <ul class="breadcrumb menu">
+          
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+          
+            <li><a href="/cuestionarios/">Cuestionarios</a> <span class="divider">/</span></li>
+          
+        </ul>
+      
+
+      <div class="container-fluid">
+
+        <div class="row">
+          
+            
+              <div class="span3">
+                  <ul class="nav nav-list menu">
+                    
+                      <li>
+                        <a href="/cuestionarios/creacion">Creacion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/dependencias">Dependencias</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/edicion">Edicion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/extras">Extras</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/impresion">Impresion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/propiedades">Propiedades</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/tipos%20de%20campos">Tipos de campos</a>
+                      </li>
+                    
+                  </ul>
+              </div>
+              <div class="span8">
+                
+
+                <h1>Impresión</h1>
+
+<p>Los campos de impresión permiten a los agentes conectarse a una impresora
+Bluetooth mientras realizan una visita. Las opciones de este campo las
+puede ver en el artículo de <a href="propiedades">propiedades</a>.</p>
+
+<p>El cuerpo de la impresión puede tener secuencias especiales que le permiten
+imprimir valores ya introducidos en el cuestionario o información como la
+hora actual.</p>
+
+<p>Las secuencias especiales son:</p>
+
+<ul>
+<li><code>{{ var_name }}</code> imprime el valor del campo cuya variable tenga el nombre <code>var_name</code>.</li>
+<li><code>{$ var_name $}</code> imprime el valor de la variable adicional <code>var_name</code>. Puede aprender más acerca de las variables adicionales en el <a href="/misc/importación avanzada">artículo sobre importación avanzada</a>.</li>
+<li><code>{% var_name %}</code> imprime el valor de la variable especial <code>var_name</code>.</li>
+</ul>
+
+<p>Las variables especiales disponibles son:</p>
+
+<ul>
+<li><code>agent</code> imprime el nombre de usuario del agente.</li>
+<li><code>folio</code> imprime el folio de la visita donde se está realizando el cuestionario.</li>
+<li><code>datetime</code> imprime la fecha y la hora actual.</li>
+<li><code>date</code> imprime la fecha actual.</li>
+<li><code>time</code> imprime la hora actual.</li>
+<li><code>year</code> imprime el año actual.</li>
+<li><code>month</code> imprime el mes actual.</li>
+<li><code>day</code> imprime el día actual.</li>
+<li><code>hour</code> imprime la hora actual.</li>
+<li><code>minute</code> imprime el minute actual.</li>
+<li><code>second</code> imprime el segundo actual.</li>
+</ul>
+
+<h1>Artículos Relacionados</h1>
+
+<ul>
+<li><a href="/misc/importacion">Importación</a></li>
+</ul>
+
+
+                
+              </div>
+            
+          
+        </div>
+
+      </div>
+
+    
+
+    <hr />
+
+
+
+    
+
+  </body>
+</html>

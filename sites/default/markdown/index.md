@@ -10,4 +10,4 @@
 Cosas por hacer en el futuro no muy lejano:
 
 * Cambiar los textos que hablen de botones por imágenes de los botones.
-e.g. "Asignar" -> ![Asignar](images/asignar.jpg)
+e.g. "Asignar" -> <img class=textsize src=/images/asignar.jpg />

@@ -10,8 +10,9 @@ Gestii creará una visita simple
 para cada realización.
 
 Para asignar una encuesta, vaya a la pestaña de Agentes y seleccione el botón
-de más información * . Posteriormente, seleccione "Asignar encuestas...",
-elija los cuestionarios que desee, y seleccione el botón de "Asignar".
+de más información (<img class=textsize src=/images/buttons/moreinfo.png />).
+Posteriormente, seleccione "Asignar encuestas...",
+elija los cuestionarios que desee, y seleccione el botón de <img class=textsize src=/images/buttons/assign.png />.
 
 # Artículos Relacionados
 

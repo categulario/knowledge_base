@@ -22,7 +22,7 @@ Todos los campos tienen un conjunto de propiedades que usted puede editar.
 
 Los distintos campos también tienen propiedades particulares para cada uno.
 
-### Texto
+### <img class=textsize src=/images/icons/text.png /> Texto
 
 <dl>
   <dt><strong>Tipo</strong></dt>
@@ -36,14 +36,14 @@ Los distintos campos también tienen propiedades particulares para cada uno.
   <dd>Cantidad de caracteres que se pueden introducir.</dd>
 </dl>
 
-### Verdadero/Falso
+### <img class=textsize src=/images/icons/yes-no.png /> Verdadero/Falso
 
 <dl>
   <dt><strong>Seleccionado</strong></dt>
   <dd>Si el campo estará seleccionado inicialmente.</dd>
 </dl>
 
-### Listas desplegables
+### <img class=textsize src=/images/icons/list.png /> Listas desplegables
 
 <dl>
   <dt><strong>Opciones</strong></dt>
@@ -54,7 +54,7 @@ Los distintos campos también tienen propiedades particulares para cada uno.
   de ese campo.</dd>
 </dl>
 
-### Fecha
+### <img class=textsize src=/images/icons/date.png /> Fecha
 
 <dl>
   <dt><strong>Límite inferior</strong></dt>
@@ -66,14 +66,14 @@ Los distintos campos también tienen propiedades particulares para cada uno.
   fechas desde mañana o anteriores.</dd>
 </dl>
 
-### Etiqueta
+### <img class=textsize src=/images/icons/tag.png /> Etiqueta
 
 <dl>
   <dt><strong>Texto</strong></dt>
   <dd>Texto adicional que acompaña a la etiqueta.</dd>
 </dl>
 
-### Impresión
+### <img class=textsize src=/images/icons/print.png /> Impresión
 
 <dl>
   <dt><strong>Cuerpo</strong></dt>
@@ -90,6 +90,6 @@ Los distintos campos también tienen propiedades particulares para cada uno.
 
 # Artículos Relacionados
 
-* [Edición](/edición)
+* [Edición](/edicion)
 * [Extras](/extras)
 * [Dependencias](/dependencias)

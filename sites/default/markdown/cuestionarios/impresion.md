@@ -30,4 +30,4 @@ Las variables especiales disponibles son:
 
 # Artículos Relacionados
 
-* [Importación](/misc/importación)
+* [Importación](/misc/importacion)

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    
+      
+        <title>
+          Tipos de campos  - Gestii Knowledge Base </title>
+      
+    
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//menteslibres.net/static/normalize/normalize.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/highlightjs/styles/solarized_dark.css">
+    <script src="//menteslibres.net/static/highlightjs/highlight.pack.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+		<style type="text/css">
+			body {
+				font-family: 'PT Sans';
+				font-size: large;
+			}
+			code {
+				font-family: 'Source Code Pro';
+			}
+			img.textsize {
+				height: 1.5em;
+			}
+		</style>
+
+  </head>
+
+  <body>
+
+    <div class="container" id="container">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="brand" href="/">Gestii Knowledge Base</a>
+
+          <div class="nav-collapse">
+            
+              <ul id="nav" class="nav menu">
+                
+                  <li><a href="/visitas">Visitas</a></li>
+                
+                  <li><a href="/cuestionarios">Cuestionarios</a></li>
+                
+                  <li><a href="/administradores">Administradores</a></li>
+                
+                  <li><a href="/mapas">Mapas</a></li>
+                
+                  <li><a href="/grupos">Grupos</a></li>
+                
+                  <li><a href="/misc">Misc</a></li>
+                
+              </ul>
+            
+            
+              <ul id="nav" class="nav pull-right menu">
+                
+                  <li><a target="_blank" href="http://gestii.com">Gestii</a></li>
+                
+              </ul>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+      
+        <ul class="breadcrumb menu">
+          
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+          
+            <li><a href="/cuestionarios/">Cuestionarios</a> <span class="divider">/</span></li>
+          
+        </ul>
+      
+
+      <div class="container-fluid">
+
+        <div class="row">
+          
+            
+              <div class="span3">
+                  <ul class="nav nav-list menu">
+                    
+                      <li>
+                        <a href="/cuestionarios/creacion">Creacion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/dependencias">Dependencias</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/edicion">Edicion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/extras">Extras</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/impresion">Impresion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/propiedades">Propiedades</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/tipos%20de%20campos">Tipos de campos</a>
+                      </li>
+                    
+                  </ul>
+              </div>
+              <div class="span8">
+                
+
+                <h1>Tipos de campos</h1>
+
+<p>Los campos permiten guardar información, usualmente la respuesta a preguntas
+que realiza el agente durante la visita.</p>
+
+<dl>
+  <dt><strong><img class=textsize src=/images/icons/text.png /> Texto</strong></dt>
+  <dd>Guarda una cadena de texto.</dd>
+  <dt><strong><img class=textsize src=/images/icons/yes-no.png /> Verdadero/falso</strong></dt>
+  <dd>Guarda alguno de los valores verdadero o falso.</dd>
+  <dt><strong><img class=textsize src=/images/icons/list.png /> Listas desplegables</strong></dt>
+  <dd>Guarda un valor de una lista predeterminada para ese campo.</dd>
+  <dt><strong><img class=textsize src=/images/icons/date.png /> Fecha</strong></dt>
+  <dd>Guarda un día en específico.</dd>
+  <dt><strong><img class=textsize src=/images/icons/tag.png /> Etiqueta</strong></dt>
+  <dd>Muestra texto predeterminado. Este campo no es editable.</dd>
+  <dt><strong><img class=textsize src=/images/icons/photo.png /> Foto</strong></dt>
+  <dd>Guarda una imágen de la cámara del celular.</dd>
+  <dt><strong><img class=textsize src=/images/icons/audio.png /> Audio</strong></dt>
+  <dd>Guarda una grabación del micrófono del celular.</dd>
+  <dt><strong><img class=textsize src=/images/icons/subquestionnaire.png /> Subcuestionario</strong></dt>
+  <dd>Puede guardar más campos o subcuestionarios dentro de sí.
+  Si su cuestionario es muy largo, es útil separarlo en subcuestionarios
+  para simplificar la navegación y captura de datos.</dd>
+  <dt><strong><img class=textsize src=/images/icons/print.png /> Impresión</strong></dt>
+  <dd>No guarda información. Manda imprimir algún formato a una impresora
+  Bluetooth desde el celular que realiza la encuesta.</dd>
+</dl>
+
+<h1>Artículos Relacionados</h1>
+
+<ul>
+<li><a href="edicion">Edición</a></li>
+</ul>
+
+
+                
+              </div>
+            
+          
+        </div>
+
+      </div>
+
+    
+
+    <hr />
+
+
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    
+      
+        <title>
+          Gestión de Visitas  - Gestii Knowledge Base </title>
+      
+    
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//menteslibres.net/static/normalize/normalize.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/highlightjs/styles/solarized_dark.css">
+    <script src="//menteslibres.net/static/highlightjs/highlight.pack.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+		<style type="text/css">
+			body {
+				font-family: 'PT Sans';
+				font-size: large;
+			}
+			code {
+				font-family: 'Source Code Pro';
+			}
+			img.textsize {
+				height: 1.5em;
+			}
+		</style>
+
+  </head>
+
+  <body>
+
+    <div class="container" id="container">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="brand" href="/">Gestii Knowledge Base</a>
+
+          <div class="nav-collapse">
+            
+              <ul id="nav" class="nav menu">
+                
+                  <li><a href="/visitas">Visitas</a></li>
+                
+                  <li><a href="/cuestionarios">Cuestionarios</a></li>
+                
+                  <li><a href="/administradores">Administradores</a></li>
+                
+                  <li><a href="/mapas">Mapas</a></li>
+                
+                  <li><a href="/grupos">Grupos</a></li>
+                
+                  <li><a href="/misc">Misc</a></li>
+                
+              </ul>
+            
+            
+              <ul id="nav" class="nav pull-right menu">
+                
+                  <li><a target="_blank" href="http://gestii.com">Gestii</a></li>
+                
+              </ul>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+      
+        <ul class="breadcrumb menu">
+          
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+          
+            <li><a href="/agentes/">Agentes</a> <span class="divider">/</span></li>
+          
+        </ul>
+      
+
+      <div class="container-fluid">
+
+        <div class="row">
+          
+            
+              <div class="span3">
+                  <ul class="nav nav-list menu">
+                    
+                      <li>
+                        <a href="/agentes/eliminar%20y%20desactivar">Eliminar y desactivar</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/agentes/estatus">Estatus</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/agentes/gestion">Gestion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/agentes/token">Token</a>
+                      </li>
+                    
+                  </ul>
+              </div>
+              <div class="span8">
+                
+
+                <h1>Gestión de Visitas</h1>
+
+<p>Si usted elige el botón de Más Información * (??) se le presentarán varias opciones
+de gestión de agentes:</p>
+
+<dl>
+  <dt><strong>Editar</strong></dt>
+  <dd>Puede cambiar el nombre, contraseña, teléfono o grupo del agente.</dd>
+  <dt><strong>Generar nuevo token</strong></dt>
+  <dd>Genera un token para conectar un nuevo celular a la cuenta del agente.</dd>
+  <dt><strong>Asignar encuestas</strong></dt>
+  <dd>Permite seleccionar un cuestionario para que el agente lo aplique como encuesta.</dd>
+  <dt><strong>Ver ruta del día</strong></dt>
+  <dd>Muestra la ruta del agente en la pestaña de mapas.</dd>
+  <dt><strong>Desactivar</strong></dt>
+  <dd>Libera la licencia del agente y le impide conectarse a Gestii de nuevo.</dd>
+  <dt><strong>Reactivar</strong></dt>
+  <dd>Permite al agente conectarse a Gestii de nuevo y ocupa una licencia. Sólo aparece cuando el agente está desactivado.</dd>
+  <dt><strong>Eliminar</strong></dt>
+  <dd>Elimina por completo la información del agente. Sólo aparece cuando el agente está desactivado.</dd>
+</dl>
+
+
+                
+              </div>
+            
+          
+        </div>
+
+      </div>
+
+    
+
+    <hr />
+
+
+
+    
+
+  </body>
+</html>

@@ -5,7 +5,7 @@ Permiten mostrar sólo los elementos que cumplen algún conjunto
 de características deseadas.
 
 Para aplicar un flitro a una lista, seleccione la opción
-de filtro (??). Se le mostrará una lista de propiedades sobre
+de filtro (<img class=textsize src=/images/buttons/filter.png />). Se le mostrará una lista de propiedades sobre
 las cuales puede filtrar. Si deja algún campo vacío,
 este no será considerado para el filtro.
 

@@ -2,7 +2,7 @@
 
 Ya que tiene una visita creada puede ser que necesite modificarla.
 
-Para ello, elija el botón de Más Información * (??). Se le presentarán
+Para ello, elija el botón de Más Información (<img class=textsize src=/images/buttons/moreinfo.png />). Se le presentarán
 varias opciones de gestión:
 
 <dl>

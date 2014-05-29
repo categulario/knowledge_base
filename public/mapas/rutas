@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    
+      
+        <title>
+          Rutas  - Gestii Knowledge Base </title>
+      
+    
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//menteslibres.net/static/normalize/normalize.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/highlightjs/styles/solarized_dark.css">
+    <script src="//menteslibres.net/static/highlightjs/highlight.pack.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+		<style type="text/css">
+			body {
+				font-family: 'PT Sans';
+				font-size: large;
+			}
+			code {
+				font-family: 'Source Code Pro';
+			}
+			img.textsize {
+				height: 1.5em;
+			}
+		</style>
+
+  </head>
+
+  <body>
+
+    <div class="container" id="container">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="brand" href="/">Gestii Knowledge Base</a>
+
+          <div class="nav-collapse">
+            
+              <ul id="nav" class="nav menu">
+                
+                  <li><a href="/visitas">Visitas</a></li>
+                
+                  <li><a href="/cuestionarios">Cuestionarios</a></li>
+                
+                  <li><a href="/administradores">Administradores</a></li>
+                
+                  <li><a href="/mapas">Mapas</a></li>
+                
+                  <li><a href="/grupos">Grupos</a></li>
+                
+                  <li><a href="/misc">Misc</a></li>
+                
+              </ul>
+            
+            
+              <ul id="nav" class="nav pull-right menu">
+                
+                  <li><a target="_blank" href="http://gestii.com">Gestii</a></li>
+                
+              </ul>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+      
+        <ul class="breadcrumb menu">
+          
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+          
+            <li><a href="/mapas/">Mapas</a> <span class="divider">/</span></li>
+          
+        </ul>
+      
+
+      <div class="container-fluid">
+
+        <div class="row">
+          
+            
+              <div class="span3">
+                  <ul class="nav nav-list menu">
+                    
+                      <li>
+                        <a href="/mapas/rutas">Rutas</a>
+                      </li>
+                    
+                  </ul>
+              </div>
+              <div class="span8">
+                
+
+                <h1>Rutas</h1>
+
+<p>Cada agente tiene asignada una ruta: la sucesión de acciones que ha realizado
+durante el día. Para ver la ruta de un agente, selecciónelo en la lista de agentes
+de la página de mapas.</p>
+
+<p>Hay distintos tipos de eventos para los agentes:</p>
+
+<dl>
+  <dt><strong>Inicio de sesión</strong></dt>
+  <dd>Marca la primera conexión del día del agente con Gestii.</dd>
+  <dt><strong>Fin de sesión</strong></dt>
+  <dd>Marca cuando el agente cerró su conexión con Gestii por el día.</dd>
+  <dt><strong>Actualizaciones periódicas</strong></dt>
+  <dd>Marcan cualquier conexión del celular del agente con Gestii.</dd>
+  <dt><strong>Visita</strong></dt>
+  <dd>Marca la realización de una visita.</dd>
+</dl>
+
+
+                
+              </div>
+            
+          
+        </div>
+
+      </div>
+
+    
+
+    <hr />
+
+
+
+    
+
+  </body>
+</html>

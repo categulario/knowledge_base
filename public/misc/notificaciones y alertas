@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    
+      
+        <title>
+          Notificaciones y alertas  - Gestii Knowledge Base </title>
+      
+    
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//menteslibres.net/static/normalize/normalize.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/highlightjs/styles/solarized_dark.css">
+    <script src="//menteslibres.net/static/highlightjs/highlight.pack.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+		<style type="text/css">
+			body {
+				font-family: 'PT Sans';
+				font-size: large;
+			}
+			code {
+				font-family: 'Source Code Pro';
+			}
+			img.textsize {
+				height: 1.5em;
+			}
+		</style>
+
+  </head>
+
+  <body>
+
+    <div class="container" id="container">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="brand" href="/">Gestii Knowledge Base</a>
+
+          <div class="nav-collapse">
+            
+              <ul id="nav" class="nav menu">
+                
+                  <li><a href="/visitas">Visitas</a></li>
+                
+                  <li><a href="/cuestionarios">Cuestionarios</a></li>
+                
+                  <li><a href="/administradores">Administradores</a></li>
+                
+                  <li><a href="/mapas">Mapas</a></li>
+                
+                  <li><a href="/grupos">Grupos</a></li>
+                
+                  <li><a href="/misc">Misc</a></li>
+                
+              </ul>
+            
+            
+              <ul id="nav" class="nav pull-right menu">
+                
+                  <li><a target="_blank" href="http://gestii.com">Gestii</a></li>
+                
+              </ul>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+      
+        <ul class="breadcrumb menu">
+          
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+          
+            <li><a href="/misc/">Misc</a> <span class="divider">/</span></li>
+          
+        </ul>
+      
+
+      <div class="container-fluid">
+
+        <div class="row">
+          
+            
+              <div class="span3">
+                  <ul class="nav nav-list menu">
+                    
+                      <li>
+                        <a href="/misc/API">API</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/misc/filtros">Filtros</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/misc/importacion%20avanzada">Importacion avanzada</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/misc/importacion">Importacion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/misc/licencias">Licencias</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/misc/notificaciones%20y%20alertas">Notificaciones y alertas</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/misc/plantillas">Plantillas</a>
+                      </li>
+                    
+                  </ul>
+              </div>
+              <div class="span8">
+                
+
+                <h1>Notificaciones y alertas</h1>
+
+<p>Para Gestii, las notificaciones y las alertas son muy diferentes.
+A grandes rasgos, las alertas se relacionan con los agentes y
+cuestionarios, mientras que las notificaciones le avisan que un
+proceso largo, como la generación de un reporte, está listo.</p>
+
+<h3>Alertas</h3>
+
+<p>Las alertas llaman su atención cuando alguna se presenta alguna
+situación que usted indicó que le interesa, tal como que algún agente
+no inicie sesión antes de alguna hora. Gestii le puede alertar cuando las
+siguientes situaciones ocurran:</p>
+
+<dl>
+  <dt><strong>Distancia de visita</strong></dt>
+  <dd>Se realizó una visita muy lejos de la dirección marcada.</dd>
+  <dt><strong>Batería</strong></dt>
+  <dd>Un agente tiene menos de 15% de batería a cierta hora.</dd>
+  <dt><strong>Inactividad</strong></dt>
+  <dd>Un agente lleva más de cierta cantidad de tiempo sin comunicarse con los servidores de Gestii.</dd>
+  <dt><strong>Login</strong></dt>
+  <dd>Un agente no ha iniciado sesión o inició sesión más tarde de su horario.</dd>
+  <dt><strong>Logout</strong></dt>
+  <dd>Un agente lleva más de cierto tiempo desconecado durante su jornada laboral.</dd>
+  <dt><strong>Visita olvidada</strong></dt>
+  <dd>Han pasado más de cierta cantidad de días desde que se subió una visita y aún no ha sido realizada.</dd>
+  <dt><strong>Productividad</strong></dt>
+  <dd>Un agente lleva menos de cierta cantidad de visitas al llegar una hora determinada.</dd>
+</dl>
+
+<p>Si le interesa activar alguna de estas alertas, por favor comuníquese con
+nosotros.</p>
+
+<h3>Notificaciones</h3>
+
+<p>Por su parte, las notificaciones le avisan en cuanto termina algún proceso
+que solicitó que Gestii hiciera, tal como la generación de un reporte.</p>
+
+<h1>Artículos Relacionados</h1>
+
+<ul>
+<li><a href="/visitas/reportes">Reportes</a></li>
+</ul>
+
+
+                
+              </div>
+            
+          
+        </div>
+
+      </div>
+
+    
+
+    <hr />
+
+
+
+    
+
+  </body>
+</html>

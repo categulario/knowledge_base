@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    
+      
+        <title>
+          Campos Extra  - Gestii Knowledge Base </title>
+      
+    
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//menteslibres.net/static/normalize/normalize.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/highlightjs/styles/solarized_dark.css">
+    <script src="//menteslibres.net/static/highlightjs/highlight.pack.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+		<style type="text/css">
+			body {
+				font-family: 'PT Sans';
+				font-size: large;
+			}
+			code {
+				font-family: 'Source Code Pro';
+			}
+			img.textsize {
+				height: 1.5em;
+			}
+		</style>
+
+  </head>
+
+  <body>
+
+    <div class="container" id="container">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="brand" href="/">Gestii Knowledge Base</a>
+
+          <div class="nav-collapse">
+            
+              <ul id="nav" class="nav menu">
+                
+                  <li><a href="/visitas">Visitas</a></li>
+                
+                  <li><a href="/cuestionarios">Cuestionarios</a></li>
+                
+                  <li><a href="/administradores">Administradores</a></li>
+                
+                  <li><a href="/mapas">Mapas</a></li>
+                
+                  <li><a href="/grupos">Grupos</a></li>
+                
+                  <li><a href="/misc">Misc</a></li>
+                
+              </ul>
+            
+            
+              <ul id="nav" class="nav pull-right menu">
+                
+                  <li><a target="_blank" href="http://gestii.com">Gestii</a></li>
+                
+              </ul>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+      
+        <ul class="breadcrumb menu">
+          
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+          
+            <li><a href="/cuestionarios/">Cuestionarios</a> <span class="divider">/</span></li>
+          
+        </ul>
+      
+
+      <div class="container-fluid">
+
+        <div class="row">
+          
+            
+              <div class="span3">
+                  <ul class="nav nav-list menu">
+                    
+                      <li>
+                        <a href="/cuestionarios/creacion">Creacion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/dependencias">Dependencias</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/edicion">Edicion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/extras">Extras</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/impresion">Impresion</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/propiedades">Propiedades</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/cuestionarios/tipos%20de%20campos">Tipos de campos</a>
+                      </li>
+                    
+                  </ul>
+              </div>
+              <div class="span8">
+                
+
+                <h1>Campos Extra</h1>
+
+<p>Cuando se efectúa una visita, Gestii guarda internamente la información que se recopiló
+en el cuestionario por separado de la información de la visita. Esto impide poder
+hacer filtros sobre cualquier campo arbitrario.</p>
+
+<p>La solución está en los campos extra: campos especiales que además de guardar su
+información normalmente, se guardan en la tabla de visitas para permitir su fácil acceso.</p>
+
+<p>Cada cuestionario tiene reservados tres campos extra: puede seleccionar qué campos deben
+ser extra en las propiedades del campo en cuestión.</p>
+
+<h1>Artículos Relacionados</h1>
+
+<ul>
+<li><a href="propiedades">Propiedades</a></li>
+<li><a href="/misc/filtros">Filtros</a></li>
+</ul>
+
+
+                
+              </div>
+            
+          
+        </div>
+
+      </div>
+
+    
+
+    <hr />
+
+
+
+    
+
+  </body>
+</html>

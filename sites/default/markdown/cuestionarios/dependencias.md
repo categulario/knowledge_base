@@ -15,4 +15,4 @@ cumplan, o cuando una o más se cumplan.
 
 # Artículos Relacionados
 
-* [Edición](/edición)
+* [Edición](/edicion)
