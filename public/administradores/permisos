@@ -13,11 +13,11 @@
     
       
         <title>
-          Permisos  - Gestii Knowledge Base </title>
+          Permisos  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -123,7 +125,7 @@ administradores en la interfaz web.</p>
 
 <p>Para asignar o revocar permisos, vaya a la pestaña de
 Administradores y seleccione el botón de Más Información
-(<img class=textsize src=/images/buttons/moreinfo.png />). Posteriormente seleccione &ldquo;Asignar permisos&rdquo;. Desde
+(<img src="/images/buttons/moreinfo.png"/>). Posteriormente seleccione “Asignar permisos”. Desde
 la ventana que aparece puede seleccionar los permisos que
 quiera que tenga el administrador seleccionado.</p>
 

@@ -13,7 +13,7 @@
     
       
         <title>
-          Gestión de Visitas  - Gestii KB </title>
+          Respuestas  - Gestii KB </title>
       
     
 
@@ -96,7 +96,7 @@
           
             <li><a href="/">Home</a> <span class="divider">/</span></li>
           
-            <li><a href="/agentes/">Agentes</a> <span class="divider">/</span></li>
+            <li><a href="/API/">API</a> <span class="divider">/</span></li>
           
         </ul>
       
@@ -110,19 +110,23 @@
                   <ul class="nav nav-list menu">
                     
                       <li>
-                        <a href="/agentes/eliminar%20y%20desactivar">Eliminar y desactivar</a>
+                        <a href="/API/auxiliares">Auxiliares</a>
                       </li>
                     
                       <li>
-                        <a href="/agentes/estatus">Estatus</a>
+                        <a href="/API/cookbook">Cookbook</a>
                       </li>
                     
                       <li>
-                        <a href="/agentes/gestion">Gestion</a>
+                        <a href="/API/objetos">Objetos</a>
                       </li>
                     
                       <li>
-                        <a href="/agentes/token">Token</a>
+                        <a href="/API/operaciones">Operaciones</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/peticiones">Peticiones</a>
                       </li>
                     
                   </ul>
@@ -130,27 +134,50 @@
               <div class="span8">
                 
 
-                <h1>Gestión de Visitas</h1>
+                <h1>Respuestas</h1>
 
-<p>Si usted elige el botón de Más Información * (??) se le presentarán varias opciones
-de gestión de agentes:</p>
+<p>Todas las respuestas de esta API son cadenas codificadas en <a href="http://es.wikipedia.org/wiki/JSON">JSON</a> y devuelven en los encabezados un código HTTP indicando si la petición tuvo éxito o falló. En caso de éxito, la respuesta contendrá alguno de los códigos siguientes:</p>
 
-<dl>
-  <dt><strong>Editar</strong></dt>
-  <dd>Puede cambiar el nombre, contraseña, teléfono o grupo del agente.</dd>
-  <dt><strong>Generar nuevo token</strong></dt>
-  <dd>Genera un token para conectar un nuevo celular a la cuenta del agente.</dd>
-  <dt><strong>Asignar encuestas</strong></dt>
-  <dd>Permite seleccionar un cuestionario para que el agente lo aplique como encuesta.</dd>
-  <dt><strong>Ver ruta del día</strong></dt>
-  <dd>Muestra la ruta del agente en la pestaña de mapas.</dd>
-  <dt><strong>Desactivar</strong></dt>
-  <dd>Libera la licencia del agente y le impide conectarse a Gestii de nuevo.</dd>
-  <dt><strong>Reactivar</strong></dt>
-  <dd>Permite al agente conectarse a Gestii de nuevo y ocupa una licencia. Sólo aparece cuando el agente está desactivado.</dd>
-  <dt><strong>Eliminar</strong></dt>
-  <dd>Elimina por completo la información del agente. Sólo aparece cuando el agente está desactivado.</dd>
-</dl>
+<ul>
+<li><code>200 OK</code> - Petición exitosa. Se devuelve el resultado de la petición en la respuesta.</li>
+<li><code>201 Created</code> - Recurso creado. Se devuelve el recurso en la respuesta.</li>
+<li><code>202 Accepted</code> - Petición aceptada para procesarse. Se devuelve información para monitorear su progreso.</li>
+<li><code>204 No Content</code> - Petición exitosa. No es necesario devolver más información.</li>
+</ul>
+
+<p>Por otro lado, en caso de error cualquier petición puede devolver alguno de los siguientes códigos:</p>
+
+<ul>
+<li><code>400 Bad Request</code> - La petición contiene parámetros erroneos o falló alguna validación.</li>
+<li><code>401 Unauthorized</code> - No se ha especificado una API key válida.</li>
+<li><code>403 Forbidden</code> - La API key especificada no cuenta con permisos para ejecutar el método llamado.</li>
+<li><code>404 Not Found</code> - El recurso solicitado no ha sido encontrado.</li>
+<li><code>429 Too Many Requests</code> - La petición no ha sido procesada debido a que se ha alcanzado el <a href="#limits">límite</a> permitido.</li>
+<li><code>500 Internal Server Error</code> - Ha ocurrido un error interno del servidor.</li>
+</ul>
+
+<p>Toda la serie de errores <code>4XX</code> devuelve en el cuerpo un objeto JSON con la siguiente estructura:</p>
+
+<pre><code>{
+    &#34;message&#34;: &#34;El recurso no ha sido encontrado&#34;
+}
+</code></pre>
+
+<p>En caso de que la petición devuelva un código <code>400 Bad Request</code>, es posible que existan errores adicionales si lo provocó una validación fallida:</p>
+
+<pre><code>{
+    &#34;message&#34;: &#34;Algunas validaciones han fallado&#34;,
+    &#34;errors&#34;: [
+        &#34;username&#34;: [
+            &#34;El nombre de usuario se encuentra en uso&#34;
+        ],
+        &#34;password&#34;: [
+            &#34;La contraseña debe tener al menos 5 caracteres&#34;,
+            &#34;La contraseña debe tener al menos un número&#34;
+        ]
+    ]
+}
+</code></pre>
 
 
                 

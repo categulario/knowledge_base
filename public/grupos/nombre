@@ -13,11 +13,11 @@
     
       
         <title>
-          Nombre de Grupo  - Gestii Knowledge Base </title>
+          Nombre de Grupo  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -121,13 +123,13 @@
 <p>Los grupos necesitan un nombre para referirse a ellos. Puede además separar
 los grupos jerárquicamente al asignarles su nombre.</p>
 
-<p>Para organizar los grupos agregue símbolos &ldquo;|&rdquo; (barra vertical) entre las
+<p>Para organizar los grupos agregue símbolos “|” (barra vertical) entre las
 partes que denotan la jerarquía de éstos. Por ejemplo, si usted necesitara
 hacer grupos separados por país y estado podría crear grupos con el formato
-&ldquo;Francia|París|Ventas&rdquo; o &ldquo;México|Guanajuato|Cobranza&rdquo;.</p>
+“Francia|París|Ventas” o “México|Guanajuato|Cobranza”.</p>
 
 <p>Con esto, usted puede ahora referirse a los grupos contenidos dentro de
-la categoría &ldquo;Francia&rdquo;, o &ldquo;México|Guanajuato&rdquo; en conjunto, tal vez para
+la categoría “Francia”, o “México|Guanajuato” en conjunto, tal vez para
 asignarle permisos de gestión a algún administrador, por ejemplo.</p>
 
 <h1>Artículos Relacionados</h1>

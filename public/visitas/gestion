@@ -13,11 +13,11 @@
     
       
         <title>
-          Gestión de Visitas  - Gestii Knowledge Base </title>
+          Gestión de Visitas  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -148,7 +150,7 @@
 
 <p>Ya que tiene una visita creada puede ser que necesite modificarla.</p>
 
-<p>Para ello, elija el botón de Más Información (<img class=textsize src=/images/buttons/moreinfo.png />). Se le presentarán
+<p>Para ello, elija el botón de Más Información (<img src="/images/buttons/moreinfo.png"/>). Se le presentarán
 varias opciones de gestión:</p>
 
 <dl>
@@ -167,8 +169,8 @@ varias opciones de gestión:</p>
 <h1>Artículos Relacionados</h1>
 
 <ul>
-<li><a href="estatus">Estatus de las visitas</a></li>
-<li><a href="ciclo de vida">Ciclo de vida de las visitas</a></li>
+<li><a>Estatus de las visitas</a></li>
+<li><a>Ciclo de vida de las visitas</a></li>
 </ul>
 
 

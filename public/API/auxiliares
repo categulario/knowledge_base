@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    
+      
+        <title>
+          Auxiliares  - Gestii KB </title>
+      
+    
+
+		<link rel="shortcut icon" href="/favicon.png" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//menteslibres.net/static/normalize/normalize.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="//menteslibres.net/static/highlightjs/styles/solarized_dark.css">
+    <script src="//menteslibres.net/static/highlightjs/highlight.pack.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+		<style type="text/css">
+			body {
+				font-family: 'PT Sans';
+				font-size: large;
+			}
+			code {
+				font-family: 'Source Code Pro';
+			}
+			img.textsize {
+				height: 1.5em;
+			}
+		</style>
+
+  </head>
+
+  <body>
+
+    <div class="container" id="container">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="brand" href="/">Gestii KB</a>
+
+          <div class="nav-collapse">
+            
+              <ul id="nav" class="nav menu">
+                
+                  <li><a href="/visitas">Visitas</a></li>
+                
+                  <li><a href="/cuestionarios">Cuestionarios</a></li>
+                
+                  <li><a href="/administradores">Administradores</a></li>
+                
+                  <li><a href="/mapas">Mapas</a></li>
+                
+                  <li><a href="/grupos">Grupos</a></li>
+                
+                  <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
+                
+              </ul>
+            
+            
+              <ul id="nav" class="nav pull-right menu">
+                
+                  <li><a target="_blank" href="http://gestii.com">Gestii</a></li>
+                
+              </ul>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+      
+        <ul class="breadcrumb menu">
+          
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+          
+            <li><a href="/API/">API</a> <span class="divider">/</span></li>
+          
+        </ul>
+      
+
+      <div class="container-fluid">
+
+        <div class="row">
+          
+            
+              <div class="span3">
+                  <ul class="nav nav-list menu">
+                    
+                      <li>
+                        <a href="/API/auxiliares">Auxiliares</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/cookbook">Cookbook</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/objetos">Objetos</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/operaciones">Operaciones</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/peticiones">Peticiones</a>
+                      </li>
+                    
+                  </ul>
+              </div>
+              <div class="span8">
+                
+
+                <h1>Auxiliares</h1>
+
+<ul>
+<li><a href="#uploads">Upload</a></li>
+<li><a href="#extradata">Extradata</a></li>
+<li><a href="#feedbacks">Feedback</a></li>
+<li><a href="#locations">Location</a></li>
+<li><a href="#reports">Reporte</a></li>
+<li><a href="#jobs">DelayedJob</a></li>
+</ul>
+
+<p>Los auxiliares son objetos de la API que no pueden ser consultados si no es mediante alguno de los métodos de los objetos principales. En general, se utilizan para representar información que no puede ser modificada.</p>
+
+<p>&lt;#uploads&gt;</p>
+
+<h2>Upload</h2>
+
+<p>Un upload representa un archivo de importación de visitas. En la API un upload se encuentra representado por un objeto con la siguiente estructura:</p>
+
+<pre><code>{
+    &#34;id&#34;: 1,
+    &#34;name&#34;: &#34;Visitas 01 enero 2014.csv&#34;,
+    &#34;status&#34;: 101,
+    &#34;processed&#34;: 1000,
+    &#34;geocoded&#34;: 500,
+    &#34;checksum&#34;: &#34;dd57cb7057dbe4de7645bd273198aa92&#34;,
+    &#34;created_at&#34;: &#34;2014-01-01T14:00:00Z&#34;
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Tipo</th>
+<th>Notas</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>name</td>
+<td>String</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>status</td>
+<td>Integer</td>
+<td>Ver el <a href="#uploads-status">diccionario de status</a>.</td>
+</tr>
+
+<tr>
+<td>processed</td>
+<td>Integer</td>
+<td>Número de visitas procesadas.</td>
+</tr>
+
+<tr>
+<td>geocoded</td>
+<td>Integer</td>
+<td>Número de visitas geolocalizadas.</td>
+</tr>
+
+<tr>
+<td>checksum</td>
+<td>String</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>created_at</td>
+<td>Timestamp</td>
+<td>\e</td>
+</tr>
+</tbody>
+</table>
+
+<p>El contador <code>processed</code> indica el número de visitas que se han leído correctamente del archivo. El contador <code>geocoded</code>, por su parte, comienza una vez que el anterior ha finalizado e indica el número de visitas que han geolocalizado con éxito. Es importante recalcar que la geolocalización no comienza hasta que todas las visitas del archivo hayan sido procesadas sin ningún error.</p>
+
+<p>&lt;#uploads-codes&gt;
+<strong>Diccionario de estatus:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Mensaje</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>100</td>
+<td>Esperando por una instancia de procesamiento.</td>
+</tr>
+
+<tr>
+<td>101</td>
+<td>El archivo está siendo procesado.</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Proceso finalizado sin errores, las visitas han sido creadas.</td>
+</tr>
+
+<tr>
+<td>200</td>
+<td>La estructura del archivo no corresponde a la requerida por el layout.</td>
+</tr>
+
+<tr>
+<td>203</td>
+<td>Algunos encabezados requeridos no se han encontrado.</td>
+</tr>
+
+<tr>
+<td>204</td>
+<td>Un archivo exactamente igual se está siendo procesado.</td>
+</tr>
+
+<tr>
+<td>300</td>
+<td>Los errores se indican en archivo (ver <a href="#visits-errors">descargar errores de importación</a>).</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Nota:</strong> Los códigos <code>1XX</code> indican que ningun error ha sido detectado, los <code>2XX</code> que se han encontrado errores globales y el <code>300</code> que han ocurrido múltiples errores distintos y es necesario descargar un archivo con la descripción de cada uno de ellos.</p>
+
+<p>&lt;#extradata&gt;</p>
+
+<h2>Extradata</h2>
+
+<p>Un extradata representa un campo de la información precargada para una visita durante la importación. En la API un extradata se encuentra representado por un objeto con la siguiente estructura:</p>
+
+<pre><code>{
+    &#34;caption&#34;: &#34;Nombre&#34;,
+    &#34;value&#34;: &#34;Han Solo&#34;
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Tipo</th>
+<th>Notas</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>El nombre de la columna del archivo de importación.</td>
+</tr>
+
+<tr>
+<td>value</td>
+<td>String</td>
+<td>\e</td>
+</tr>
+</tbody>
+</table>
+
+<p>&lt;#feedbacks&gt;</p>
+
+<h2>Feedback</h2>
+
+<p>Un feedback representa un campo de la información capturada para una visita al momento de su realización. En la API un feedback se encuentra representado por un objeto con la siguiente estructura:</p>
+
+<pre><code>{
+    &#34;varname&#34;: &#34;color&#34;,
+    &#34;caption&#34;: &#34;Color&#34;,
+    &#34;value&#34;: &#34;Rojo&#34;
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Tipo</th>
+<th>Notas</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>varname</td>
+<td>String</td>
+<td>La variable del campo del <a href="#forms">cuestionario</a>.</td>
+</tr>
+
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>La etiqueta del campo del <a href="#forms">cuestionario</a>.</td>
+</tr>
+
+<tr>
+<td>value</td>
+<td>String</td>
+<td>\e</td>
+</tr>
+</tbody>
+</table>
+
+<p>&lt;#locations&gt;</p>
+
+<h2>Location</h2>
+
+<p>Una location representa un punto de ubicación geográfica y un evento de uno de los <a href="#agents">agentes</a>. En la API una location se encuentra representada por un objeto con la siguiente estructura:</p>
+
+<pre><code>{
+    &#34;id&#34;: 1,
+    &#34;agent_id&#34;: 1,
+    &#34;event&#34;: 1,
+    &#34;latitude&#34;: 19.492316,
+    &#34;longitude&#34;: -99.234433,
+    &#34;accuracy&#34;: 10,
+    &#34;created_at&#34;: &#34;2014-01-01T14:00:00Z&#34;
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Tipo</th>
+<th>Notas</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>agent_id</td>
+<td>Integer</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>event</td>
+<td>Integer</td>
+<td>Ver el <a href="#locations-events">diccionario de eventos</a>.</td>
+</tr>
+
+<tr>
+<td>latitude</td>
+<td>Decimal</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>longitude</td>
+<td>Decimal</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>accuracy</td>
+<td>Integer</td>
+<td>Precisión en metros de la localización.</td>
+</tr>
+
+<tr>
+<td>created_at</td>
+<td>Timestamp</td>
+<td>\e</td>
+</tr>
+</tbody>
+</table>
+
+<p>&lt;#locations-events&gt;
+<strong>Diccionario de eventos:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Mensaje</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>0</td>
+<td>Inicio de sesión.</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Cierre de sesión por agente.</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Solicitud de visitas.</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Aceptación de visitas.</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Notificación de ubicación.</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Envío de resultado de visita.</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Solicitud de cuestionario.</td>
+</tr>
+</tbody>
+</table>
+
+<p>&lt;#reports&gt;</p>
+
+<h2>Reporte</h2>
+
+<p>Un reporte representa un archivo comprimido que puede ser generado y descargado con información de <a href="#visits">visitas</a>, <a href="#agents">agentes</a> y demás objetos. En la API un reporte se encuentra representado por un objeto con la siguiente estructura:</p>
+
+<pre><code>{
+    &#34;generator&#34;: &#34;VISITS&#34;,
+    &#34;name&#34;: &#34;Reporte PDF&#34;,
+    &#34;description&#34;: &#34;Reporte en formato PDF estándar&#34;,
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Tipo</th>
+<th>Notas</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>generator</td>
+<td>String</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>name</td>
+<td>String</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>description</td>
+<td>String</td>
+<td>\e</td>
+</tr>
+</tbody>
+</table>
+
+<p>&lt;#jobs&gt;</p>
+
+<h2>DelayedJob</h2>
+
+<p>Un delayed job es un proceso que se ejecuta de forma asíncrona y en background en Gestii. Este tipo de operación se utiliza especialmente para realizar tareas que se espera que no terminen inmediatamente pero de las cuáles se necesita proveer un método de monitoreo de su finalización. En la API un delayed job se encuentra representado por un objeto con la siguiente estructura:</p>
+
+<pre><code>{
+    &#34;id&#34;: &#34;b9iLXiAa&#34;,
+    &#34;status&#34;: 0
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Tipo</th>
+<th>Notas</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>\e</td>
+</tr>
+
+<tr>
+<td>status</td>
+<td>Integer</td>
+<td>Uno de: <code>0</code> (procesando), <code>1</code> (finalizado).</td>
+</tr>
+</tbody>
+</table>
+
+
+                
+              </div>
+            
+          
+        </div>
+
+      </div>
+
+    
+
+    <hr />
+
+
+
+    
+
+  </body>
+</html>

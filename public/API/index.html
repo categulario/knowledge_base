@@ -13,11 +13,11 @@
     
       
         <title>
-          API  - Gestii Knowledge Base </title>
+          API REST v1  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -94,7 +96,7 @@
           
             <li><a href="/">Home</a> <span class="divider">/</span></li>
           
-            <li><a href="/misc/">Misc</a> <span class="divider">/</span></li>
+            <li><a href="/API/">API</a> <span class="divider">/</span></li>
           
         </ul>
       
@@ -108,31 +110,23 @@
                   <ul class="nav nav-list menu">
                     
                       <li>
-                        <a href="/misc/API">API</a>
+                        <a href="/API/auxiliares">Auxiliares</a>
                       </li>
                     
                       <li>
-                        <a href="/misc/filtros">Filtros</a>
+                        <a href="/API/cookbook">Cookbook</a>
                       </li>
                     
                       <li>
-                        <a href="/misc/importacion%20avanzada">Importacion avanzada</a>
+                        <a href="/API/objetos">Objetos</a>
                       </li>
                     
                       <li>
-                        <a href="/misc/importacion">Importacion</a>
+                        <a href="/API/operaciones">Operaciones</a>
                       </li>
                     
                       <li>
-                        <a href="/misc/licencias">Licencias</a>
-                      </li>
-                    
-                      <li>
-                        <a href="/misc/notificaciones%20y%20alertas">Notificaciones y alertas</a>
-                      </li>
-                    
-                      <li>
-                        <a href="/misc/plantillas">Plantillas</a>
+                        <a href="/API/peticiones">Peticiones</a>
                       </li>
                     
                   </ul>
@@ -140,10 +134,11 @@
               <div class="span8">
                 
 
-                <h1>API</h1>
+                <h1>API REST v1</h1>
 
-<p>Si usted ya tiene algún sistema de gestión y lo quiere integrar con Gestii,
-puede consultar nuestra <a href="http://gestii.com:8080/devs">API</a>.</p>
+<p>Gestii es una solución completamente hosteada que te permite tener bajo control la operación de tus agentes de campo y, por supuesto, de toda tu información. Es por eso que proveemos una API <a href="http://es.wikipedia.org/wiki/Representational_State_Transfer">REST</a> construída con principios pragmáticos que la hacen muy sencilla de consultar.</p>
+
+<p>Nuestra API utiliza todas las ventajas del protocolo HTTP, desde las comunicaciones seguras hasta los códigos de respuesta, por lo que cualquier cliente o componente HTTP debería ser capaz de comunicarse sin problemas con ella.</p>
 
 
                 

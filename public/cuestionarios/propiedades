@@ -13,11 +13,11 @@
     
       
         <title>
-          Propiedades  - Gestii Knowledge Base </title>
+          Propiedades  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -164,7 +166,7 @@
 
 <p>Los distintos campos también tienen propiedades particulares para cada uno.</p>
 
-<h3><img class=textsize src=/images/icons/text.png /> Texto</h3>
+<h3><img src="/images/icons/text.png"/> Texto</h3>
 
 <dl>
   <dt><strong>Tipo</strong></dt>
@@ -178,14 +180,14 @@
   <dd>Cantidad de caracteres que se pueden introducir.</dd>
 </dl>
 
-<h3><img class=textsize src=/images/icons/yes-no.png /> Verdadero/Falso</h3>
+<h3><img src="/images/icons/yes-no.png"/> Verdadero/Falso</h3>
 
 <dl>
   <dt><strong>Seleccionado</strong></dt>
   <dd>Si el campo estará seleccionado inicialmente.</dd>
 </dl>
 
-<h3><img class=textsize src=/images/icons/list.png /> Listas desplegables</h3>
+<h3><img src="/images/icons/list.png"/> Listas desplegables</h3>
 
 <dl>
   <dt><strong>Opciones</strong></dt>
@@ -196,7 +198,7 @@
   de ese campo.</dd>
 </dl>
 
-<h3><img class=textsize src=/images/icons/date.png /> Fecha</h3>
+<h3><img src="/images/icons/date.png"/> Fecha</h3>
 
 <dl>
   <dt><strong>Límite inferior</strong></dt>
@@ -208,14 +210,14 @@
   fechas desde mañana o anteriores.</dd>
 </dl>
 
-<h3><img class=textsize src=/images/icons/tag.png /> Etiqueta</h3>
+<h3><img src="/images/icons/tag.png"/> Etiqueta</h3>
 
 <dl>
   <dt><strong>Texto</strong></dt>
   <dd>Texto adicional que acompaña a la etiqueta.</dd>
 </dl>
 
-<h3><img class=textsize src=/images/icons/print.png /> Impresión</h3>
+<h3><img src="/images/icons/print.png"/> Impresión</h3>
 
 <dl>
   <dt><strong>Cuerpo</strong></dt>

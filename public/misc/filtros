@@ -13,11 +13,11 @@
     
       
         <title>
-          Filtros  - Gestii Knowledge Base </title>
+          Filtros  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -108,10 +110,6 @@
                   <ul class="nav nav-list menu">
                     
                       <li>
-                        <a href="/misc/API">API</a>
-                      </li>
-                    
-                      <li>
                         <a href="/misc/filtros">Filtros</a>
                       </li>
                     
@@ -147,7 +145,7 @@ Permiten mostrar sólo los elementos que cumplen algún conjunto
 de características deseadas.</p>
 
 <p>Para aplicar un flitro a una lista, seleccione la opción
-de filtro (<img class=textsize src=/images/buttons/filter.png />). Se le mostrará una lista de propiedades sobre
+de filtro (<img src="/images/buttons/filter.png"/>). Se le mostrará una lista de propiedades sobre
 las cuales puede filtrar. Si deja algún campo vacío,
 este no será considerado para el filtro.</p>
 

@@ -13,11 +13,11 @@
     
       
         <title>
-          Cómo crear un cuestionario  - Gestii Knowledge Base </title>
+          Cómo crear un cuestionario  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -143,14 +145,14 @@
                 <h1>Cómo crear un cuestionario</h1>
 
 <p>En la pestaña de cuestionarios seleccione el botón de Agregar
-(<img class=textsize src=/images/buttons/add.png />)
+(<img src="/images/buttons/add.png"/>)
 y asígnele un nombre y descripción a su nuevo cuestionario. Ahora
 puede editar su cuestionario para agregar los campos que necesite.</p>
 
 <h1>Artículos Relacionados</h1>
 
 <ul>
-<li><a href="edicion">Edición de cuestionarios</a></li>
+<li><a>Edición de cuestionarios</a></li>
 </ul>
 
 

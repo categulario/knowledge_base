@@ -13,11 +13,11 @@
     
       
         <title>
-          Ciclo de vida de las visitas  - Gestii Knowledge Base </title>
+          Ciclo de vida de las visitas  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -151,7 +153,7 @@
 <pre>
 ~ Diagrama feo ~
 
-Pendiente -> Disponible -> Terminada.
+Pendiente -&gt; Disponible -&gt; Terminada.
 Cancelada
 Expirada
 Actualizada
@@ -178,8 +180,8 @@ complete la información restante.</p>
 <h1>Artículos Relacionados</h1>
 
 <ul>
-<li><a href="estatus">Estatus</a></li>
-<li><a href="gestion">Gestión</a></li>
+<li><a>Estatus</a></li>
+<li><a>Gestión</a></li>
 </ul>
 
 

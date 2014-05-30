@@ -13,11 +13,11 @@
     
       
         <title>
-          Visitas de supervisión  - Gestii Knowledge Base </title>
+          Visitas de supervisión  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -149,7 +151,7 @@
 <p>Al terminar una visita simple, se puede asignar la supervisión de ésta a
 otro agente para que coteje las respuestas visitando nuevamente la
 dirección. A estas visitas las llamamos visitas de supervisión y se indican
-con una banderita (<img class=textsize src=/images/icons/flag.png />) junto al folio de éstas.</p>
+con una banderita (<img src="/images/icons/flag.png"/>) junto al folio de éstas.</p>
 
 <p>Al finalizar una visita de supervisión, las nuevas respuestas obtenidas
 <em>sobreescribirán</em> las de la visita simple anterior. Puede ver en la página
@@ -158,7 +160,7 @@ de detalles de la visita de supervisión qué campos fueron sobreescritos.</p>
 <h1>Artículos Relacionados</h1>
 
 <ul>
-<li><a href="tipos de visitas">Tipos de visitas</a></li>
+<li><a>Tipos de visitas</a></li>
 </ul>
 
 

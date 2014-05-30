@@ -13,11 +13,11 @@
     
       
         <title>
-          Reportes  - Gestii Knowledge Base </title>
+          Reportes  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -158,8 +160,8 @@ Generar Reporte. Después de algunos minutos podrá descargarlo desde la
 pestaña de notificaciones.</p>
 
 <p>Si necesita un reporte de sólo ciertas visitas, utilize el botón
-de Filtro (<img class=textsize src=/images/buttons/filter.png />) para seleccionar sólo las visitas que requiere y
-posteriormente utilize el botón de <img class=textsize src=/images/buttons/generatereport.png />.</p>
+de Filtro (<img src="/images/buttons/filter.png"/>) para seleccionar sólo las visitas que requiere y
+posteriormente utilize el botón de <img src="/images/buttons/generatereport.png"/>.</p>
 
 <p>Si la información de las visitas incluye imágenes, éstas serán
 incluidas junto con el archivo del reporte.</p>

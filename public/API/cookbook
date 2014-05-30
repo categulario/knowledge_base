@@ -13,7 +13,7 @@
     
       
         <title>
-          Gestión de Visitas  - Gestii KB </title>
+          Cookbook  - Gestii KB </title>
       
     
 
@@ -96,7 +96,7 @@
           
             <li><a href="/">Home</a> <span class="divider">/</span></li>
           
-            <li><a href="/agentes/">Agentes</a> <span class="divider">/</span></li>
+            <li><a href="/API/">API</a> <span class="divider">/</span></li>
           
         </ul>
       
@@ -110,19 +110,23 @@
                   <ul class="nav nav-list menu">
                     
                       <li>
-                        <a href="/agentes/eliminar%20y%20desactivar">Eliminar y desactivar</a>
+                        <a href="/API/auxiliares">Auxiliares</a>
                       </li>
                     
                       <li>
-                        <a href="/agentes/estatus">Estatus</a>
+                        <a href="/API/cookbook">Cookbook</a>
                       </li>
                     
                       <li>
-                        <a href="/agentes/gestion">Gestion</a>
+                        <a href="/API/objetos">Objetos</a>
                       </li>
                     
                       <li>
-                        <a href="/agentes/token">Token</a>
+                        <a href="/API/operaciones">Operaciones</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/peticiones">Peticiones</a>
                       </li>
                     
                   </ul>
@@ -130,27 +134,16 @@
               <div class="span8">
                 
 
-                <h1>Gestión de Visitas</h1>
+                <h1>Cookbook</h1>
 
-<p>Si usted elige el botón de Más Información * (??) se le presentarán varias opciones
-de gestión de agentes:</p>
+<p>A continuación listamos recetas rápidas y deliciosas para realizar algunas de las acciones complejas más comunes de esta API.</p>
 
-<dl>
-  <dt><strong>Editar</strong></dt>
-  <dd>Puede cambiar el nombre, contraseña, teléfono o grupo del agente.</dd>
-  <dt><strong>Generar nuevo token</strong></dt>
-  <dd>Genera un token para conectar un nuevo celular a la cuenta del agente.</dd>
-  <dt><strong>Asignar encuestas</strong></dt>
-  <dd>Permite seleccionar un cuestionario para que el agente lo aplique como encuesta.</dd>
-  <dt><strong>Ver ruta del día</strong></dt>
-  <dd>Muestra la ruta del agente en la pestaña de mapas.</dd>
-  <dt><strong>Desactivar</strong></dt>
-  <dd>Libera la licencia del agente y le impide conectarse a Gestii de nuevo.</dd>
-  <dt><strong>Reactivar</strong></dt>
-  <dd>Permite al agente conectarse a Gestii de nuevo y ocupa una licencia. Sólo aparece cuando el agente está desactivado.</dd>
-  <dt><strong>Eliminar</strong></dt>
-  <dd>Elimina por completo la información del agente. Sólo aparece cuando el agente está desactivado.</dd>
-</dl>
+<h2>Agentes</h2>
+
+<p>Regenerar el token de un agente:</p>
+
+<pre><code>PUT /api/v1/agents/1?token=true?apikey=123456
+</code></pre>
 
 
                 

@@ -13,11 +13,11 @@
     
       
         <title>
-          Tipos de campos  - Gestii Knowledge Base </title>
+          Tipos de campos  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -146,25 +148,25 @@
 que realiza el agente durante la visita.</p>
 
 <dl>
-  <dt><strong><img class=textsize src=/images/icons/text.png /> Texto</strong></dt>
+  <dt><strong><img src="/images/icons/text.png"/> Texto</strong></dt>
   <dd>Guarda una cadena de texto.</dd>
-  <dt><strong><img class=textsize src=/images/icons/yes-no.png /> Verdadero/falso</strong></dt>
+  <dt><strong><img src="/images/icons/yes-no.png"/> Verdadero/falso</strong></dt>
   <dd>Guarda alguno de los valores verdadero o falso.</dd>
-  <dt><strong><img class=textsize src=/images/icons/list.png /> Listas desplegables</strong></dt>
+  <dt><strong><img src="/images/icons/list.png"/> Listas desplegables</strong></dt>
   <dd>Guarda un valor de una lista predeterminada para ese campo.</dd>
-  <dt><strong><img class=textsize src=/images/icons/date.png /> Fecha</strong></dt>
+  <dt><strong><img src="/images/icons/date.png"/> Fecha</strong></dt>
   <dd>Guarda un día en específico.</dd>
-  <dt><strong><img class=textsize src=/images/icons/tag.png /> Etiqueta</strong></dt>
+  <dt><strong><img src="/images/icons/tag.png"/> Etiqueta</strong></dt>
   <dd>Muestra texto predeterminado. Este campo no es editable.</dd>
-  <dt><strong><img class=textsize src=/images/icons/photo.png /> Foto</strong></dt>
+  <dt><strong><img src="/images/icons/photo.png"/> Foto</strong></dt>
   <dd>Guarda una imágen de la cámara del celular.</dd>
-  <dt><strong><img class=textsize src=/images/icons/audio.png /> Audio</strong></dt>
+  <dt><strong><img src="/images/icons/audio.png"/> Audio</strong></dt>
   <dd>Guarda una grabación del micrófono del celular.</dd>
-  <dt><strong><img class=textsize src=/images/icons/subquestionnaire.png /> Subcuestionario</strong></dt>
+  <dt><strong><img src="/images/icons/subquestionnaire.png"/> Subcuestionario</strong></dt>
   <dd>Puede guardar más campos o subcuestionarios dentro de sí.
   Si su cuestionario es muy largo, es útil separarlo en subcuestionarios
   para simplificar la navegación y captura de datos.</dd>
-  <dt><strong><img class=textsize src=/images/icons/print.png /> Impresión</strong></dt>
+  <dt><strong><img src="/images/icons/print.png"/> Impresión</strong></dt>
   <dd>No guarda información. Manda imprimir algún formato a una impresora
   Bluetooth desde el celular que realiza la encuesta.</dd>
 </dl>
@@ -172,7 +174,7 @@ que realiza el agente durante la visita.</p>
 <h1>Artículos Relacionados</h1>
 
 <ul>
-<li><a href="edicion">Edición</a></li>
+<li><a>Edición</a></li>
 </ul>
 
 

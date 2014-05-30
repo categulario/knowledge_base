@@ -13,11 +13,11 @@
     
       
         <title>
-          Token  - Gestii Knowledge Base </title>
+          Token  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -141,7 +143,7 @@ token.</p>
 
 <p>Cuando un agente abre Gestii en un celular nuevo e ingresa sus datos, Gestii le pedirá
 que ingrese un token. Para generar un token para un agente basta con seleccionar el
-botón de Más Información (??) y posteriormente <em>Generar nuevo token&hellip;</em>. El nuevo
+botón de Más Información (??) y posteriormente <em>Generar nuevo token…</em>. El nuevo
 token aparecerá en la fila correspondiente al agente en cuestión en la columna de
 Token.</p>
 

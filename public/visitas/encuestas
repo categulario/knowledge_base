@@ -13,11 +13,11 @@
     
       
         <title>
-          Encuestas  - Gestii Knowledge Base </title>
+          Encuestas  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -156,14 +158,14 @@ Gestii creará una visita simple
 para cada realización.</p>
 
 <p>Para asignar una encuesta, vaya a la pestaña de Agentes y seleccione el botón
-de más información (<img class=textsize src=/images/buttons/moreinfo.png />).
-Posteriormente, seleccione &ldquo;Asignar encuestas&hellip;&rdquo;,
-elija los cuestionarios que desee, y seleccione el botón de <img class=textsize src=/images/buttons/assign.png />.</p>
+de más información (<img src="/images/buttons/moreinfo.png"/>).
+Posteriormente, seleccione “Asignar encuestas…”,
+elija los cuestionarios que desee, y seleccione el botón de <img src="/images/buttons/assign.png"/>.</p>
 
 <h1>Artículos Relacionados</h1>
 
 <ul>
-<li><a href="tipos de visitas">Tipos de visitas</a></li>
+<li><a>Tipos de visitas</a></li>
 </ul>
 
 

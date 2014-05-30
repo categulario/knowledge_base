@@ -13,11 +13,11 @@
     
       
         <title>
-          Campos Extra  - Gestii Knowledge Base </title>
+          Campos Extra  - Gestii KB </title>
       
     
 
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.png" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii Knowledge Base</a>
+          <a class="brand" href="/">Gestii KB</a>
 
           <div class="nav-collapse">
             
@@ -71,6 +71,8 @@
                   <li><a href="/grupos">Grupos</a></li>
                 
                   <li><a href="/misc">Misc</a></li>
+                
+                  <li><a href="/API">API</a></li>
                 
               </ul>
             
@@ -155,7 +157,7 @@ ser extra en las propiedades del campo en cuestión.</p>
 <h1>Artículos Relacionados</h1>
 
 <ul>
-<li><a href="propiedades">Propiedades</a></li>
+<li><a>Propiedades</a></li>
 <li><a href="/misc/filtros">Filtros</a></li>
 </ul>
 
