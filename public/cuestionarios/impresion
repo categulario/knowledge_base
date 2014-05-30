@@ -154,7 +154,7 @@ hora actual.</p>
 
 <ul>
 <li><code>{{ var_name }}</code> imprime el valor del campo cuya variable tenga el nombre <code>var_name</code>.</li>
-<li><code>{$ var_name $}</code> imprime el valor de la variable adicional <code>var_name</code>. Puede aprender más acerca de las variables adicionales en el <a href="/misc/importación avanzada">artículo sobre importación avanzada</a>.</li>
+<li><code>{$ var_name $}</code> imprime el valor de la variable adicional <code>var_name</code>. Puede aprender más acerca de las variables adicionales en el <a href="/misc/importacion avanzada">artículo sobre importación avanzada</a>.</li>
 <li><code>{% var_name %}</code> imprime el valor de la variable especial <code>var_name</code>.</li>
 </ul>
 

@@ -21,7 +21,7 @@
       {{ end }}
     {{ end }}
 
-		<link rel="shortcut icon" href="{{ asset "/favicon.ico" }}" />
+		<link rel="shortcut icon" href="{{ asset "/favicon.png" }}" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 

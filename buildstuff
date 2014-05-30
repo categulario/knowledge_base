@@ -6,3 +6,6 @@ mv localhost:9000 public
 #find localhost:9000 -name "*%*" -delete
 #rm ~/Dropbox/gestii_dev/kb.zip 
 #zip -r ~/Dropbox/gestii_dev/kb.zip 
+cd public
+ncftpput -R -v -E -u freddy -p yoloswag gestii.com / .
+cd -

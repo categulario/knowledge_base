@@ -11,7 +11,7 @@ hora actual.
 Las secuencias especiales son:
 
 * `{{ var_name }}` imprime el valor del campo cuya variable tenga el nombre `var_name`.
-* `{$ var_name $}` imprime el valor de la variable adicional `var_name`. Puede aprender más acerca de las variables adicionales en el [artículo sobre importación avanzada](/misc/importación avanzada).
+* `{$ var_name $}` imprime el valor de la variable adicional `var_name`. Puede aprender más acerca de las variables adicionales en el [artículo sobre importación avanzada](/misc/importacion avanzada).
 * `{% var_name %}` imprime el valor de la variable especial `var_name`.
 
 Las variables especiales disponibles son:

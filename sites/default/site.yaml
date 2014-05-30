@@ -9,18 +9,15 @@
 
 page:
   # Name of the site.
-  brand: "Gestii Knowledge Base"
+  brand: "Gestii KB"
 
   # Some properties for <head>.
   head:
     # Title that appears on the <title> tag.
-    title: "Gestii Knowledge Base"
+    title: "Gestii KB"
 
   # Some properties for <body>.
   body:
-    # Title that appears on the <h1> tag.
-    title: "A new Luminos project"
-
     # Top navigation bar.
     menu:
       - { text: "Visitas", url: "/visitas" }
@@ -29,6 +26,7 @@ page:
       - { text: "Mapas", url: "/mapas" }
       - { text: "Grupos", url: "/grupos" }
       - { text: "Misc", url: "/misc" }
+      - { text: "API", url: "/API" }
 
     # Top-right navigation helper.
     menu_pull:
