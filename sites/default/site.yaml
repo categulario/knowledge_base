@@ -9,12 +9,12 @@
 
 page:
   # Name of the site.
-  brand: "Gestii KB"
+  brand: "Gestii Knowledge Base"
 
   # Some properties for <head>.
   head:
     # Title that appears on the <title> tag.
-    title: "Gestii KB"
+    title: "Gestii Knowledge Base"
 
   # Some properties for <body>.
   body:
