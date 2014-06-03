@@ -58,7 +58,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="{{ asset "/" }}">{{ setting "page/brand" }}</a>
+          <a class="brand" href="{{ asset "/" }}"><img style="height: 25px; padding: none;" src=/images/logo.png />  {{ setting "page/brand" }}</a>
 
           <div class="nav-collapse">
             {{ if settings "page/body/menu" }}

@@ -57,40 +57,40 @@ Las visitas son el objeto central de procesamiento de Gestii y se utilizan para 
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|--------------------------------------------------------------------------------------------
-id             | Integer   | \e
-code           | String    | \e
-subcode        | String    | \e
-description    | String    | \e
+id             | Integer   | 
+code           | String    | 
+subcode        | String    | 
+description    | String    | 
 status         | Integer   | Uno de: `0` (pendiente), `1` (disponible), `2` (terminada), `3` (cancelada), `4` (vencida).
 type           | Integer   | Uno de: `0` (normal), `1` (encuesta), `2` (supervisión).
 priority       | Integer   | Del 1 al 5, siendo 5 la prioridad más alta.
-street         | String    | \e
-district       | String    | \e
-zipcode        | String    | \e
-city           | String    | \e
-state          | String    | \e
-country        | String    | \e
+street         | String    | 
+district       | String    | 
+zipcode        | String    | 
+city           | String    | 
+state          | String    | 
+country        | String    | 
 address        | String    | Dirección estilizada para mostrar.
-latitude       | Decimal   | \e
-longitude      | Decimal   | \e
+latitude       | Decimal   | 
+longitude      | Decimal   | 
 agent_id       | Integer   | Puede ser `null` si se encuentra aun sin asignar.
 upload_id      | Integer   | Puede ser `null` si no se creó en una importación.
-form_id        | Integer   | \e
-group_id       | Integer   | \e
-created_at     | Timestamp | \e
-updated_at     | Timestamp | \e
-available_at   | Timestamp | \e
-expires_at     | Timestamp | \e
-started_at     | Timestamp | \e
-finished_at    | Timestamp | \e
-received_at    | Timestamp | \e
-location_id    | Integer   | \e
+form_id        | Integer   | 
+group_id       | Integer   | 
+created_at     | Timestamp | 
+updated_at     | Timestamp | 
+available_at   | Timestamp | 
+expires_at     | Timestamp | 
+started_at     | Timestamp | 
+finished_at    | Timestamp | 
+received_at    | Timestamp | 
+location_id    | Integer   | 
 distance       | Integer   | Distancia en metros a la que se realizó la visita.
 timespan       | Integer   | Duración en minutos de la visita.
-alarms         | Integer   | \e
+alarms         | Integer   | 
 supervising_id | Integer   | El id de la visita que se está supervisando.
 supervision    | Integer   | Uno de: `null` (sin supervisar), `0` (en supervisión), `1` (aceptada), `2` (corregida), `3` (rechazada).
-version        | Integer   | \e
+version        | Integer   | 
 
 <#visits-list>
 ### Listar visitas
@@ -101,26 +101,26 @@ Devuelve una colección de objetos tipo [Visita][]. Este método soporta las ope
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|-------------------------------------
-code           | String    | Opcional  | \e
-status         | Integer   | Opcional  | \e
-priority       | Integer   | Opcional  | \e
-agent_id       | Integer   | Opcional  | \e
-upload_id      | Integer   | Opcional  | \e
-form_id        | Integer   | Opcional  | \e
-group_id       | Integer   | Opcional  | \e
-created_at     | DateTime  | Opcional  | \e
-updated_at     | DateTime  | Opcional  | \e
-available_at   | DateTime  | Opcional  | \e
-expires_at     | DateTime  | Opcional  | \e
-finished_at    | DateTime  | Opcional  | \e
-received_at    | DateTime  | Opcional  | \e
-alarms         | Boolean   | Opcional  | \e
+code           | String    | Opcional  | 
+status         | Integer   | Opcional  | 
+priority       | Integer   | Opcional  | 
+agent_id       | Integer   | Opcional  | 
+upload_id      | Integer   | Opcional  | 
+form_id        | Integer   | Opcional  | 
+group_id       | Integer   | Opcional  | 
+created_at     | DateTime  | Opcional  | 
+updated_at     | DateTime  | Opcional  | 
+available_at   | DateTime  | Opcional  | 
+expires_at     | DateTime  | Opcional  | 
+finished_at    | DateTime  | Opcional  | 
+received_at    | DateTime  | Opcional  | 
+alarms         | Boolean   | Opcional  | 
 sort           | String    | Opcional  | Default: `-finished_at`.
-offset         | Integer   | Opcional  | \e
-limit          | Integer   | Opcional  | \e
-fields         | CSV       | Opcional  | \e
+offset         | Integer   | Opcional  | 
+limit          | Integer   | Opcional  | 
+fields         | CSV       | Opcional  | 
 embed          | CSV       | Opcional  | Aceptados: `agent`, `form`, `group`.
-count          | Boolean   | Opcional  | \e
+count          | Boolean   | Opcional  | 
 
 Listar los ids y códigos de las visitas realizadas por el agente con id "1" el 1 de enero de 2014:
 
@@ -259,7 +259,7 @@ Devuelve un objeto tipo [Visita][]. Este método soporta las operaciones de [ext
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|-------------------------------------
-fields         | CSV       | Opcional  | \e
+fields         | CSV       | Opcional  | 
 embed          | CSV       | Opcional  | Aceptados: `agent`, `form`, `group`.
 
 Mostrar el código y subcódigo de la visita con id "1" y vincular el usuario su agente asignado:
@@ -548,7 +548,7 @@ Content-Type: application/json
 ```
 
 ```json
-\e
+
 ```
 
 <#visits-assign>
@@ -560,7 +560,7 @@ Cambia el [agente](#agents) asignado a una visita. Si la visita no había sido a
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|----------------------------------------------------------------------------
-agent_id       | Integer   | Requerido | \e
+agent_id       | Integer   | Requerido | 
 supervise      | Boolean   | Opcional  | Default: `false`. En `true` para [supervisar](#visits-supervise) la visita.
 
 Reasignar la visita con id "1" al agente con id "3":
@@ -752,23 +752,23 @@ Parámetro      | Tipo      | Estatus   | Notas
 queue          | String    | Requerido | Debe ser: `reports`.
 generator      | String    | Requerido | Uno de la [lista de reportes](#visits-reports).
 images         | Boolean   | Opcional  | Default: `false`.
-code           | String    | Opcional  | \e
-status         | Integer   | Opcional  | \e
-priority       | Integer   | Opcional  | \e
-agent_id       | Integer   | Opcional  | \e
-upload_id      | Integer   | Opcional  | \e
-form_id        | Integer   | Opcional  | \e
-group_id       | Integer   | Opcional  | \e
-created_at     | DateTime  | Opcional  | \e
-updated_at     | DateTime  | Opcional  | \e
-available_at   | DateTime  | Opcional  | \e
-expires_at     | DateTime  | Opcional  | \e
-finished_at    | DateTime  | Opcional  | \e
-received_at    | DateTime  | Opcional  | \e
-alarms         | Boolean   | Opcional  | \e
+code           | String    | Opcional  | 
+status         | Integer   | Opcional  | 
+priority       | Integer   | Opcional  | 
+agent_id       | Integer   | Opcional  | 
+upload_id      | Integer   | Opcional  | 
+form_id        | Integer   | Opcional  | 
+group_id       | Integer   | Opcional  | 
+created_at     | DateTime  | Opcional  | 
+updated_at     | DateTime  | Opcional  | 
+available_at   | DateTime  | Opcional  | 
+expires_at     | DateTime  | Opcional  | 
+finished_at    | DateTime  | Opcional  | 
+received_at    | DateTime  | Opcional  | 
+alarms         | Boolean   | Opcional  | 
 sort           | String    | Opcional  | Default: `-finished_at`.
-offset         | Integer   | Opcional  | \e
-limit          | Integer   | Opcional  | \e
+offset         | Integer   | Opcional  | 
+limit          | Integer   | Opcional  | 
 
 Generar un reporte PDF de las visitas de la semana del agente con id "1":
 
@@ -882,15 +882,15 @@ Un agente es un tipo de usuario con permisos para conectarse desde las apps móv
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|----------------------------------------------------------------------
-id             | Integer   | \e
-username       | String    | \e
+id             | Integer   | 
+username       | String    | 
 status         | Integer   | Uno de: `0` (desconectado), `1` (ausente), `2` (conectado).
 license        | Boolean   | Uno de: `true` si el agente tiene una licencia activa, `false` si no.
-battery        | Integer   | \e
-name           | String    | \e
-phone          | String    | \e
-token          | String    | \e
-group_id       | Integer   | \e
+battery        | Integer   | 
+name           | String    | 
+phone          | String    | 
+token          | String    | 
+group_id       | Integer   | 
 
 <#agents-list>
 ### Listar agentes
@@ -901,17 +901,17 @@ Devuelve una colección de objetos tipo [Agente][]. Este método soporta las ope
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|---------------------
-username       | String    | Opcional  | \e
-name           | String    | Opcional  | \e
-status         | Integer   | Opcional  | \e
-license        | Boolean   | Opcional  | \e
-group_id       | Integer   | Opcional  | \e
+username       | String    | Opcional  | 
+name           | String    | Opcional  | 
+status         | Integer   | Opcional  | 
+license        | Boolean   | Opcional  | 
+group_id       | Integer   | Opcional  | 
 sort           | String    | Opcional  | Default: `username`.
-offset         | Integer   | Opcional  | \e
-limit          | Integer   | Opcional  | \e
-fields         | CSV       | Opcional  | \e
+offset         | Integer   | Opcional  | 
+limit          | Integer   | Opcional  | 
+fields         | CSV       | Opcional  | 
 embed          | CSV       | Opcional  | Aceptados: `group`.
-count          | Boolean   | Opcional  | \e
+count          | Boolean   | Opcional  | 
 
 Listar agentes cuyo usuario comience por "test" ordenados descendentemente por nombre:
 
@@ -959,7 +959,7 @@ Devuelve un objeto tipo [Agente][]. Este método soporta las operaciones de [ext
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|--------------------
-fields         | CSV       | Opcional  | \e
+fields         | CSV       | Opcional  | 
 embed          | CSV       | Opcional  | Aceptados: `group`.
 
 Mostrar el agente con id "1" y sus recursos vinculados:
@@ -999,11 +999,11 @@ Crea un agente y devuelve un objeto tipo [Agente][] representando el recurso cre
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|---------------------------------
 username       | String    | Requerido | No podrá ser modificado después.
-password       | String    | Requerido | \e
-name           | String    | Requerido | \e
+password       | String    | Requerido | 
+name           | String    | Requerido | 
 phone          | String    | Opcional  | Default: vacío.
 license        | Boolean   | Opcional  | Default: `true`.
-group_id       | Integer   | Requerido | \e
+group_id       | Integer   | Requerido | 
 
 Crear un agente nuevo con licencia activada y sin número telefónico:
 
@@ -1038,11 +1038,11 @@ Actualiza los datos de un agente y devuelve un objeto tipo [Agente][] con las mo
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|----------------------------------------------
 password       | String    | Opcional  | Si existe, la contraseña será modificada.
-name           | String    | Opcional  | \e
-phone          | String    | Opcional  | \e
-license        | Boolean   | Opcional  | \e
+name           | String    | Opcional  | 
+phone          | String    | Opcional  | 
+license        | Boolean   | Opcional  | 
 token          | Boolean   | Opcional  | Enviar en `true` para generar un nuevo token.
-group_id       | Integer   | Opcional  | \e
+group_id       | Integer   | Opcional  | 
 
 Actualizar el nombre y número telefónico del agente con id "1":
 
@@ -1109,7 +1109,7 @@ Content-Type: application/json
 ```
 
 ```json
-\e
+
 ```
 
 <#agents-surveys>
@@ -1163,7 +1163,7 @@ Content-Type: application/json
 ```
 
 ```json
-\e
+
 ```
 
 <#agents-location>
@@ -1213,8 +1213,8 @@ Devuelve una colección de objetos tipo [Location][] con las ubicaciones de rast
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------
-id             | Integer   | Requerido | \e
-date           | Date      | Requerido | \e
+id             | Integer   | Requerido | 
+date           | Date      | Requerido | 
 
 Mostrar el rastreo del agente con id "1" para el 1 de enero de 2014:
 
@@ -1300,14 +1300,14 @@ Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------------------------
 queue          | String    | Requerido | Debe ser: `reports`.
 generator      | String    | Requerido | Uno de la [lista de reportes](#agents-reports).
-username       | String    | Opcional  | \e
-name           | String    | Opcional  | \e
-status         | Integer   | Opcional  | \e
-license        | Boolean   | Opcional  | \e
-group_id       | Integer   | Opcional  | \e
+username       | String    | Opcional  | 
+name           | String    | Opcional  | 
+status         | Integer   | Opcional  | 
+license        | Boolean   | Opcional  | 
+group_id       | Integer   | Opcional  | 
 sort           | String    | Opcional  | Default: `username`.
-offset         | Integer   | Opcional  | \e
-limit          | Integer   | Opcional  | \e
+offset         | Integer   | Opcional  | 
+limit          | Integer   | Opcional  | 
 
 Generar un reporte de productividad del [grupo](#groups) con id "1":
 
@@ -1356,11 +1356,11 @@ Un admin es un tipo de usuario con permisos para conectarse vía internet a la p
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|--------------------------------------------------------------------------
-id             | Integer   | \e
-username       | String    | \e
-name           | String    | \e
+id             | Integer   | 
+username       | String    | 
+name           | String    | 
 active         | Boolean   | Uno de: `true` si el admin puede iniciar sesión en la web, `false` si no.
-email          | String    | \e
+email          | String    | 
 
 <#admins-list>
 ### Listar admins
@@ -1371,14 +1371,14 @@ Devuelve una colección de objetos tipo [Admin][]. Este método soporta las oper
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|---------------------
-username       | String    | Opcional  | \e
-name           | String    | Opcional  | \e
-active         | Integer   | Opcional  | \e
+username       | String    | Opcional  | 
+name           | String    | Opcional  | 
+active         | Integer   | Opcional  | 
 sort           | String    | Opcional  | Default: `username`.
-offset         | Integer   | Opcional  | \e
-limit          | Integer   | Opcional  | \e
-fields         | CSV       | Opcional  | \e
-count          | Boolean   | Opcional  | \e
+offset         | Integer   | Opcional  | 
+limit          | Integer   | Opcional  | 
+fields         | CSV       | Opcional  | 
+count          | Boolean   | Opcional  | 
 
 Listar los ids y usuarios de los administradores activos, por ejemplo, para mostrar en un `<select>`:
 
@@ -1411,7 +1411,7 @@ Devuelve un objeto tipo [Admin][]. Este método soporta la operación [extracci�
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------
-fields         | CSV       | Opcional  | \e
+fields         | CSV       | Opcional  | 
 
 Mostrar la información del admin con id "2":
 
@@ -1442,9 +1442,9 @@ Crea un admin y devuelve un objeto tipo [Admin][] representando el recurso cread
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|---------------------------------
 username       | String    | Requerido | No podrá ser modificado después.
-password       | String    | Requerido | \e
-name           | String    | Requerido | \e
-email          | String    | Requerido | \e
+password       | String    | Requerido | 
+name           | String    | Requerido | 
+email          | String    | Requerido | 
 active         | Boolean   | Opcional  | Default: `true`.
 
 Crear un admin inactivo que no podrá iniciar sesión hasta que sea activado:
@@ -1476,9 +1476,9 @@ Actualiza los datos de un admin y devuelve un objeto tipo [Admin][] con las modi
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------------------
 password       | String    | Requerido | Si existe, la contraseña será modificada.
-name           | String    | Requerido | \e
-email          | String    | Requerido | \e
-active         | Boolean   | Opcional  | \e
+name           | String    | Requerido | 
+email          | String    | Requerido | 
+active         | Boolean   | Opcional  | 
 
 Actualizar el admin con id "3" para concederle permisos de acceso:
 
@@ -1535,7 +1535,7 @@ Content-Type: application/json
 ```
 
 ```json
-\e
+
 ```
 
 <#admins-permissions>
@@ -1588,7 +1588,7 @@ Content-Type: application/json
 ```
 
 ```json
-\e
+
 ```
 
 <#admins-catalog>
@@ -1671,7 +1671,7 @@ Sobreescribe los objetos que el admin tiene permiso de visualizar.
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|-------------------------------------------------
 object         | String    | Requerido | Uno de: `groups`, `forms`, `layouts`, `reports`.
-ids            | CSV       | Requerido | \e
+ids            | CSV       | Requerido | 
 
 Asignar permisos para visualizar los grupos con ids "1", "2" y "3" al admin con id "1":
 
@@ -1683,7 +1683,7 @@ Content-Type: application/json
 ```
 
 ```json
-\e
+
 ```
 
 Cada uno de los permisos de objetos restringe los resultados de los métodos que listan y manipulan los siguientes objetos: `groups` limita [visitas](#visits), [agentes](#agents) y [grupos](#groups); `forms` limita [cuestionarios](#forms); `layouts` limita [layouts](#layouts); `reports` limita [reportes](#reports).
@@ -1755,7 +1755,7 @@ Content-Type: application/json
 ```
 
 ```json
-\e
+
 ```
 
 <#groups>
@@ -1779,8 +1779,8 @@ Los grupos son utilizados para reprensentar divisiones organizacionales de [agen
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|------
-id             | Integer   | \e
-name           | String    | \e
+id             | Integer   | 
+name           | String    | 
 
 El atributo `name` permite un formato especial donde es posible jerarquizar los grupos simplemente antecediendo su nombre con los nombres de sus niveles superiores separados por el caracter `|`. Es decir, si por ejemplo en tu organización existiera una región "Norte" con sucursales "Monterrey" y "Torreón", el nombre de dichos grupos debería ser `Norte|Monterrey` y `Norte|Torreón` respectivamente. Este formato es procesado por Gestii para extender algunas funcionalidades, principalmente en la interfaz web.
 
@@ -1795,13 +1795,13 @@ Devuelve una colección de objetos tipo [Grupo][]. Este método soporta las oper
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|-------------------------------------
-name           | String    | Opcional  | \e
+name           | String    | Opcional  | 
 levels         | Integer   | Opcional  | Uno de: `0`, `1`, `2`. Default: `0`.
 sort           | String    | Opcional  | Default: `name`.
-offset         | Integer   | Opcional  | \e
-limit          | Integer   | Opcional  | \e
-fields         | CSV       | Opcional  | \e
-count          | Boolean   | Opcional  | \e
+offset         | Integer   | Opcional  | 
+limit          | Integer   | Opcional  | 
+fields         | CSV       | Opcional  | 
+count          | Boolean   | Opcional  | 
 
 El parámetro `levels` normaliza el número de niveles que es devuelto en el nombre del grupo, es decir, aun cuando un grupo no contenga niveles superiores, si `levels` es establecido a `2`, el formato del nombre será el siguiente: `-|-|Oficina DF`. Si el grupo tiene más niveles de los indicados, los niveles superiores serán omitidos en la respuesta.
 
@@ -1863,7 +1863,7 @@ Devuelve un objeto tipo [Grupo][]. Este método soporta la operación [extracci�
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|-------------------------------------
 levels         | Integer   | Opcional  | Uno de: `0`, `1`, `2`. Default: `0`.
-fields         | CSV       | Opcional  | \e
+fields         | CSV       | Opcional  | 
 
 Mostrar la información del grupo con id "1":
 
@@ -1890,7 +1890,7 @@ Crea un grupo y devuelve un objeto tipo [Grupo][] representando el recurso cread
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------
-name           | String    | Requerido | \e
+name           | String    | Requerido | 
 
 Crear una sucursal llamada "Ciudad de México" perteneciente a la sucursal "Centro":
 
@@ -1917,7 +1917,7 @@ Actualiza los datos de un grupo y devuelve un objeto tipo [Grupo][] con las modi
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------
-name           | String    | Requerido | \e
+name           | String    | Requerido | 
 
 Cambiar el nombre del grupo con id "3":
 
@@ -1957,7 +1957,7 @@ Content-Type: application/json
 ```
 
 ```json
-\e
+
 ```
 
 Eliminar el grupo con id "1" y reubicar sus visitas y agentes al grupo con id "2":
@@ -1970,7 +1970,7 @@ Content-Type: application/json
 ```
 
 ```json
-\e
+
 ```
 
 **Nota:** Si se elige `cascade=delete`, el mecanismo de [eliminación de agentes](#agents-delete) también será desencadenado.

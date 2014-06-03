@@ -13,7 +13,7 @@
     
       
         <title>
-          Filtros  - Gestii KB </title>
+          Filtros  - Gestii Knowledge Base </title>
       
     
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii KB</a>
+          <a class="brand" href="/"><img style="height: 25px; padding: none;" src=/images/logo.png />  Gestii Knowledge Base</a>
 
           <div class="nav-collapse">
             

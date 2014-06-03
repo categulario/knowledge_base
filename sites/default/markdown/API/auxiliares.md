@@ -30,13 +30,13 @@ Un upload representa un archivo de importación de visitas. En la API un upload 
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|-------------------------------------------------
-id             | Integer   | \e
-name           | String    | \e
+id             | Integer   | 
+name           | String    | 
 status         | Integer   | Ver el [diccionario de status](#uploads-status).
 processed      | Integer   | Número de visitas procesadas.
 geocoded       | Integer   | Número de visitas geolocalizadas.
-checksum       | String    | \e
-created_at     | Timestamp | \e
+checksum       | String    | 
+created_at     | Timestamp | 
 
 El contador `processed` indica el número de visitas que se han leído correctamente del archivo. El contador `geocoded`, por su parte, comienza una vez que el anterior ha finalizado e indica el número de visitas que han geolocalizado con éxito. Es importante recalcar que la geolocalización no comienza hasta que todas las visitas del archivo hayan sido procesadas sin ningún error.
 
@@ -71,7 +71,7 @@ Un extradata representa un campo de la información precargada para una visita d
 Atributo       | Tipo      | Notas
 ---------------|-----------|----------------------------------------------------
 caption        | String    | El nombre de la columna del archivo de importación.
-value          | String    | \e
+value          | String    | 
 
 <#feedbacks>
 Feedback
@@ -91,7 +91,7 @@ Atributo       | Tipo      | Notas
 ---------------|-----------|--------------------------------------------------
 varname        | String    | La variable del campo del [cuestionario](#forms).
 caption        | String    | La etiqueta del campo del [cuestionario](#forms).
-value          | String    | \e
+value          | String    | 
 
 <#locations>
 Location
@@ -113,13 +113,13 @@ Una location representa un punto de ubicación geográfica y un evento de uno de
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|----------------------------------------------------
-id             | Integer   | \e
-agent_id       | Integer   | \e
+id             | Integer   | 
+agent_id       | Integer   | 
 event          | Integer   | Ver el [diccionario de eventos](#locations-events).
-latitude       | Decimal   | \e
-longitude      | Decimal   | \e
+latitude       | Decimal   | 
+longitude      | Decimal   | 
 accuracy       | Integer   | Precisión en metros de la localización.
-created_at     | Timestamp | \e
+created_at     | Timestamp | 
 
 <#locations-events>
 **Diccionario de eventos:**
@@ -151,9 +151,9 @@ Un reporte representa un archivo comprimido que puede ser generado y descargado 
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|------
-generator      | String    | \e
-name           | String    | \e
-description    | String    | \e
+generator      | String    | 
+name           | String    | 
+description    | String    | 
 
 <#jobs>
 DelayedJob
@@ -171,7 +171,7 @@ Un delayed job es un proceso que se ejecuta de forma asíncrona y en background 
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|--------------------------------------------
-id             | Integer   | \e
+id             | Integer   | 
 status         | Integer   | Uno de: `0` (procesando), `1` (finalizado).
 [Agente]: #agents
 [Admin]: #admins

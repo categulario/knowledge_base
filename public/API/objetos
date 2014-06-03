@@ -13,7 +13,7 @@
     
       
         <title>
-          Objetos  - Gestii KB </title>
+          Objetos  - Gestii Knowledge Base </title>
       
     
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii KB</a>
+          <a class="brand" href="/"><img style="height: 25px; padding: none;" src=/images/logo.png />  Gestii Knowledge Base</a>
 
           <div class="nav-collapse">
             
@@ -114,7 +114,19 @@
                       </li>
                     
                       <li>
+                        <a href="/API/auxiliares.md.bak">Auxiliares.md.bak</a>
+                      </li>
+                    
+                      <li>
                         <a href="/API/cookbook">Cookbook</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/cookbook.md.bak">Cookbook.md.bak</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/index.md.bak">Index.md.bak</a>
                       </li>
                     
                       <li>
@@ -122,11 +134,23 @@
                       </li>
                     
                       <li>
+                        <a href="/API/objetos.md.bak">Objetos.md.bak</a>
+                      </li>
+                    
+                      <li>
                         <a href="/API/operaciones">Operaciones</a>
                       </li>
                     
                       <li>
+                        <a href="/API/operaciones.md.bak">Operaciones.md.bak</a>
+                      </li>
+                    
+                      <li>
                         <a href="/API/peticiones">Peticiones</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/peticiones.md.bak">Peticiones.md.bak</a>
                       </li>
                     
                   </ul>
@@ -204,25 +228,25 @@
 <tr>
 <td>id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>code</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>subcode</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>description</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -246,37 +270,37 @@
 <tr>
 <td>street</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>district</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>zipcode</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>city</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>state</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>country</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -288,13 +312,13 @@
 <tr>
 <td>latitude</td>
 <td>Decimal</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>longitude</td>
 <td>Decimal</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -312,61 +336,61 @@
 <tr>
 <td>form_id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>group_id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>created_at</td>
 <td>Timestamp</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>updated_at</td>
 <td>Timestamp</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>available_at</td>
 <td>Timestamp</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>expires_at</td>
 <td>Timestamp</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>started_at</td>
 <td>Timestamp</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>finished_at</td>
 <td>Timestamp</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>received_at</td>
 <td>Timestamp</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>location_id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -384,7 +408,7 @@
 <tr>
 <td>alarms</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -402,7 +426,7 @@
 <tr>
 <td>version</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -431,98 +455,98 @@
 <td>code</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>status</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>priority</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>agent_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>upload_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>form_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>group_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>created_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>updated_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>available_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>expires_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>finished_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>received_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>alarms</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -536,21 +560,21 @@
 <td>offset</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>limit</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>fields</td>
 <td>CSV</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -564,7 +588,7 @@
 <td>count</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -718,7 +742,7 @@ Content-Type: application/json
 <td>fields</td>
 <td>CSV</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -1060,7 +1084,7 @@ Content-Type: application/json
 Content-Type: application/json
 </code></pre>
 
-<pre><code>\e
+<pre><code>
 </code></pre>
 
 <p>&lt;#visits-assign&gt;</p>
@@ -1087,7 +1111,7 @@ Content-Type: application/json
 <td>agent_id</td>
 <td>Integer</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -1318,98 +1342,98 @@ Content-Type: application/json
 <td>code</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>status</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>priority</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>agent_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>upload_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>form_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>group_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>created_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>updated_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>available_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>expires_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>finished_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>received_at</td>
 <td>DateTime</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>alarms</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -1423,14 +1447,14 @@ Content-Type: application/json
 <td>offset</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>limit</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1559,13 +1583,13 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 <tr>
 <td>id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>username</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -1583,31 +1607,31 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 <tr>
 <td>battery</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>phone</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>token</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>group_id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1636,35 +1660,35 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 <td>username</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>status</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>license</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>group_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -1678,21 +1702,21 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 <td>offset</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>limit</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>fields</td>
 <td>CSV</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -1706,7 +1730,7 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 <td>count</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1770,7 +1794,7 @@ Content-Type: application/json
 <td>fields</td>
 <td>CSV</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -1839,14 +1863,14 @@ Content-Type: application/json
 <td>password</td>
 <td>String</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -1867,7 +1891,7 @@ Content-Type: application/json
 <td>group_id</td>
 <td>Integer</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1925,21 +1949,21 @@ Content-Type: application/json
 <td>name</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>phone</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>license</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -1953,7 +1977,7 @@ Content-Type: application/json
 <td>group_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2022,7 +2046,7 @@ Content-Type: application/json
 Content-Type: application/json
 </code></pre>
 
-<pre><code>\e
+<pre><code>
 </code></pre>
 
 <p>&lt;#agents-surveys&gt;</p>
@@ -2093,7 +2117,7 @@ Content-Type: application/json
 Content-Type: application/json
 </code></pre>
 
-<pre><code>\e
+<pre><code>
 </code></pre>
 
 <p>&lt;#agents-location&gt;</p>
@@ -2158,14 +2182,14 @@ Content-Type: application/json
 <td>id</td>
 <td>Integer</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>date</td>
 <td>Date</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2279,35 +2303,35 @@ Content-Type: application/json
 <td>username</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>status</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>license</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>group_id</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -2321,14 +2345,14 @@ Content-Type: application/json
 <td>offset</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>limit</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2391,19 +2415,19 @@ Content-Type: application/json
 <tr>
 <td>id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>username</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -2415,7 +2439,7 @@ Content-Type: application/json
 <tr>
 <td>email</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2444,21 +2468,21 @@ Content-Type: application/json
 <td>username</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>active</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -2472,28 +2496,28 @@ Content-Type: application/json
 <td>offset</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>limit</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>fields</td>
 <td>CSV</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>count</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2543,7 +2567,7 @@ Content-Type: application/json
 <td>fields</td>
 <td>CSV</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2597,21 +2621,21 @@ Content-Type: application/json
 <td>password</td>
 <td>String</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>email</td>
 <td>String</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -2672,21 +2696,21 @@ Content-Type: application/json
 <td>name</td>
 <td>String</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>email</td>
 <td>String</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>active</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2745,7 +2769,7 @@ Content-Type: application/json
 Content-Type: application/json
 </code></pre>
 
-<pre><code>\e
+<pre><code>
 </code></pre>
 
 <p>&lt;#admins-permissions&gt;</p>
@@ -2815,7 +2839,7 @@ Content-Type: application/json
 Content-Type: application/json
 </code></pre>
 
-<pre><code>\e
+<pre><code>
 </code></pre>
 
 <p>&lt;#admins-catalog&gt;</p>
@@ -2920,7 +2944,7 @@ Content-Type: application/json
 <td>ids</td>
 <td>CSV</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2934,7 +2958,7 @@ Content-Type: application/json
 Content-Type: application/json
 </code></pre>
 
-<pre><code>\e
+<pre><code>
 </code></pre>
 
 <p>Cada uno de los permisos de objetos restringe los resultados de los métodos que listan y manipulan los siguientes objetos: <code>groups</code> limita <a href="#visits">visitas</a>, <a href="#agents">agentes</a> y <a href="#groups">grupos</a>; <code>forms</code> limita <a href="#forms">cuestionarios</a>; <code>layouts</code> limita <a href="#layouts">layouts</a>; <code>reports</code> limita <a href="#reports">reportes</a>.</p>
@@ -3007,7 +3031,7 @@ Content-Type: application/json
 Content-Type: application/json
 </code></pre>
 
-<pre><code>\e
+<pre><code>
 </code></pre>
 
 <p>&lt;#groups&gt;</p>
@@ -3043,13 +3067,13 @@ Content-Type: application/json
 <tr>
 <td>id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -3082,7 +3106,7 @@ Content-Type: application/json
 <td>name</td>
 <td>String</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -3103,28 +3127,28 @@ Content-Type: application/json
 <td>offset</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>limit</td>
 <td>Integer</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>fields</td>
 <td>CSV</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>count</td>
 <td>Boolean</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -3208,7 +3232,7 @@ Content-Type: application/json
 <td>fields</td>
 <td>CSV</td>
 <td>Opcional</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -3252,7 +3276,7 @@ Content-Type: application/json
 <td>name</td>
 <td>String</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -3296,7 +3320,7 @@ Content-Type: application/json
 <td>name</td>
 <td>String</td>
 <td>Requerido</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -3361,7 +3385,7 @@ Content-Type: application/json
 Content-Type: application/json
 </code></pre>
 
-<pre><code>\e
+<pre><code>
 </code></pre>
 
 <p>Eliminar el grupo con id “1” y reubicar sus visitas y agentes al grupo con id “2”:</p>
@@ -3373,7 +3397,7 @@ Content-Type: application/json
 Content-Type: application/json
 </code></pre>
 
-<pre><code>\e
+<pre><code>
 </code></pre>
 
 <p><strong>Nota:</strong> Si se elige <code>cascade=delete</code>, el mecanismo de <a href="#agents-delete">eliminación de agentes</a> también será desencadenado.</p>

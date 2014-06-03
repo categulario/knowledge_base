@@ -1,54 +1,98 @@
+* {
+	box-shadow: none !important;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, strong{
+	color: #597fb1;
+}
 body {
-  font-size: 1.15em;
-  font-family: "PT Serif","Georgia","Helvetica Neue",Arial,sans-serif;
-  background-color: #ddd;
+	font-size: 1.15em;
+	font-family: "PT Serif","Georgia","Helvetica Neue",Arial,sans-serif;
+	padding-top: 50px;
+	background-color: #fcfcfc;
+	color: #858594;
 }
 #container {
-  background-color: #fff;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-radius: 10px;
+	background-color: #fff;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
 }
 .container-fluid {
-  line-height: 1.5em;
+	line-height: 1.5em;
+}
+.container-fluid .span8 {
+	width: auto !important;
+	max-width: 620px;
 }
 .container-fluid p {
-  margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
 }
 .container-fluid ul li {
-  line-height: 1.5em;
+	line-height: 1.5em;
 }
 .hero-unit {
-  background: #eee;
-  background-position: center;
+	background: #eee;
+	background-position: center;
 }
 .hero-unit img {
-  float: right;
+	float: right;
 }
 .navbar, footer, button, .hero-unit, .menu {
-  font-family: 'PT Sans';
+	font-family: 'PT Sans';
 }
 code, pre {
-  font-family: "Source Code Pro", "Inconsolata", monospace;
-  font-size: 12pt;
+	font-family: "Source Code Pro", "Inconsolata", monospace;
+	font-size: 12pt;
 }
 blockquote {
-  color: #888;
-  font-size: 9pt;
+	color: #888;
+	font-size: 9pt;
 }
 blockquote p {
-  margin-bottom: 1.1em;
+	margin-bottom: 1.1em;
 }
 footer {
-  font-size: small;
-  padding-left: 30px;
-  padding-right: 30px;
-  color: #888;
+	font-size: small;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: #888;
 }
 .navbar .brand {
-  margin-left: 0px;
+	margin-left: 0px;
 }
-body {
-  padding-top: 50px;
+.navbar-inner {
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	background-color: #5a81b1 !important;
+	background-image: none !important;
+}
+.navbar-inner * {
+	color: #ffffff !important;
+	text-decoration: none !important;
+	text-shadow: none !important;
+}
+.navbar.navbar-fixed-top .navbar-inner .container {
+	width: 1050px !important;
+	/*margin: auto 20px auto 20px !important;*/
+}
+.navbar-inner .nav.menu .active a {
+	background-color: #4a6e9d !important;
+}
+.navbar-inner .nav.menu a:hover {
+	background-color: #4a6e9d !important;
+}
+.breadcrumb.menu {
+	background-color: #f8f9fa !important;
+}
+.nav.nav-list.menu .active a {
+	color: #ffffff;
+	background-color: #5a81b1;
+	text-shadow: none;
+}
+.nav.nav-list.menu a:hover {
+	color: #ffffff;
+	background-color: #5a81b1;
+	text-shadow: none;
 }

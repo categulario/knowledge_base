@@ -13,7 +13,7 @@
     
       
         <title>
-          Respuestas  - Gestii KB </title>
+          Respuestas  - Gestii Knowledge Base </title>
       
     
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii KB</a>
+          <a class="brand" href="/"><img style="height: 25px; padding: none;" src=/images/logo.png />  Gestii Knowledge Base</a>
 
           <div class="nav-collapse">
             
@@ -114,7 +114,19 @@
                       </li>
                     
                       <li>
+                        <a href="/API/auxiliares.md.bak">Auxiliares.md.bak</a>
+                      </li>
+                    
+                      <li>
                         <a href="/API/cookbook">Cookbook</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/cookbook.md.bak">Cookbook.md.bak</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/index.md.bak">Index.md.bak</a>
                       </li>
                     
                       <li>
@@ -122,11 +134,23 @@
                       </li>
                     
                       <li>
+                        <a href="/API/objetos.md.bak">Objetos.md.bak</a>
+                      </li>
+                    
+                      <li>
                         <a href="/API/operaciones">Operaciones</a>
                       </li>
                     
                       <li>
+                        <a href="/API/operaciones.md.bak">Operaciones.md.bak</a>
+                      </li>
+                    
+                      <li>
                         <a href="/API/peticiones">Peticiones</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/peticiones.md.bak">Peticiones.md.bak</a>
                       </li>
                     
                   </ul>

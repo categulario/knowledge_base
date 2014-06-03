@@ -1,5 +1,6 @@
 * {
 	box-shadow: none !important;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h1, h2, h3, h4, strong{
 	color: #597fb1;
@@ -73,7 +74,7 @@ footer {
 	text-shadow: none !important;
 }
 .navbar.navbar-fixed-top .navbar-inner .container {
-	width: auto !important;
+	width: 1050px !important;
 	/*margin: auto 20px auto 20px !important;*/
 }
 .navbar-inner .nav.menu .active a {

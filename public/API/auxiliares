@@ -13,7 +13,7 @@
     
       
         <title>
-          Auxiliares  - Gestii KB </title>
+          Auxiliares  - Gestii Knowledge Base </title>
       
     
 
@@ -54,7 +54,7 @@
       <div class="navbar-inner">
         <div class="container">
 
-          <a class="brand" href="/">Gestii KB</a>
+          <a class="brand" href="/"><img style="height: 25px; padding: none;" src=/images/logo.png />  Gestii Knowledge Base</a>
 
           <div class="nav-collapse">
             
@@ -114,7 +114,19 @@
                       </li>
                     
                       <li>
+                        <a href="/API/auxiliares.md.bak">Auxiliares.md.bak</a>
+                      </li>
+                    
+                      <li>
                         <a href="/API/cookbook">Cookbook</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/cookbook.md.bak">Cookbook.md.bak</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/index.md.bak">Index.md.bak</a>
                       </li>
                     
                       <li>
@@ -122,11 +134,23 @@
                       </li>
                     
                       <li>
+                        <a href="/API/objetos.md.bak">Objetos.md.bak</a>
+                      </li>
+                    
+                      <li>
                         <a href="/API/operaciones">Operaciones</a>
                       </li>
                     
                       <li>
+                        <a href="/API/operaciones.md.bak">Operaciones.md.bak</a>
+                      </li>
+                    
+                      <li>
                         <a href="/API/peticiones">Peticiones</a>
+                      </li>
+                    
+                      <li>
+                        <a href="/API/peticiones.md.bak">Peticiones.md.bak</a>
                       </li>
                     
                   </ul>
@@ -177,13 +201,13 @@
 <tr>
 <td>id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -207,13 +231,13 @@
 <tr>
 <td>checksum</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>created_at</td>
 <td>Timestamp</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +326,7 @@
 <tr>
 <td>value</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -345,7 +369,7 @@
 <tr>
 <td>value</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -380,13 +404,13 @@
 <tr>
 <td>id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>agent_id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -398,13 +422,13 @@
 <tr>
 <td>latitude</td>
 <td>Decimal</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>longitude</td>
 <td>Decimal</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
@@ -416,7 +440,7 @@
 <tr>
 <td>created_at</td>
 <td>Timestamp</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -496,19 +520,19 @@
 <tr>
 <td>generator</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>name</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
 <td>description</td>
 <td>String</td>
-<td>\e</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -538,7 +562,7 @@
 <tr>
 <td>id</td>
 <td>Integer</td>
-<td>\e</td>
+<td></td>
 </tr>
 
 <tr>
