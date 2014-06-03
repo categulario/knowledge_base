@@ -101,24 +101,35 @@ Adicional a estos 12 dígitos, es posible agregar un modificador (opcional) para
 Los modificadores válidos para sumar o restar a un `DateTime` son los siguientes: `m` (minutos), `d` (días), `w` (semanas), `M` (meses). Cada uno de estos modificadores deberá ir antecedido por un signo de `+` o `-` para indicar la dirección del rango y un número entero positivo indicando el número de veces que se deberá extender dicho rango.
 
 **Nota:** Observa que los minutos se distinguen de los meses al ser los primeros una `m` minúscula y los segundos una `M` mayúscula.
-[Agente]: #agents
-[Admin]: #admins
-[Grupo]: #groups
-[Form]: #forms
-[Alarma]: #alarms
-[Reporte]: #reports
-[Visita]: #visits
-[Upload]: #uploads
-[Extradata]: #extradata
-[Feedback]: #feedbacks
-[Location]: #locations
-[Reporte]: #reports
-[DelayedJob]: #jobs
+
+[Peticiones]: http://help.gestii.com:8080/API/peticiones
+[Respuestas]: http://help.gestii.com:8080/API/respuestas
+[Operaciones]: http://help.gestii.com:8080/API/operaciones
+[Visitas]: http://help.gestii.com:8080/API/visitas
+[Agentes]: http://help.gestii.com:8080/API/agentes
+[Admins]: http://help.gestii.com:8080/API/admins
+[Grupos]: http://help.gestii.com:8080/API/grupos
+[Auxiliares]: http://help.gestii.com:8080/API/auxiliares
+[Cookbook]: http://help.gestii.com:8080/API/cookbook
+
+[Agente]: http://help.gestii.com:8080/API/agentes
+[Admin]: http://help.gestii.com:8080/API/admins
+[Grupo]: http://help.gestii.com:8080/API/grupos
+[Form]: http://help.gestii.com:8080/API/#forms
+[Alarma]: http://help.gestii.com:8080/API/#alarms
+[Reporte]: http://help.gestii.com:8080/API/auxiliares#reports
+[Visita]: http://help.gestii.com:8080/API/visitas
+[Upload]: http://help.gestii.com:8080/API/auxiliares#uploads
+[Extradata]: http://help.gestii.com:8080/API/auxiliares#extradata
+[Feedback]: http://help.gestii.com:8080/API/auxiliares#feedbacks
+[Location]: http://help.gestii.com:8080/API/auxiliares#locations
+[Reporte]: http://help.gestii.com:8080/API/auxiliares#reports
+[DelayedJob]: http://help.gestii.com:8080/API/auxiliares#jobs
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 
-[búsqueda]: #searching
-[ordenación]: #sorting
-[paginado]: #pagination
-[extracción]: #extraction
-[vinculación]: #embedding
+[búsqueda]: http://help.gestii.com:8080/API/operaciones#searching
+[ordenación]: http://help.gestii.com:8080/API/operaciones#sorting
+[paginado]: http://help.gestii.com:8080/API/operaciones#pagination
+[extracción]: http://help.gestii.com:8080/API/operaciones#extraction
+[vinculación]: http://help.gestii.com:8080/API/operaciones#embedding
