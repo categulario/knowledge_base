@@ -1,6 +1,6 @@
-# Gestión de Visitas
+# Gestión de Agentes
 
-Si usted elige el botón de Más Información * (??) se le presentarán varias opciones
+Si usted elige el botón de más información (<img class=textsize src=/images/buttons/moreinfo.png />) se le presentarán varias opciones
 de gestión de agentes:
 
 <dl>

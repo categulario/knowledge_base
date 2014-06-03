@@ -9,12 +9,12 @@
 
 page:
   # Name of the site.
-  brand: "Gestii Knowledge Base"
+  brand: "Gestii KB"
 
   # Some properties for <head>.
   head:
     # Title that appears on the <title> tag.
-    title: "Gestii Knowledge Base"
+    title: "Gestii KB"
 
   # Some properties for <body>.
   body:
@@ -22,6 +22,7 @@ page:
     menu:
       - { text: "Visitas", url: "/visitas" }
       - { text: "Cuestionarios", url: "/cuestionarios" }
+      - { text: "Agentes", url: "/agentes" }
       - { text: "Administradores", url: "/administradores" }
       - { text: "Mapas", url: "/mapas" }
       - { text: "Grupos", url: "/grupos" }
