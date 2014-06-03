@@ -848,34 +848,34 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 
 **Nota:** Por conveniencia, los reportes siempre se descargan en un archivo ZIP. Para procesarlos deberás guardar el byte stream que la petición devuelve y guardar el archivo con extensión ZIP. Posteriormente puedes manipularlo (programáticamente, inclusive) con cualquier aplicación que procese archivos comprimidos, como [7-Zip](http://7-zip.com.mx/), por ejemplo.
 
-[Peticiones]: http://help.gestii.com:8080/API/peticiones
-[Respuestas]: http://help.gestii.com:8080/API/respuestas
-[Operaciones]: http://help.gestii.com:8080/API/operaciones
-[Visitas]: http://help.gestii.com:8080/API/visitas
-[Agentes]: http://help.gestii.com:8080/API/agentes
-[Admins]: http://help.gestii.com:8080/API/admins
-[Grupos]: http://help.gestii.com:8080/API/grupos
-[Auxiliares]: http://help.gestii.com:8080/API/auxiliares
-[Cookbook]: http://help.gestii.com:8080/API/cookbook
+[Peticiones]: /API/peticiones
+[Respuestas]: /API/respuestas
+[Operaciones]: /API/operaciones
+[Visitas]: /API/visitas
+[Agentes]: /API/agentes
+[Admins]: /API/admins
+[Grupos]: /API/grupos
+[Auxiliares]: /API/auxiliares
+[Cookbook]: /API/cookbook
 
-[Agente]: http://help.gestii.com:8080/API/agentes
-[Admin]: http://help.gestii.com:8080/API/admins
-[Grupo]: http://help.gestii.com:8080/API/grupos
-[Form]: http://help.gestii.com:8080/API/#forms
-[Alarma]: http://help.gestii.com:8080/API/#alarms
-[Reporte]: http://help.gestii.com:8080/API/auxiliares#reports
-[Visita]: http://help.gestii.com:8080/API/visitas
-[Upload]: http://help.gestii.com:8080/API/auxiliares#uploads
-[Extradata]: http://help.gestii.com:8080/API/auxiliares#extradata
-[Feedback]: http://help.gestii.com:8080/API/auxiliares#feedbacks
-[Location]: http://help.gestii.com:8080/API/auxiliares#locations
-[Reporte]: http://help.gestii.com:8080/API/auxiliares#reports
-[DelayedJob]: http://help.gestii.com:8080/API/auxiliares#jobs
+[Agente]: /API/agentes
+[Admin]: /API/admins
+[Grupo]: /API/grupos
+[Form]: /API/#forms
+[Alarma]: /API/#alarms
+[Reporte]: /API/auxiliares#reports
+[Visita]: /API/visitas
+[Upload]: /API/auxiliares#uploads
+[Extradata]: /API/auxiliares#extradata
+[Feedback]: /API/auxiliares#feedbacks
+[Location]: /API/auxiliares#locations
+[Reporte]: /API/auxiliares#reports
+[DelayedJob]: /API/auxiliares#jobs
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 
-[búsqueda]: http://help.gestii.com:8080/API/operaciones#searching
-[ordenación]: http://help.gestii.com:8080/API/operaciones#sorting
-[paginado]: http://help.gestii.com:8080/API/operaciones#pagination
-[extracción]: http://help.gestii.com:8080/API/operaciones#extraction
-[vinculación]: http://help.gestii.com:8080/API/operaciones#embedding
+[búsqueda]: /API/operaciones#searching
+[ordenación]: /API/operaciones#sorting
+[paginado]: /API/operaciones#pagination
+[extracción]: /API/operaciones#extraction
+[vinculación]: /API/operaciones#embedding
