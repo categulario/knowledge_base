@@ -106,7 +106,7 @@ footer {
 	color: #C3D1E3;
 	background-color: #5a81b1;
 }
-#help a, h1, h2, h3, h4, strong {
+#help a, #help h1, #help h2, #help h3, #help h4, #help strong {
 	color: #ffffff;
 }
 #auronix {
