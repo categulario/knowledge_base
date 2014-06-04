@@ -20,13 +20,13 @@ page:
   body:
     # Top navigation bar.
     menu:
-      - { text: "Visitas", url: "/visitas" }
-      - { text: "Cuestionarios", url: "/cuestionarios" }
-      - { text: "Agentes", url: "/agentes" }
-      - { text: "Administradores", url: "/administradores" }
-      - { text: "Mapas", url: "/mapas" }
-      - { text: "Grupos", url: "/grupos" }
-      - { text: "Misc", url: "/misc" }
+      - { text: "VISITAS", url: "/visitas" }
+      - { text: "CUESTIONARIOS", url: "/cuestionarios" }
+      - { text: "AGENTES", url: "/agentes" }
+      - { text: "ADMINISTRADORES", url: "/administradores" }
+      - { text: "MAPAS", url: "/mapas" }
+      - { text: "GRUPOS", url: "/grupos" }
+      - { text: "MISC", url: "/misc" }
       - { text: "API", url: "/API" }
 
     # Top-right navigation helper.

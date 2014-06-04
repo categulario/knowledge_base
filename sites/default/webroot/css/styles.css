@@ -70,7 +70,7 @@ footer {
 }
 .navbar-inner * {
 	color: #ffffff !important;
-	text-decoration: none !important;
+	/*text-decoration: none !important;*/
 	text-shadow: none !important;
 }
 .navbar.navbar-fixed-top .navbar-inner .container {
@@ -95,4 +95,24 @@ footer {
 	color: #ffffff;
 	background-color: #5a81b1;
 	text-shadow: none;
+}
+.navbar-fixed-top .nav.menu a {
+	font-size: 14px !important;
+}
+#help {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 18px;
+	color: #C3D1E3;
+	background-color: #5a81b1;
+}
+#help a, h1, h2, h3, h4, strong {
+	color: #ffffff;
+}
+#auronix {
+	background-color: #3F3F3F;
+	font-size: 11px;
+	color: #858594;
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
