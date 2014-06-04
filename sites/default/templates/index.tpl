@@ -173,8 +173,6 @@
     {{ end }}
     </div>
 
-    <hr />
-
     <div id="help"><center>
     <h3 id="help-trigger">¿Necesitas ayuda?</h3>
     <p id="help-text">Escríbenos a <a href="#">soporte@gestii.com</a> o llámanos a la línea de atención telefónica Gestii al <strong>+52 (55) 4438 0011</strong>.</p>
