@@ -83,22 +83,20 @@
 
     {{ if .IsHome  }}
 
-<!--
       <div class="hero-unit">
 
-        <h1>Luminos</h1>
-        <p>
-					A tiny server for markdown documents
-        </p>
+        <h1>Gestii Knowledge Base</h1>
+        <p>Bienvenido a la base de conocimiento de Gestii. Para navegar, elija una categoría en la barra superior.</p>
 
+<!--
         <p class="pull-right">
           <a href="http://luminos.menteslibres.org" target="_blank" class="btn btn-large btn-primary">
             Homepage
           </a>
         </p>
+-->
 
       </div>
--->
 
       <div class="container-fluid">
         <div class="row">

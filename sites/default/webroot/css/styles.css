@@ -84,7 +84,7 @@ footer {
 	background-color: #4a6e9d !important;
 }
 .breadcrumb.menu {
-	background-color: #f8f9fa !important;
+	background-color: #eaeded !important;
 }
 .nav.nav-list.menu .active a {
 	color: #ffffff;
@@ -115,4 +115,6 @@ footer {
 	color: #858594;
 	padding-top: 20px;
 	padding-bottom: 10px;
+	padding-right: 25px;
+	padding-left: 25px;
 }
