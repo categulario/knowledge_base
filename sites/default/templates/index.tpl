@@ -53,7 +53,6 @@
 
   <body>
 
-    <div class="container" id="container">
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -80,6 +79,8 @@
         </div>
       </div>
     </div>
+
+    <div class="container" id="container">
 
     {{ if .IsHome  }}
 

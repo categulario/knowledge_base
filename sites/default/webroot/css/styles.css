@@ -8,7 +8,6 @@ h1, h2, h3, h4, strong{
 body {
 	font-size: 1.15em;
 	font-family: "PT Serif","Georgia","Helvetica Neue",Arial,sans-serif;
-	padding-top: 50px;
 	background-color: #fcfcfc;
 	color: #858594;
 }
@@ -73,8 +72,12 @@ footer {
 	/*text-decoration: none !important;*/
 	text-shadow: none !important;
 }
+.navbar-fixed-top {
+	position: relative;
+}
 .navbar.navbar-fixed-top .navbar-inner .container {
-	width: 1050px !important;
+	width: auto !important;
+	max-width: 1000px !important;
 	/*margin: auto 20px auto 20px !important;*/
 }
 .navbar-inner .nav.menu .active a {
@@ -102,6 +105,8 @@ footer {
 #help {
 	padding-top: 10px;
 	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
 	font-size: 18px;
 	color: #C3D1E3;
 	background-color: #5a81b1;
@@ -115,6 +120,7 @@ footer {
 	color: #858594;
 	padding-top: 20px;
 	padding-bottom: 10px;
-	padding-right: 25px;
-	padding-left: 25px;
+	padding-right: 10px;
+	padding-left: 10px;
+	line-height: 1.2em;
 }
