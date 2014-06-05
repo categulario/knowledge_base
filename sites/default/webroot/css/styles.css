@@ -2,101 +2,127 @@
 	box-shadow: none !important;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
 h1, h2, h3, h4, strong{
 	color: #597fb1;
 }
+
+thead {
+	background-color: #eaeded;
+}
+
 body {
 	font-size: 1.15em;
 	font-family: "PT Serif","Georgia","Helvetica Neue",Arial,sans-serif;
 	background-color: #fcfcfc;
 	color: #858594;
-	min-width: 1000px;
+	min-width: 1050px;
 }
+
 #container {
 	background-color: #fff;
 	margin-top: 0px;
+	margin-bottom: 15px;
 	border-radius: 10px;
 }
+
 .container-fluid {
 	line-height: 1.5em;
 }
+
 .container-fluid .span8 {
 	/*width: auto !important;
 	max-width: 620px;*/
 	width: 620px;
 }
+
 .container-fluid p {
 	margin-bottom: 1.5em;
 }
+
 .container-fluid ul li {
 	line-height: 1.5em;
 }
+
 .hero-unit {
 	background: #eee;
 	background-position: center;
 }
+
 .hero-unit img {
 	float: right;
 }
+
 .navbar, footer, button, .hero-unit, .menu {
 	font-family: 'PT Sans';
 }
+
 code, pre {
 	font-family: "Source Code Pro", "Inconsolata", monospace;
 	font-size: 12pt;
 }
+
 blockquote {
 	color: #888;
 	font-size: 9pt;
 }
+
 blockquote p {
 	margin-bottom: 1.1em;
 }
+
 .navbar .brand {
 	margin-left: 0px;
 }
+
 .navbar-inner {
 	-webkit-box-shadow: none !important;
 	-moz-box-shadow: none !important;
 	background-color: #5a81b1 !important;
 	background-image: none !important;
 }
+
 .navbar-inner * {
 	color: #ffffff !important;
-	/*text-decoration: none !important;*/
 	text-shadow: none !important;
 }
+
 .navbar-fixed-top {
 	position: relative;
 }
+
 .navbar.navbar-fixed-top .navbar-inner .container {
-	width: 1000px !important;
-	/*width: auto !important;
-	max-width: 1000px !important;
-	margin: auto 20px auto 20px !important;*/
+	width: 1050px !important;
 }
+
 .navbar-inner .nav.menu .active a {
 	background-color: #4a6e9d !important;
 }
+
 .navbar-inner .nav.menu a:hover {
 	background-color: #4a6e9d !important;
 }
+
 .breadcrumb.menu {
 	background-color: #eaeded !important;
 }
+
 .nav.nav-list.menu .active a {
 	color: #ffffff;
 	background-color: #5a81b1;
 	text-shadow: none;
 }
+
 .nav.nav-list.menu a:hover {
 	color: #ffffff;
 	background-color: #5a81b1;
 	text-shadow: none;
 }
+
 .navbar-fixed-top .nav.menu a {
 	font-size: 14px !important;
 }
+
 #help {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -106,13 +132,16 @@ blockquote p {
 	color: #C3D1E3;
 	background-color: #5a81b1;
 }
+
 #help-inner {
 	width: 900px;
 	margin: auto;
 }
+
 #help-inner a, #help-inner h1, #help-inner h2, #help-inner h3, #help-inner h4, #help-inner strong {
 	color: #ffffff;
 }
+
 #auronix {
 	background-color: #3F3F3F;
 	font-size: 11px;
@@ -123,6 +152,7 @@ blockquote p {
 	padding-left: 10px;
 	line-height: 1.2em;
 }
+
 #auronix-inner {
 	width: 900px;
 	margin: auto;
