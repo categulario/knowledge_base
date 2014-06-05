@@ -2,6 +2,7 @@
 rm -rf public
 wget -m localhost:9000
 mv localhost:9000 public
+find public -exec gsed -i -e "s/^<p>~~~~\(.*\)<\/p>$/<a name=\"\1\"><\/a>/g" {} \;
 #find localhost:9000 -exec sh -c "mv \"{}\" \"`echo \"{}\" | node urldecode.js`\"" \;
 #find localhost:9000 -name "*%*" -delete
 #rm ~/Dropbox/gestii_dev/kb.zip 
