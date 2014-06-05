@@ -172,18 +172,22 @@
     {{ end }}
     </div>
 
-    <div id="help"><center>
-    <h3 id="help-trigger">¿Necesitas ayuda?</h3>
-    <p id="help-text">Escríbenos a <a href="#">soporte@gestii.com</a> o llámanos a la línea de atención telefónica Gestii al <strong>+52 (55) 4438 0011</strong>.</p>
-    </center></div>
+    <div id="help">
+      <div id="help-inner"><center>
+        <h3 id="help-trigger">¿Necesitas ayuda?</h3>
+        <p id="help-text">Escríbenos a <a href="#">soporte@gestii.com</a> o llámanos a la línea de atención telefónica Gestii al <strong>+52 (55) 4438 0011</strong>.</p>
+      </center></div>
+    </div>
 
-    <div id="auronix"><center>
-    <img src="/images/logos/auronix_footer.png">
-    <br /> <br />
-    <p class="small">Hda. de Coaxamalucan #145. Hacienda de Echegaray, Naucalpan, México DF, 53300. México.</p>
-    <p class="small">Proteger la seguridad y privacidad de tu información es muy importante para Auronix, por lo tanto ofrecemos nuestros servicios de acuerdo a las leyes aplicables en materia de protección de la privacidad y seguridad de datos. Para ayudarte a entender los datos que Gestii puede recopilar, cómo Gestii los utiliza y qué garantías ofrecemos sobre ellos, por favor consulta nuestra política de privacidad.</p>
-    <p class="small">Gestii es marca registrada de Auronix. Todos los derechos reservados.</p>
-    </center></div>
+    <div id="auronix">
+      <div id="auronix-inner"><center>
+      <img src="/images/logos/auronix_footer.png">
+      <br /> <br />
+      <p class="small">Hda. de Coaxamalucan #145. Hacienda de Echegaray, Naucalpan, México DF, 53300. México.</p>
+      <p class="small">Proteger la seguridad y privacidad de tu información es muy importante para Auronix, por lo tanto ofrecemos nuestros servicios de acuerdo a las leyes aplicables en materia de protección de la privacidad y seguridad de datos. Para ayudarte a entender los datos que Gestii puede recopilar, cómo Gestii los utiliza y qué garantías ofrecemos sobre ellos, por favor consulta nuestra política de privacidad.</p>
+      <p class="small">Gestii es marca registrada de Auronix. Todos los derechos reservados.</p>
+      </center></div>
+    </div>
 
     {{ if setting "page/body/scripts/footer" }}
       <script type="text/javascript">
