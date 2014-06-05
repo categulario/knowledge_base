@@ -10,7 +10,7 @@ Auxiliares
 
 Los auxiliares son objetos de la API que no pueden ser consultados si no es mediante alguno de los métodos de los objetos principales. En general, se utilizan para representar información que no puede ser modificada.
 
-<#uploads>
+~~~~uploads
 Upload
 ------
 
@@ -40,7 +40,7 @@ created_at     | Timestamp |
 
 El contador `processed` indica el número de visitas que se han leído correctamente del archivo. El contador `geocoded`, por su parte, comienza una vez que el anterior ha finalizado e indica el número de visitas que han geolocalizado con éxito. Es importante recalcar que la geolocalización no comienza hasta que todas las visitas del archivo hayan sido procesadas sin ningún error.
 
-<#uploads-codes>
+~~~~uploads-codes
 **Diccionario de estatus:**
 
 Status | Mensaje
@@ -55,7 +55,7 @@ Status | Mensaje
 
 **Nota:** Los códigos `1XX` indican que ningun error ha sido detectado, los `2XX` que se han encontrado errores globales y el `300` que han ocurrido múltiples errores distintos y es necesario descargar un archivo con la descripción de cada uno de ellos.
 
-<#extradata>
+~~~~extradata
 Extradata
 ---------
 
@@ -73,7 +73,7 @@ Atributo       | Tipo      | Notas
 caption        | String    | El nombre de la columna del archivo de importación.
 value          | String    | 
 
-<#feedbacks>
+~~~~feedbacks
 Feedback
 --------
 
@@ -89,15 +89,15 @@ Un feedback representa un campo de la información capturada para una visita al 
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|--------------------------------------------------
-varname        | String    | La variable del campo del [cuestionario](#forms).
-caption        | String    | La etiqueta del campo del [cuestionario](#forms).
+varname        | String    | La variable del campo del [cuestionario][Cuestionarios].
+caption        | String    | La etiqueta del campo del [cuestionario][Cuestionarios].
 value          | String    | 
 
-<#locations>
+~~~~locations
 Location
 --------
 
-Una location representa un punto de ubicación geográfica y un evento de uno de los [agentes](#agents). En la API una location se encuentra representada por un objeto con la siguiente estructura:
+Una location representa un punto de ubicación geográfica y un evento de uno de los [agentes][Agentes]. En la API una location se encuentra representada por un objeto con la siguiente estructura:
 
 ```json
 {
@@ -121,7 +121,7 @@ longitude      | Decimal   |
 accuracy       | Integer   | Precisión en metros de la localización.
 created_at     | Timestamp | 
 
-<#locations-events>
+~~~~locations-events
 **Diccionario de eventos:**
 
 Evento | Mensaje
@@ -134,11 +134,11 @@ Evento | Mensaje
 5      | Envío de resultado de visita.
 6      | Solicitud de cuestionario.
 
-<#reports>
+~~~~reports
 Reporte
 -------
 
-Un reporte representa un archivo comprimido que puede ser generado y descargado con información de [visitas](#visits), [agentes](#agents) y demás objetos. En la API un reporte se encuentra representado por un objeto con la siguiente estructura:
+Un reporte representa un archivo comprimido que puede ser generado y descargado con información de [visitas][Visitas], [agentes][Agentes] y demás objetos. En la API un reporte se encuentra representado por un objeto con la siguiente estructura:
 
 
 ```json
@@ -155,7 +155,7 @@ generator      | String    |
 name           | String    | 
 description    | String    | 
 
-<#jobs>
+~~~~jobs
 DelayedJob
 ----------
 
@@ -183,6 +183,8 @@ status         | Integer   | Uno de: `0` (procesando), `1` (finalizado).
 [Grupos]: /API/grupos
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
+[Alertas]: /API/alertas
+[Cuestionarios]: /API/cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -191,6 +193,7 @@ status         | Integer   | Uno de: `0` (procesando), `1` (finalizado).
 [Alarma]: /API/#alarms
 [Reporte]: /API/auxiliares#reports
 [Visita]: /API/visitas
+
 [Upload]: /API/auxiliares#uploads
 [Extradata]: /API/auxiliares#extradata
 [Feedback]: /API/auxiliares#feedbacks
@@ -200,8 +203,46 @@ status         | Integer   | Uno de: `0` (procesando), `1` (finalizado).
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 
+[listar admins]: /API/admins#admins-list
+[mostrar admins]: /API/admins#admins-show
+[crear admins]: /API/admins#admins-create
+[modificar admins]: /API/admins#admins-update
+[eliminar admins]: /API/admins#admins-delete
+[permisos admins]: /API/admins#admins-permissions
+[objetos admins]: http://help.gestii.com:8080/API/admins#admins-objects
+[APIkeys]: /API/admins#admins-apikeys
+
+[listar agentes]: /API/agentes#agents-list
+[mostrar agentes]: /API/agentes#agents-show
+[crear agentes]: /API/agentes#agents-create
+[modificar agentes]: /API/agentes#agents-update
+[eliminar agentes]: /API/agentes#agents-delete
+[encuestas agentes]: /API/agentes#agents-surveys
+[localizar agentes]: /API/agentes#agents-location
+[reporte agentes]: /API/agentes#agents-reports
+
+[listar grupos]: /API/grupos#groups-list
+[mostrar grupos]: /API/grupos#groups-show
+[crear grupos]: /API/grupos#groups-create
+[modificar grupos]: /API/grupos#groups-update
+[eliminar grupos]: /API/grupos#groups-delete
+
+[listar visitas]: /API/visitas#visits-list
+[mostrar visitas]: /API/visitas#visits-show
+[importar visitas]: /API/visitas#visits-upload
+[cancelar visitas]: /API/visitas#visits-cancel
+[eliminar visitas]: /API/visitas#visits-delete
+[asignar visitas]: /API/visitas#visits-assign
+[supervisar visitas]: /API/visitas#visits-supervise
+[reporte visitas]: /API/visitas#visits-reports
+
 [búsqueda]: /API/operaciones#searching
 [ordenación]: /API/operaciones#sorting
 [paginado]: /API/operaciones#pagination
 [extracción]: /API/operaciones#extraction
 [vinculación]: /API/operaciones#embedding
+
+[autorización]: /API/peticiones#auth
+[límite de peticiones]: /API/peticiones#limits
+[tipos de datos]: /API/peticiones#data-types
+[datetime]: /API/peticiones#type-datetime

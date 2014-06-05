@@ -1,4 +1,3 @@
-<#ops>
 Operaciones
 ===========
 
@@ -10,7 +9,7 @@ Operaciones
 
 Por conveniencia, muchos de los métodos de esta API soportan operaciones especiales para manipular la respuesta antes de que sea devuelta. Estas operaciones se realizan a través de parámetros reservados que siempre que estén presentes en una petición significará que la acción a la que hacen alusión puede ser realizada. Algunos de los parámetros reservados son los siguientes: `count`, `sort`, `limit`, `offset`, `fields` y `embed`.
 
-<#searching>
+~~~~searching
 Búsqueda
 --------
 
@@ -18,11 +17,11 @@ Algunos de los métodos que devuelven colecciónes de objetos aceptan parámetro
 
 En general, los métodos que soportan este tipo de operación son los listados de objetos, en los cuales todos los parámetros que no son un parámetro restringido por otra operación, si están presentes, son considerados para aplicar un filtro de búsqueda.
 
-Por ejemplo, en el [listado de agentes](#agents-list), los parámetros `username`, `name`, `status`, `license` y `group_id` son utilizados como criterios de búsqueda, mientras que todos los demás son parámetros reservados para realizar otro tipo de operaciones.
+Por ejemplo, en el [listado de agentes][listar agentes], los parámetros `username`, `name`, `status`, `license` y `group_id` son utilizados como criterios de búsqueda, mientras que todos los demás son parámetros reservados para realizar otro tipo de operaciones.
 
 Si más de un parámetro de búsqueda es indicado, los resultados que la petición devolverá serán todos aquellos que cumplan con los criterios de todos los parámetros, es decir, se realiza una [conjunción lógica](http://es.wikipedia.org/wiki/Puerta_AND) sobre ellos.
 
-El tipo de búsqueda que realiza cada parámetro depende de su [tipo de dato](#data-types): para parámetros `Boolean` e `Integer` el campo debe ser exactamente igual al valor que se está proporcionando, para parámetros `String` se realiza una búsqueda parcial desde el inicio de la cadena, y para los parámetros `DateTime` se búsca exactamente la fecha indicada en caso de que el parámetro no tenga un [modificador de rango](#type-datetime), o por todos los resultados que se encuentren entre dos fechas en caso de que un modificador de rango sí se haya especificado. El resto de los tipos de datos no son utilizados por esta API para realizar consultas.
+El tipo de búsqueda que realiza cada parámetro depende de su [tipo de dato][tipos de datos]: para parámetros `Boolean` e `Integer` el campo debe ser exactamente igual al valor que se está proporcionando, para parámetros `String` se realiza una búsqueda parcial desde el inicio de la cadena, y para los parámetros `DateTime` se búsca exactamente la fecha indicada en caso de que el parámetro no tenga un [modificador de rango][datetime], o por todos los resultados que se encuentren entre dos fechas en caso de que un modificador de rango sí se haya especificado. El resto de los tipos de datos no son utilizados por esta API para realizar consultas.
 
 ### Contar resultados
 
@@ -49,7 +48,7 @@ X-Search-Count: 2
 ]
 ```
 
-<#sorting>
+~~~~sorting
 Ordenación
 ----------
 
@@ -57,7 +56,7 @@ La ordenación es una operación que permite —justamente— definir el orden e
 
 En general, los métodos que pueden ser ordenados son los mismos que aceptan la operación de [búsqueda][], donde los atributos por los cuales se puede ordenar corresponden a cualesquiera de los parámetros que pueden ser utilizados también para buscar, es decir, todos aquellos que estén indicados en la documentación y que no sean parámetros reservados por otras operaciones.
 
-La forma para indicar, por ejemplo, una ordenación por nombre de usuario al [listar agentes](#agents-list) es la siguiente:
+La forma para indicar, por ejemplo, una ordenación por nombre de usuario al [listar agentes][] es la siguiente:
 
 	GET /api/v1/agents?sort=username&apikey=123456
 
@@ -69,15 +68,15 @@ Retomando el ejemplo anterior, ordenar el mismo atributo pero en forma descenden
 
 **Nota:** No es posible ordenar por más de un atributo en cada petición.
 
-<#pagination>
+~~~~pagination
 Paginado
 --------
 
-Debido a que hay [búsquedas](#searching) que pueden devolver muchos más objetos de los que es visualmente conveniente mostrar en una aplicación, los métodos de la API que soportan búsquedas pueden ser configurados para devolver los resultados en páginas.
+Debido a que hay [búsquedas][búsqueda] que pueden devolver muchos más objetos de los que es visualmente conveniente mostrar en una aplicación, los métodos de la API que soportan búsquedas pueden ser configurados para devolver los resultados en páginas.
 
 Esta operación utiliza los parámetros reservados `limit` y `offset`, donde el primero indica el número de resultados que el método debe devolver por página (por default 50), y el segundo el número de resultados que se deben ignorar desde el inicio de la búsqueda (por default 0).
 
-Por ejemplo, para obtener la primera página de 10 elementos en un [listado de agentes](#agents-list) que encontró 20 resultados deberás solicitar:
+Por ejemplo, para obtener la primera página de 10 elementos en un [listado de agentes][listar agentes] que encontró 20 resultados deberás solicitar:
 
 	GET /api/v1/agents?limit=10&offset=0&apikey=123456
 
@@ -87,7 +86,7 @@ Así mismo, para la segunda página:
 
 Ten en cuenta que cualquier `limit` menor a 1 y mayor a 100 arrojará un error, de la misma forma en que lo hará cualquier `offset` negativo. Un `offset` mayor al número de resultados de una búsqueda simplemente devolverá una colección vacía sin provocar ningún error.
 
-<#extraction>
+~~~~extraction
 Extracción
 ----------
 
@@ -115,7 +114,7 @@ Content-Type: application/json
 ]
 ```
 
-<#embedding>
+~~~~embedding
 Vinculación
 -----------
 
@@ -185,6 +184,8 @@ Content-Type: application/json
 [Grupos]: /API/grupos
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
+[Alertas]: /API/alertas
+[Cuestionarios]: /API/cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -193,6 +194,7 @@ Content-Type: application/json
 [Alarma]: /API/#alarms
 [Reporte]: /API/auxiliares#reports
 [Visita]: /API/visitas
+
 [Upload]: /API/auxiliares#uploads
 [Extradata]: /API/auxiliares#extradata
 [Feedback]: /API/auxiliares#feedbacks
@@ -202,8 +204,46 @@ Content-Type: application/json
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 
+[listar admins]: /API/admins#admins-list
+[mostrar admins]: /API/admins#admins-show
+[crear admins]: /API/admins#admins-create
+[modificar admins]: /API/admins#admins-update
+[eliminar admins]: /API/admins#admins-delete
+[permisos admins]: /API/admins#admins-permissions
+[objetos admins]: http://help.gestii.com:8080/API/admins#admins-objects
+[APIkeys]: /API/admins#admins-apikeys
+
+[listar agentes]: /API/agentes#agents-list
+[mostrar agentes]: /API/agentes#agents-show
+[crear agentes]: /API/agentes#agents-create
+[modificar agentes]: /API/agentes#agents-update
+[eliminar agentes]: /API/agentes#agents-delete
+[encuestas agentes]: /API/agentes#agents-surveys
+[localizar agentes]: /API/agentes#agents-location
+[reporte agentes]: /API/agentes#agents-reports
+
+[listar grupos]: /API/grupos#groups-list
+[mostrar grupos]: /API/grupos#groups-show
+[crear grupos]: /API/grupos#groups-create
+[modificar grupos]: /API/grupos#groups-update
+[eliminar grupos]: /API/grupos#groups-delete
+
+[listar visitas]: /API/visitas#visits-list
+[mostrar visitas]: /API/visitas#visits-show
+[importar visitas]: /API/visitas#visits-upload
+[cancelar visitas]: /API/visitas#visits-cancel
+[eliminar visitas]: /API/visitas#visits-delete
+[asignar visitas]: /API/visitas#visits-assign
+[supervisar visitas]: /API/visitas#visits-supervise
+[reporte visitas]: /API/visitas#visits-reports
+
 [búsqueda]: /API/operaciones#searching
 [ordenación]: /API/operaciones#sorting
 [paginado]: /API/operaciones#pagination
 [extracción]: /API/operaciones#extraction
 [vinculación]: /API/operaciones#embedding
+
+[autorización]: /API/peticiones#auth
+[límite de peticiones]: /API/peticiones#limits
+[tipos de datos]: /API/peticiones#data-types
+[datetime]: /API/peticiones#type-datetime

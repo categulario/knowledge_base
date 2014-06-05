@@ -1,4 +1,3 @@
-<#groups>
 Grupos
 ------
 
@@ -8,7 +7,7 @@ Grupos
 - [Modificar los datos de un grupo](#groups-update)
 - [Eliminar un grupo](#groups-delete)
 
-Los grupos son utilizados para reprensentar divisiones organizacionales de [agentes](#agents) y [visitas](#visits). Un grupo puede representar una oficina, una sucursal, un departamento o cualquier otro concepto similar. En la API un grupo se encuentra representado por un objeto con la siguiente estructura:
+Los grupos son utilizados para reprensentar divisiones organizacionales de [agentes][Agentes] y [visitas][Visitas]. Un grupo puede representar una oficina, una sucursal, un departamento o cualquier otro concepto similar. En la API un grupo se encuentra representado por un objeto con la siguiente estructura:
 
 ```json
 {
@@ -26,7 +25,7 @@ El atributo `name` permite un formato especial donde es posible jerarquizar los 
 
 **Nota:** Es posible agregar hasta dos niveles de jerarquía al nombre de un grupo, por ejemplo: `Norte|Nuevo Leon|Monterrey`.
 
-<#groups-list>
+~~~~groups-list
 ### Listar grupos
 
 Devuelve una colección de objetos tipo [Grupo][]. Este método soporta las operaciones de [búsqueda][], [ordenación][], [paginado][] y [extracción][].
@@ -93,7 +92,7 @@ Content-Type: application/json
 ]
 ```
 
-<#groups-show>
+~~~~groups-show
 ### Mostrar grupo
 
 Devuelve un objeto tipo [Grupo][]. Este método soporta la operación [extracción][].
@@ -121,7 +120,7 @@ Content-Type: application/json
 }
 ```
 
-<#groups-create>
+~~~~groups-create
 ### Crear grupo
 
 Crea un grupo y devuelve un objeto tipo [Grupo][] representando el recurso creado.
@@ -148,7 +147,7 @@ Content-Type: application/json
 }
 ```
 
-<#groups-update>
+~~~~groups-update
 ### Modificar grupo
 
 Actualiza los datos de un grupo y devuelve un objeto tipo [Grupo][] con las modificaciones realizadas.
@@ -175,10 +174,10 @@ Content-Type: application/json
 }
 ```
 
-<#groups-delete>
+~~~~groups-delete
 ### Eliminar grupo
 
-Elimina permanentemente un grupo. Si el grupo contiene [visitas](#visits) y [agentes](#agents), se permite mover ambos elementos a otro grupo o eliminarlos en cascada.
+Elimina permanentemente un grupo. Si el grupo contiene [visitas][Visitas] y [agentes][Agentes], se permite mover ambos elementos a otro grupo o eliminarlos en cascada.
 
 	DELETE /api/v1/groups/:id
 
@@ -213,7 +212,7 @@ Content-Type: application/json
 
 ```
 
-**Nota:** Si se elige `cascade=delete`, el mecanismo de [eliminación de agentes](#agents-delete) también será desencadenado.
+**Nota:** Si se elige `cascade=delete`, el mecanismo de [eliminación de agentes][eliminar agentes] también será desencadenado.
 
 [Peticiones]: /API/peticiones
 [Respuestas]: /API/respuestas
@@ -224,6 +223,8 @@ Content-Type: application/json
 [Grupos]: /API/grupos
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
+[Alertas]: /API/alertas
+[Cuestionarios]: /API/cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -232,6 +233,7 @@ Content-Type: application/json
 [Alarma]: /API/#alarms
 [Reporte]: /API/auxiliares#reports
 [Visita]: /API/visitas
+
 [Upload]: /API/auxiliares#uploads
 [Extradata]: /API/auxiliares#extradata
 [Feedback]: /API/auxiliares#feedbacks
@@ -241,8 +243,46 @@ Content-Type: application/json
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 
+[listar admins]: /API/admins#admins-list
+[mostrar admins]: /API/admins#admins-show
+[crear admins]: /API/admins#admins-create
+[modificar admins]: /API/admins#admins-update
+[eliminar admins]: /API/admins#admins-delete
+[permisos admins]: /API/admins#admins-permissions
+[objetos admins]: http://help.gestii.com:8080/API/admins#admins-objects
+[APIkeys]: /API/admins#admins-apikeys
+
+[listar agentes]: /API/agentes#agents-list
+[mostrar agentes]: /API/agentes#agents-show
+[crear agentes]: /API/agentes#agents-create
+[modificar agentes]: /API/agentes#agents-update
+[eliminar agentes]: /API/agentes#agents-delete
+[encuestas agentes]: /API/agentes#agents-surveys
+[localizar agentes]: /API/agentes#agents-location
+[reporte agentes]: /API/agentes#agents-reports
+
+[listar grupos]: /API/grupos#groups-list
+[mostrar grupos]: /API/grupos#groups-show
+[crear grupos]: /API/grupos#groups-create
+[modificar grupos]: /API/grupos#groups-update
+[eliminar grupos]: /API/grupos#groups-delete
+
+[listar visitas]: /API/visitas#visits-list
+[mostrar visitas]: /API/visitas#visits-show
+[importar visitas]: /API/visitas#visits-upload
+[cancelar visitas]: /API/visitas#visits-cancel
+[eliminar visitas]: /API/visitas#visits-delete
+[asignar visitas]: /API/visitas#visits-assign
+[supervisar visitas]: /API/visitas#visits-supervise
+[reporte visitas]: /API/visitas#visits-reports
+
 [búsqueda]: /API/operaciones#searching
 [ordenación]: /API/operaciones#sorting
 [paginado]: /API/operaciones#pagination
 [extracción]: /API/operaciones#extraction
 [vinculación]: /API/operaciones#embedding
+
+[autorización]: /API/peticiones#auth
+[límite de peticiones]: /API/peticiones#limits
+[tipos de datos]: /API/peticiones#data-types
+[datetime]: /API/peticiones#type-datetime

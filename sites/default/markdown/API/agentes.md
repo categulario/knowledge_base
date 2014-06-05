@@ -1,4 +1,3 @@
-<#agents>
 Agentes
 -------
 
@@ -39,7 +38,7 @@ phone          | String    |
 token          | String    | 
 group_id       | Integer   | 
 
-<#agents-list>
+~~~~agents-list
 ### Listar agentes
 
 Devuelve una colección de objetos tipo [Agente][]. Este método soporta las operaciones de [búsqueda][], [ordenación][], [paginado][], [extracción][] y [vinculación][].
@@ -96,7 +95,7 @@ Content-Type: application/json
 ]
 ```
 
-<#agents-show>
+~~~~agents-show
 ### Mostrar agente
 
 Devuelve un objeto tipo [Agente][]. Este método soporta las operaciones de [extracción][] y [vinculación][].
@@ -136,7 +135,7 @@ Content-Type: application/json
 }
 ```
 
-<#agents-create>
+~~~~agents-create
 ### Crear agente
 
 Crea un agente y devuelve un objeto tipo [Agente][] representando el recurso creado.
@@ -175,7 +174,7 @@ Content-Type: application/json
 }
 ```
 
-<#agents-update>
+~~~~agents-update
 ### Modificar agente
 
 Actualiza los datos de un agente y devuelve un objeto tipo [Agente][] con las modificaciones realizadas.
@@ -239,10 +238,10 @@ Content-Type: application/json
 
 **Nota:** Al regenerar el token de un agente, el agente será desconectado automáticamente de la app móvil.
 
-<#agents-delete>
+~~~~agents-delete
 ### Eliminar agente
 
-Elimina permanentemente un agente. Como consecuencia, todas las [visitas](#visits) no realizadas que dicho agente tuviera asignadas serán canceladas.
+Elimina permanentemente un agente. Como consecuencia, todas las [visitas][Visitas] no realizadas que dicho agente tuviera asignadas serán canceladas.
 
 	DELETE /api/v1/agents/:id
 
@@ -259,14 +258,14 @@ Content-Type: application/json
 
 ```
 
-<#agents-surveys>
+~~~~agents-surveys
 ### Asignar encuestas
 
-Una encuesta es una visita que puede ser realizada en cualquier momento sin haber sido asignada previamente. Para que un agente pueda realizar encuestas es necesario asignarle los [cuestionarios](#forms) con los que podrá realizarlas. Cualquier cuestionario es válido para asignar como encuesta.
+Una encuesta es una visita que puede ser realizada en cualquier momento sin haber sido asignada previamente. Para que un agente pueda realizar encuestas es necesario asignarle los [cuestionarios][Cuestionarios] con los que podrá realizarlas. Cualquier cuestionario es válido para asignar como encuesta.
 
 #### Listas encuestas asignadas
 
-Devuelve una colección de objetos tipo [Form][]. Este método no soporta ninguna operación.
+Devuelve una colección de objetos tipo [Form][Cuestionarios]. Este método no soporta ninguna operación.
 
 	GET /api/v1/agents/:id/surveys
 
@@ -292,7 +291,7 @@ Content-Type: application/json
 
 #### Asignar cuestionarios para encuestas
 
-Sobreescribe los [cuestionarios](#forms) que el agente tiene asignados para realizar encuestas. La respuesta se devuelve vacía en caso de éxito.
+Sobreescribe los [cuestionarios][Cuestionarios] que el agente tiene asignados para realizar encuestas. La respuesta se devuelve vacía en caso de éxito.
 
 	PUT /api/v1/agents/:id/surveys
 
@@ -313,7 +312,7 @@ Content-Type: application/json
 
 ```
 
-<#agents-location>
+~~~~agents-location
 ### Localizar agentes
 
 Devuelve una colección de objetos tipo [Location][] con la ubicación actual de todos los agentes.
@@ -404,7 +403,7 @@ Content-Type: application/json
 ]
 ```
 
-<#agents-reports>
+~~~~agents-reports
 ### Generar reportes
 
 Como conveniencia, es posible descargar la información de los agentes en reportes pre-armados en distintos formatos.
@@ -437,16 +436,16 @@ Content-Type: application/json
 
 #### Generar un nuevo reporte
 
-Dado que la generación de un nuevo reporte es un proceso asíncrono, se realiza a través de la API de [Delayed Jobs](#jobs). Dependiendo del tipo de reporte y de la cantidad de información, este proceso puede tardar algunos minutos en finalizar.
+Dado que la generación de un nuevo reporte es un proceso asíncrono, se realiza a través de la API de [Delayed Jobs][DelayedJob]. Dependiendo del tipo de reporte y de la cantidad de información, este proceso puede tardar algunos minutos en finalizar.
 
-Devuelve un objeto tipo [DelayedJob][] para monitorear el progreso de generación del reporte. Este método soporta las operaciones de [búsqueda][], [ordenación][] y [paginado][] de acuerdo a los mismos parámetros que el [listado de agentes](#agents-list).
+Devuelve un objeto tipo [DelayedJob][] para monitorear el progreso de generación del reporte. Este método soporta las operaciones de [búsqueda][], [ordenación][] y [paginado][] de acuerdo a los mismos parámetros que el [listado de agentes][listar agentes].
 
 	POST /api/v1/jobs
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------------------------
 queue          | String    | Requerido | Debe ser: `reports`.
-generator      | String    | Requerido | Uno de la [lista de reportes](#agents-reports).
+generator      | String    | Requerido | Uno de la [lista de reportes][reporte agentes].
 username       | String    | Opcional  | 
 name           | String    | Opcional  | 
 status         | Integer   | Opcional  | 
@@ -456,7 +455,7 @@ sort           | String    | Opcional  | Default: `username`.
 offset         | Integer   | Opcional  | 
 limit          | Integer   | Opcional  | 
 
-Generar un reporte de productividad del [grupo](#groups) con id "1":
+Generar un reporte de productividad del [grupo][Grupos] con id "1":
 
 	POST /api/v1/jobs?queue=reports&generator=PRODUCTIVITY&group_id=1&apikey=123456
 
@@ -474,7 +473,7 @@ Content-Type: application/json
 
 #### Monitorear y descargar el reporte
 
-Tanto el monitoreo como la descarga se realizan exactamente de la misma manera que los [reportes de visitas](#visits-reports-status).
+Tanto el monitoreo como la descarga se realizan exactamente de la misma manera que los [reportes de visitas][reporte visitas].
 
 [Peticiones]: /API/peticiones
 [Respuestas]: /API/respuestas
@@ -485,6 +484,8 @@ Tanto el monitoreo como la descarga se realizan exactamente de la misma manera q
 [Grupos]: /API/grupos
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
+[Alertas]: /API/alertas
+[Cuestionarios]: /API/cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -493,6 +494,7 @@ Tanto el monitoreo como la descarga se realizan exactamente de la misma manera q
 [Alarma]: /API/#alarms
 [Reporte]: /API/auxiliares#reports
 [Visita]: /API/visitas
+
 [Upload]: /API/auxiliares#uploads
 [Extradata]: /API/auxiliares#extradata
 [Feedback]: /API/auxiliares#feedbacks
@@ -502,8 +504,46 @@ Tanto el monitoreo como la descarga se realizan exactamente de la misma manera q
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 
+[listar admins]: /API/admins#admins-list
+[mostrar admins]: /API/admins#admins-show
+[crear admins]: /API/admins#admins-create
+[modificar admins]: /API/admins#admins-update
+[eliminar admins]: /API/admins#admins-delete
+[permisos admins]: /API/admins#admins-permissions
+[objetos admins]: http://help.gestii.com:8080/API/admins#admins-objects
+[APIkeys]: /API/admins#admins-apikeys
+
+[listar agentes]: /API/agentes#agents-list
+[mostrar agentes]: /API/agentes#agents-show
+[crear agentes]: /API/agentes#agents-create
+[modificar agentes]: /API/agentes#agents-update
+[eliminar agentes]: /API/agentes#agents-delete
+[encuestas agentes]: /API/agentes#agents-surveys
+[localizar agentes]: /API/agentes#agents-location
+[reporte agentes]: /API/agentes#agents-reports
+
+[listar grupos]: /API/grupos#groups-list
+[mostrar grupos]: /API/grupos#groups-show
+[crear grupos]: /API/grupos#groups-create
+[modificar grupos]: /API/grupos#groups-update
+[eliminar grupos]: /API/grupos#groups-delete
+
+[listar visitas]: /API/visitas#visits-list
+[mostrar visitas]: /API/visitas#visits-show
+[importar visitas]: /API/visitas#visits-upload
+[cancelar visitas]: /API/visitas#visits-cancel
+[eliminar visitas]: /API/visitas#visits-delete
+[asignar visitas]: /API/visitas#visits-assign
+[supervisar visitas]: /API/visitas#visits-supervise
+[reporte visitas]: /API/visitas#visits-reports
+
 [búsqueda]: /API/operaciones#searching
 [ordenación]: /API/operaciones#sorting
 [paginado]: /API/operaciones#pagination
 [extracción]: /API/operaciones#extraction
 [vinculación]: /API/operaciones#embedding
+
+[autorización]: /API/peticiones#auth
+[límite de peticiones]: /API/peticiones#limits
+[tipos de datos]: /API/peticiones#data-types
+[datetime]: /API/peticiones#type-datetime

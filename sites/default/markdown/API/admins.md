@@ -1,4 +1,3 @@
-<#admins>
 Admins
 ------
 
@@ -19,7 +18,8 @@ Un admin es un tipo de usuario con permisos para conectarse vía internet a la p
 	"username": "admin1",
 	"active": true,
 	"name": "Admin 1",
-	"email": "admin@gestii.com"
+	"email": "admin@gestii.com",
+	"type": 0
 }
 ```
 
@@ -30,13 +30,16 @@ username       | String    |
 name           | String    | 
 active         | Boolean   | Uno de: `true` si el admin puede iniciar sesión en la web, `false` si no.
 email          | String    | 
+type           | Integer   | 0: Usuario normal, 1: Administrador principal
 
-<#admins-list>
+~~~~admins-list
 ### Listar admins
 
 Devuelve una colección de objetos tipo [Admin][]. Este método soporta las operaciones de [búsqueda][], [ordenación][], [paginado][] y [extracción][].
 
-	GET /api/v1/admins
+````
+GET /api/v1/admins
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|---------------------
@@ -51,7 +54,9 @@ count          | Boolean   | Opcional  |
 
 Listar los ids y usuarios de los administradores activos, por ejemplo, para mostrar en un `<select>`:
 
-	GET /api/v1/admins?active=true&fields=id,username&apikey=123456
+````http
+GET /api/v1/admins?active=true&fields=id,username&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -71,7 +76,7 @@ Content-Type: application/json
 ]
 ```
 
-<#admins-show>
+~~~~admins-show
 ### Mostrar admin
 
 Devuelve un objeto tipo [Admin][]. Este método soporta la operación [extracción][].
@@ -97,11 +102,12 @@ Content-Type: application/json
 	"username": "admin2",
 	"active": true,
 	"name": "Admin 2",
-	"email": "admin2@gestii.com"
+	"email": "admin2@gestii.com",
+	"type": 0
 }
 ```
 
-<#admins-create>
+~~~~admins-create
 ### Crear admin
 
 Crea un admin y devuelve un objeto tipo [Admin][] representando el recurso creado.
@@ -131,11 +137,12 @@ Content-Type: application/json
 	"username": "admin3",
 	"active": false,
 	"name": "Admin 3",
-	"email": "admin3@gestii.com"
+	"email": "admin3@gestii.com",
+	"type": 0
 }
 ```
 
-<#admins-update>
+~~~~admins-update
 ### Modificar admin
 
 Actualiza los datos de un admin y devuelve un objeto tipo [Admin][] con las modificaciones realizadas.
@@ -144,7 +151,7 @@ Actualiza los datos de un admin y devuelve un objeto tipo [Admin][] con las modi
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------------------
-password       | String    | Requerido | Si existe, la contraseña será modificada.
+password       | String    | Opcional  | Si existe, la contraseña será modificada.
 name           | String    | Requerido | 
 email          | String    | Requerido | 
 active         | Boolean   | Opcional  | 
@@ -164,13 +171,14 @@ Content-Type: application/json
 	"username": "admin3",
 	"active": true,
 	"name": "Admin 3",
-	"email": "admin3@gestii.com"
+	"email": "admin3@gestii.com",
+	"type": 0
 }
 ```
 
 Cambiar a "nuevo@gestii.com" el correo electrónico del admin con id "1":
 
-	PUT /api/v1/admins/1?email=nuevo@gestii.com&apikey=123456
+	PUT /api/v1/admins/1?email=nuevo@gestii.com&name=Admin%201&apikey=123456
 
 ```headers
 Status: 200 OK
@@ -183,11 +191,12 @@ Content-Type: application/json
 	"username": "admin1",
 	"active": true,
 	"name": "Admin 1",
-	"email": "nuevo@gestii.com"
+	"email": "nuevo@gestii.com",
+	"type": 0
 }
 ```
 
-<#admins-delete>
+~~~~admins-delete
 ### Eliminar admin
 
 Elimina permanentemente un admin. Este método no afecta otros objetos del sistema.
@@ -260,10 +269,10 @@ Content-Type: application/json
 
 ```
 
-<#admins-catalog>
+~~~~admins-catalog
 #### Catálogo de permisos
 
-Devuelve un array de [strings](#type-basics) con los permisos disponibles en la aplicación.
+Devuelve un array de [strings][tipos de datos] con los permisos disponibles en la aplicación.
 
 	GET /api/v1/admins/permissions
 
@@ -294,7 +303,7 @@ Content-Type: application/json
 ]
 ```
 
-<#admins-objects>
+~~~~admins-objects
 ### Asignar objetos
 
 Los objetos son el subconjunto de datos que un admin tiene permitido visualizar ya sea desde la interfaz web o desde una API key.
@@ -315,20 +324,38 @@ Content-Type: application/json
 ```
 
 ```json
-[
-	{
-		"object": "groups",
-		"ids": "1,2,3"
-	},
-	{
-		"object": "forms",
-		"ids": "1"
-	},
-	{
-		"object": "reports",
-		"ids": "1,2,3"
-	}
-]
+{
+	"forms": [
+		1,
+		2,
+		3,
+		4,
+		5
+	],
+	"groups": [
+		1,
+		2,
+		3,
+		4,
+		5
+	],
+	"visits_reports": [
+		1,
+		2,
+		3
+	],
+	"agents_reports": [
+		4
+	],
+	"layouts": [
+		1,
+		2,
+		3
+	],
+	"alerts": [
+		1
+	]
+}
 ```
 
 #### Asignar permisos de objetos
@@ -338,8 +365,8 @@ Sobreescribe los objetos que el admin tiene permiso de visualizar.
 	PUT /api/v1/admins/:id/objects
 
 Parámetro      | Tipo      | Estatus   | Notas
----------------|-----------|-----------|-------------------------------------------------
-object         | String    | Requerido | Uno de: `groups`, `forms`, `layouts`, `reports`.
+---------------|-----------|-----------|------------------------------------------------------------------------------------
+object         | String    | Requerido | Uno de: `groups`, `forms`, `visits_reports`, `agents_reports`, `layouts`, `alerts`.
 ids            | CSV       | Requerido | 
 
 Asignar permisos para visualizar los grupos con ids "1", "2" y "3" al admin con id "1":
@@ -355,14 +382,14 @@ Content-Type: application/json
 
 ```
 
-Cada uno de los permisos de objetos restringe los resultados de los métodos que listan y manipulan los siguientes objetos: `groups` limita [visitas](#visits), [agentes](#agents) y [grupos](#groups); `forms` limita [cuestionarios](#forms); `layouts` limita [layouts](#layouts); `reports` limita [reportes](#reports).
+Cada uno de los permisos de objetos restringe los resultados de los métodos que listan y manipulan los siguientes objetos: `groups` limita [visitas][], [agentes][] y [grupos][]; `forms` limita [cuestionarios][]; `layouts` limita [layouts][]; `agents_reports` limita [reportes de agentes][reporte agentes], `visits_reports` limita [reportes de visitas][reporte visitas], `alerts` limita [alertas][Alertas].
 
 En el caso de los listados, los objetos para los que no se cuente con permisos serán omitidos. Para el caso de las operaciones sobre un objeto en particular, si el admin no tiene permiso para acceder a él, la petición responderá con un `404 Not Found`.
 
-<#admins-apikeys>
+~~~~admins-apikeys
 ### Administrar API keys
 
-Las API keys son el mecanismo de [autorización](#auth) que utiliza esta API. Por default la primera API key con todos los permisos es generada al crear tu cuenta en Gestii, sin embargo puedes crear API keys para administradores con [permisos](#admin-permissions) diferentes de tal manera que asegures que desde tus aplicaciones únicamente se está accediendo a los datos y operaciones que se deben acceder sin comprometer información privada o sensible.
+Las API keys son el mecanismo de [autorización][] que utiliza esta API. Por default la primera API key con todos los permisos es generada al crear tu cuenta en Gestii, sin embargo puedes crear API keys para administradores con [permisos][permisos admins] diferentes de tal manera que asegures que desde tus aplicaciones únicamente se está accediendo a los datos y operaciones que se deben acceder sin comprometer información privada o sensible.
 
 #### Mostrar la API key de un admin
 
@@ -436,6 +463,8 @@ Content-Type: application/json
 [Grupos]: /API/grupos
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
+[Alertas]: /API/alertas
+[Cuestionarios]: /API/cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -444,6 +473,7 @@ Content-Type: application/json
 [Alarma]: /API/#alarms
 [Reporte]: /API/auxiliares#reports
 [Visita]: /API/visitas
+
 [Upload]: /API/auxiliares#uploads
 [Extradata]: /API/auxiliares#extradata
 [Feedback]: /API/auxiliares#feedbacks
@@ -453,8 +483,46 @@ Content-Type: application/json
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 
+[listar admins]: /API/admins#admins-list
+[mostrar admins]: /API/admins#admins-show
+[crear admins]: /API/admins#admins-create
+[modificar admins]: /API/admins#admins-update
+[eliminar admins]: /API/admins#admins-delete
+[permisos admins]: /API/admins#admins-permissions
+[objetos admins]: http://help.gestii.com:8080/API/admins#admins-objects
+[APIkeys]: /API/admins#admins-apikeys
+
+[listar agentes]: /API/agentes#agents-list
+[mostrar agentes]: /API/agentes#agents-show
+[crear agentes]: /API/agentes#agents-create
+[modificar agentes]: /API/agentes#agents-update
+[eliminar agentes]: /API/agentes#agents-delete
+[encuestas agentes]: /API/agentes#agents-surveys
+[localizar agentes]: /API/agentes#agents-location
+[reporte agentes]: /API/agentes#agents-reports
+
+[listar grupos]: /API/grupos#groups-list
+[mostrar grupos]: /API/grupos#groups-show
+[crear grupos]: /API/grupos#groups-create
+[modificar grupos]: /API/grupos#groups-update
+[eliminar grupos]: /API/grupos#groups-delete
+
+[listar visitas]: /API/visitas#visits-list
+[mostrar visitas]: /API/visitas#visits-show
+[importar visitas]: /API/visitas#visits-upload
+[cancelar visitas]: /API/visitas#visits-cancel
+[eliminar visitas]: /API/visitas#visits-delete
+[asignar visitas]: /API/visitas#visits-assign
+[supervisar visitas]: /API/visitas#visits-supervise
+[reporte visitas]: /API/visitas#visits-reports
+
 [búsqueda]: /API/operaciones#searching
 [ordenación]: /API/operaciones#sorting
 [paginado]: /API/operaciones#pagination
 [extracción]: /API/operaciones#extraction
 [vinculación]: /API/operaciones#embedding
+
+[autorización]: /API/peticiones#auth
+[límite de peticiones]: /API/peticiones#limits
+[tipos de datos]: /API/peticiones#data-types
+[datetime]: /API/peticiones#type-datetime

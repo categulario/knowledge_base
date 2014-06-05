@@ -1,4 +1,3 @@
-<#visits>
 Visitas
 -------
 
@@ -11,7 +10,7 @@ Visitas
 - [Supervisar una visita](#visits-supervise)
 - [Generar reportes de visitas](#visits-reports)
 
-Las visitas son el objeto central de procesamiento de Gestii y se utilizan para indicar los domicilios en donde un [agente](#agents) debe realizar o realizó una actividad. Puedes pensar en una visita como una orden de trabajo, ya sea una cuenta por cobrar o un cliente que evaluar, o como un levantamiento no previsto, por ejemplo una encuesta aleatoria de opinión. En la API una visita se encuentra representada por un objeto con la siguiente estructura:
+Las visitas son el objeto central de procesamiento de Gestii y se utilizan para indicar los domicilios en donde un [agente][Agentes] debe realizar o realizó una actividad. Puedes pensar en una visita como una orden de trabajo, ya sea una cuenta por cobrar o un cliente que evaluar, o como un levantamiento no previsto, por ejemplo una encuesta aleatoria de opinión. En la API una visita se encuentra representada por un objeto con la siguiente estructura:
 
 ```json
 {
@@ -89,7 +88,7 @@ supervising_id | Integer   | El id de la visita que se está supervisando.
 supervision    | Integer   | Uno de: `null` (sin supervisar), `0` (en supervisión), `1` (aceptada), `2` (corregida), `3` (rechazada).
 version        | Integer   | 
 
-<#visits-list>
+~~~~visits-list
 ### Listar visitas
 
 Devuelve una colección de objetos tipo [Visita][]. Este método soporta las operaciones de [búsqueda][], [ordenación][], [paginado][], [extracción][] y [vinculación][].
@@ -197,7 +196,7 @@ Listar las visitas cuyo código es exactamente "XYZ" (nota el guión al final de
 ]
 ```
 
-Listar todas las visitas recibidas en los últimos 5 minutos (ver [rangos de fechas](#type-datetime)):
+Listar todas las visitas recibidas en los últimos 5 minutos (ver [rangos de fechas][datetime]):
 
 	GET /api/v1/visits?received_at=20140101140000-5m&fields=id,finished_at,received_at&apikey=123456
 
@@ -221,7 +220,7 @@ Content-Type: application/json
 ]
 ```
 
-Listar todas las visitas [canceladas](#visits-cancel) el día de hoy:
+Listar todas las visitas [canceladas][cancelar visitas] el día de hoy:
 
 	GET /api/v1/visits?status=3&updated_at=20140101000000+1d&fields=id,status,updated_at&apikey=123456
 
@@ -247,7 +246,7 @@ Content-Type: application/json
 
 **Nota:** Aunque en el objeto [Visita][] los atributos `code` y `subcode` se muestran por separado, cualquier operación de filtro y ordenamiento por `code` considerará `subcode` en su resultado. En el caso de los filtros es necesario separar explícitamente el código y el subcódigo con un guión.
 
-<#visits-show>
+~~~~visits-show
 ### Mostrar visita
 
 Devuelve un objeto tipo [Visita][]. Este método soporta las operaciones de [extracción][] y [vinculación][].
@@ -282,7 +281,7 @@ Content-Type: application/json
 
 #### Obtener datos precargados en la importación
 
-Devuelve una colección de objetos tipo [Extradata][] con los datos precargados al [importar la visita](#visits-import).
+Devuelve una colección de objetos tipo [Extradata][] con los datos precargados al [importar la visita][importar visitas].
 
 	GET /api/v1/visits/:id/extradata
 
@@ -372,11 +371,11 @@ Content-Type: application/json
 ]
 ```
 
-La URL de las imágenes deberá ser complementada con la [URL base](#requests) y por una API key con permisos para verlas. Por ejemplo:
+La URL de las imágenes deberá ser complementada con la [URL base][Peticiones] y por una API key con permisos para verlas. Por ejemplo:
 
 	<img src="http://sitio.gestii.com/cdn/images/1?apikey=123456">
 
-<#visits-upload>
+~~~~visits-upload
 ### Importar visitas
 
 Importa un archivo de visitas y devuelve un objeto tipo [Upload][] para monitorear el estatus de la importación.
@@ -422,7 +421,7 @@ Puedes encontrar más información acerca de los layouts y formatos de archivos 
 
 **Nota:** Las visitas no pueden ser modificadas, sin embargo importar nuevamente una visita con el mismo código y subcódigo que una visita existente causará que la visita existente sea sobreescrita con la información de la visita que se está importando. Al hacer esto, la nueva visita estará disponible para realizar sin importar el estado en el que se encontrara la visita anterior.
 
-<#visits-status>
+~~~~visits-status
 #### Monitorear estatus de importación
 
 Dependiendo de la cantidad de visitas importadas, el proceso puede tardar algunos minutos en publicar las visitas a las apps móviles de los agentes. Si necesitas monitorear el estatus del upload en lo que el proceso termina, puedes utilizar el siguiente método que devolverá un objeto [Upload][] con el estatus en que se encuentra el upload solicitado:
@@ -452,7 +451,7 @@ Content-Type: application/json
 
 **Nota:** Nuestro promedio actual de tiempo de finalización de una importación es de 5 minutos por cada 1,000 visitas en el archivo.
 
-<#visits-errors>
+~~~~visits-errors
 #### Descargar errores de importación
 
 En caso de que el estatus devuelto por el objeto [Upload][] indique que el proceso de importación ha fallado y se debe descargar un archivo con la descripción de los errores (código `300`), el archivo podrá ser accedido utilizando la siguiente URL:
@@ -476,7 +475,7 @@ El agente no existe, XYZ789, Reforma #342, Juárez, 06600, Cuauhtémoc, México 
 
 Observa que la primer columna ahora contiene la descripción del error encontrado específicamente para la fila en que se muestra.
 
-<#visits-cancel>
+~~~~visits-cancel
 ### Cancelar visita
 
 Cancela una visita y devuelve un objeto tipo [Visita][] con las modificaciones realizadas. Esta operación no elimina la visita.
@@ -528,7 +527,7 @@ Content-Type: application/json
 }
 ```
 
-<#visits-delete>
+~~~~visits-delete
 ### Eliminar visita
 
 Elimina permanentemente una visita. Este método no afecta otros objetos del sistema.
@@ -548,17 +547,17 @@ Content-Type: application/json
 
 ```
 
-<#visits-assign>
+~~~~visits-assign
 ### Reasignar visita
 
-Cambia el [agente](#agents) asignado a una visita. Si la visita no había sido asignada a nadie previamente, se devuelve un objeto tipo [Visita][] con el agente actualizado. Si la visita ya había sido asignada a alguien, entonces este método crea una nueva visita con la misma información y devuelve un objeto tipo [Visita][] con la nueva visita y estatus `201 Created`. La visita reasignada siempre estará disponible nuevamente para realizar.
+Cambia el [agente][Agentes] asignado a una visita. Si la visita no había sido asignada a nadie previamente, se devuelve un objeto tipo [Visita][] con el agente actualizado. Si la visita ya había sido asignada a alguien, entonces este método crea una nueva visita con la misma información y devuelve un objeto tipo [Visita][] con la nueva visita y estatus `201 Created`. La visita reasignada siempre estará disponible nuevamente para realizar.
 
 	PUT /api/v1/visits/:id/assign
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|----------------------------------------------------------------------------
 agent_id       | Integer   | Requerido | 
-supervise      | Boolean   | Opcional  | Default: `false`. En `true` para [supervisar](#visits-supervise) la visita.
+supervise      | Boolean   | Opcional  | Default: `false`. En `true` para [supervisar][supervisar visitas] la visita.
 
 Reasignar la visita con id "1" al agente con id "3":
 
@@ -650,10 +649,10 @@ Content-Type: application/json
 }
 ```
 
-<#visits-supervise>
+~~~~visits-supervise
 #### Reasignar una visita para supervisión
 
-Al [reasignar](#visits-assign) una visita es posible indicar que la visita debe ser supervisada con `supervise=true` en los parámetros. Esto provocará que al enviar la visita al nuevo agente, la información capturada originalmente aparezca pre-llenada en su app móvil, permitiéndole al agente que supervisa validarla o modificarla en caso de ser necesario. Al enviarla, los cambios realizados se reflejarán en la visita original.
+Al [reasignar][asignar visitas] una visita es posible indicar que la visita debe ser supervisada con `supervise=true` en los parámetros. Esto provocará que al enviar la visita al nuevo agente, la información capturada originalmente aparezca pre-llenada en su app móvil, permitiéndole al agente que supervisa validarla o modificarla en caso de ser necesario. Al enviarla, los cambios realizados se reflejarán en la visita original.
 
 Únicamente es posible supervisar visitas cuyo tipo sea `0` (normales) o `1` (encuestas) y ya hayan sido terminadas, es decir, en estatus `2`. Por lo tanto: no es posible supervisar una supervisión ni una visita sin realizar. Esta petición siempre devuelve `201 Created`.
 
@@ -705,7 +704,7 @@ Content-Type: application/json
 }
 ```
 
-<#visits-reports>
+~~~~visits-reports
 ### Generar reportes
 
 Como conveniencia, es posible descargar la información de las visitas en reportes pre-armados en distintos formatos.
@@ -738,16 +737,16 @@ Content-Type: application/json
 
 #### Generar un nuevo reporte
 
-Dado que la generación de un nuevo reporte es un proceso asíncrono, se realiza a través de la API de [Delayed Jobs](#jobs). Dependiendo del tipo de reporte y de la cantidad de información, este proceso puede tardar algunos minutos en finalizar.
+Dado que la generación de un nuevo reporte es un proceso asíncrono, se realiza a través de la API de [Delayed Jobs][DelayedJob]. Dependiendo del tipo de reporte y de la cantidad de información, este proceso puede tardar algunos minutos en finalizar.
 
-Devuelve un objeto tipo [DelayedJob][] para monitorear el progreso de generación del reporte. Este método soporta las operaciones de [búsqueda][], [ordenación][] y [paginado][] de acuerdo a los mismos parámetros que el [listado de visitas](#visits-list).
+Devuelve un objeto tipo [DelayedJob][] para monitorear el progreso de generación del reporte. Este método soporta las operaciones de [búsqueda][], [ordenación][] y [paginado][] de acuerdo a los mismos parámetros que el [listado de visitas][listar visitas].
 
 	POST /api/v1/jobs
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------------------------
 queue          | String    | Requerido | Debe ser: `reports`.
-generator      | String    | Requerido | Uno de la [lista de reportes](#visits-reports).
+generator      | String    | Requerido | Uno de la [lista de reportes][listar reportes].
 images         | Boolean   | Opcional  | Default: `false`.
 code           | String    | Opcional  | 
 status         | Integer   | Opcional  | 
@@ -783,7 +782,7 @@ Content-Type: application/json
 }
 ```
 
-<#visits-reports-status>
+~~~~visits-reports-status
 #### Monitorear estatus de generación
 
 Devuelve un objeto tipo [DelayedJob][] con el estatus de finalización del reporte.
@@ -857,6 +856,8 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 [Grupos]: /API/grupos
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
+[Alertas]: /API/alertas
+[Cuestionarios]: /API/cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -865,6 +866,7 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 [Alarma]: /API/#alarms
 [Reporte]: /API/auxiliares#reports
 [Visita]: /API/visitas
+
 [Upload]: /API/auxiliares#uploads
 [Extradata]: /API/auxiliares#extradata
 [Feedback]: /API/auxiliares#feedbacks
@@ -874,8 +876,46 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 
+[listar admins]: /API/admins#admins-list
+[mostrar admins]: /API/admins#admins-show
+[crear admins]: /API/admins#admins-create
+[modificar admins]: /API/admins#admins-update
+[eliminar admins]: /API/admins#admins-delete
+[permisos admins]: /API/admins#admins-permissions
+[objetos admins]: http://help.gestii.com:8080/API/admins#admins-objects
+[APIkeys]: /API/admins#admins-apikeys
+
+[listar agentes]: /API/agentes#agents-list
+[mostrar agentes]: /API/agentes#agents-show
+[crear agentes]: /API/agentes#agents-create
+[modificar agentes]: /API/agentes#agents-update
+[eliminar agentes]: /API/agentes#agents-delete
+[encuestas agentes]: /API/agentes#agents-surveys
+[localizar agentes]: /API/agentes#agents-location
+[reporte agentes]: /API/agentes#agents-reports
+
+[listar grupos]: /API/grupos#groups-list
+[mostrar grupos]: /API/grupos#groups-show
+[crear grupos]: /API/grupos#groups-create
+[modificar grupos]: /API/grupos#groups-update
+[eliminar grupos]: /API/grupos#groups-delete
+
+[listar visitas]: /API/visitas#visits-list
+[mostrar visitas]: /API/visitas#visits-show
+[importar visitas]: /API/visitas#visits-upload
+[cancelar visitas]: /API/visitas#visits-cancel
+[eliminar visitas]: /API/visitas#visits-delete
+[asignar visitas]: /API/visitas#visits-assign
+[supervisar visitas]: /API/visitas#visits-supervise
+[reporte visitas]: /API/visitas#visits-reports
+
 [búsqueda]: /API/operaciones#searching
 [ordenación]: /API/operaciones#sorting
 [paginado]: /API/operaciones#pagination
 [extracción]: /API/operaciones#extraction
 [vinculación]: /API/operaciones#embedding
+
+[autorización]: /API/peticiones#auth
+[límite de peticiones]: /API/peticiones#limits
+[tipos de datos]: /API/peticiones#data-types
+[datetime]: /API/peticiones#type-datetime
