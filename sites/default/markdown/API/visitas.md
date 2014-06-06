@@ -16,7 +16,6 @@ Las visitas son el objeto central de procesamiento de Gestii y se utilizan para 
 {
 	"id": 1,
 	"code": "ABC",
-	"subcode": "123",
 	"description": "",
 	"status": 0,
 	"type": 0,
@@ -27,13 +26,14 @@ Las visitas son el objeto central de procesamiento de Gestii y se utilizan para 
 	"city": "Naucalpan",
 	"state": "México",
 	"country": "México",
-	"address": "Hda. Coaxamalucan #132, Hda. de Echegaray, 53300, Naucalpan, México, México",
 	"latitude": 19.492316,
 	"longitude": -99.234433,
 	"agent_id": 1,
 	"upload_id": 1,
 	"form_id": 1,
 	"group_id": 1,
+	"cluster": null,
+	"is_new": false,
 	"created_at": "2014-01-01T14:00:00Z",
 	"updated_at": "2014-01-01T15:35:00Z",
 	"available_at": "2014-01-01T14:00:00Z",
@@ -44,9 +44,8 @@ Las visitas son el objeto central de procesamiento de Gestii y se utilizan para 
 	"location_id": 1,
 	"distance": 10,
 	"timespan": 30,
-	"alarms": 0,
+	"alerts": 0,
 	"supervising_id": null,
-	"supervision": null,
 	"version": 1
 }
 ```
@@ -55,7 +54,6 @@ Atributo       | Tipo      | Notas
 ---------------|-----------|--------------------------------------------------------------------------------------------
 id             | Integer   | 
 code           | String    | 
-subcode        | String    | 
 description    | String    | 
 status         | Integer   | Uno de: `0` (pendiente), `1` (disponible), `2` (terminada), `3` (cancelada), `4` (vencida).
 type           | Integer   | Uno de: `0` (normal), `1` (encuesta), `2` (supervisión).
@@ -66,13 +64,14 @@ zipcode        | String    |
 city           | String    | 
 state          | String    | 
 country        | String    | 
-address        | String    | Dirección estilizada para mostrar.
 latitude       | Decimal   | 
 longitude      | Decimal   | 
 agent_id       | Integer   | Puede ser `null` si se encuentra aun sin asignar.
 upload_id      | Integer   | Puede ser `null` si no se creó en una importación.
 form_id        | Integer   | 
 group_id       | Integer   | 
+cluster        | String    | 
+is_new         | Boolean   | 
 created_at     | Timestamp | 
 updated_at     | Timestamp | 
 available_at   | Timestamp | 
@@ -83,9 +82,8 @@ received_at    | Timestamp |
 location_id    | Integer   | 
 distance       | Integer   | Distancia en metros a la que se realizó la visita.
 timespan       | Integer   | Duración en minutos de la visita.
-alarms         | Integer   | 
+alerts         | Integer   | 
 supervising_id | Integer   | El id de la visita que se está supervisando.
-supervision    | Integer   | Uno de: `null` (sin supervisar), `0` (en supervisión), `1` (aceptada), `2` (corregida), `3` (rechazada).
 version        | Integer   | 
 
 ~~~~visits-list
@@ -93,11 +91,12 @@ version        | Integer   |
 
 Devuelve una colección de objetos tipo [Visita][]. Este método soporta las operaciones de [búsqueda][], [ordenación][], [paginado][], [extracción][] y [vinculación][].
 
-	GET /api/v1/visits
+````http-req
+GET /api/v1/visits
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|-------------------------------------
-code           | String    | Opcional  | 
 status         | Integer   | Opcional  | 
 priority       | Integer   | Opcional  | 
 agent_id       | Integer   | Opcional  | 
@@ -107,10 +106,12 @@ group_id       | Integer   | Opcional  |
 created_at     | DateTime  | Opcional  | 
 updated_at     | DateTime  | Opcional  | 
 available_at   | DateTime  | Opcional  | 
-expires_at     | DateTime  | Opcional  | 
 finished_at    | DateTime  | Opcional  | 
 received_at    | DateTime  | Opcional  | 
-alarms         | Boolean   | Opcional  | 
+alerts         | Boolean   | Opcional  | 
+cluster        | String    | Opcional  | 
+is_new         | Boolean   | Opcional  | 
+type           | Integer   | Opcional  | El tipo de la visita.
 sort           | String    | Opcional  | Default: `-finished_at`.
 offset         | Integer   | Opcional  | 
 limit          | Integer   | Opcional  | 
@@ -118,9 +119,11 @@ fields         | CSV       | Opcional  |
 embed          | CSV       | Opcional  | Aceptados: `agent`, `form`, `group`.
 count          | Boolean   | Opcional  | 
 
-Listar los ids y códigos de las visitas realizadas por el agente con id "1" el 1 de enero de 2014:
+Listar los ids y folios de las visitas realizadas por el agente con id "1" el 1 de enero de 2014:
 
-	GET /api/v1/visits?agent_id=1&finished_at=20140101&fields=id,code,agent_id,finished_at&apikey=123456
+````http-req
+GET /api/v1/visits?agent_id=1&finished_at=20140101&fields=id,code,agent_id,finished_at&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -144,61 +147,64 @@ Content-Type: application/json
 ]
 ```
 
-Listar las visitas cuyo código comienza por "ABC" y cualquier subcódigo ordenadas descendentemente por código:
+Listar las visitas cuyo folio comienza por "ABC" ordenadas descendentemente por folio:
 
-	GET /api/v1/visits?code=ABC&sort=-code&fields=id,code,subcode&apikey=123456
+````http-req
+GET /api/v1/visits?code=ABC&sort=-code&fields=id,code&apikey=123456
+````
 
 ```json
 [
 	{
 		"id": 1,
 		"code": "ABC",
-		"subcode": "456"
 	},
 	{
 		"id": 2,
 		"code": "XYZ",
-		"subcode": "123"
 	}
 ]
 ```
 
-Listar las visitas con código "ABC" y subcódigo "123":
+Listar las visitas con folio "ABC-123":
 
-	GET /api/v1/visits?code=ABC-123&sort=-code&fields=id,code,subcode&apikey=123456
+````http-req
+GET /api/v1/visits?code=ABC-123&sort=-code&fields=id,code&apikey=123456
+````
 
 ```json
 [
 	{
 		"id": 1,
 		"code": "ABC",
-		"subcode": "456"
 	}
 ]
 ```
 
-Listar las visitas cuyo código es exactamente "XYZ" (nota el guión al final de `code`):
+Listar las visitas cuyo folio comienza exactamente "XYZ" (nota el guión al final de `code`):
 
-	GET /api/v1/visits?code=XYZ-&fields=id,code,subcode&apikey=123456
+````http-req
+GET /api/v1/visits?code=XYZ-&fields=id,code&apikey=123456
+````
 
 ```json
 [
 	{
 		"id": 2,
 		"code": "XYZ",
-		"subcode": "123"
 	},
 	{
 		"id": 3,
 		"code": "XYZ",
-		"subcode": "456"
 	}
 ]
 ```
 
 Listar todas las visitas recibidas en los últimos 5 minutos (ver [rangos de fechas][datetime]):
 
-	GET /api/v1/visits?received_at=20140101140000-5m&fields=id,finished_at,received_at&apikey=123456
+````http-req
+GET /api/v1/visits?received_at=20140101140000-5m&fields=id,finished_at,received_at&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -244,8 +250,6 @@ Content-Type: application/json
 ]
 ```
 
-**Nota:** Aunque en el objeto [Visita][] los atributos `code` y `subcode` se muestran por separado, cualquier operación de filtro y ordenamiento por `code` considerará `subcode` en su resultado. En el caso de los filtros es necesario separar explícitamente el código y el subcódigo con un guión.
-
 ~~~~visits-show
 ### Mostrar visita
 
@@ -260,7 +264,7 @@ embed          | CSV       | Opcional  | Aceptados: `agent`, `form`, `group`.
 
 Mostrar el código y subcódigo de la visita con id "1" y vincular el usuario su agente asignado:
 
-	GET /api/v1/visits/1?fields=code,subcode&embed=agent.username&apikey=123456
+	GET /api/v1/visits/1?fields=code&embed=agent.username&apikey=123456
 
 ```headers
 Status: 200 OK
@@ -271,7 +275,6 @@ Content-Type: application/json
 [
 	{
 		"code": "ABC",
-		"subcode": "456",
 		"agent": {
 			"username": "agente1"
 		}
@@ -350,11 +353,11 @@ Content-Type: application/json
 
 Devuelve una colección de objetos tipo [Feedback][] con las imágenes capturadas durante la visita o la supervisión.
 
-	GET /api/v1/visits/:id/images
+	GET /api/v1/visits/:id/media
 
 Mostrar las imágenes capturadas para la visita con id "1":
 
-	GET /api/v1/visits/1/images?apikey=123456
+	GET /api/v1/visits/1/media?apikey=123456
 
 ```headers
 Status: 200 OK
@@ -366,14 +369,14 @@ Content-Type: application/json
 	{
 		"varname": "fachada",
 		"caption": "Fachada de la casa",
-		"value": "/cdn/images/1"
+		"value": "/cdn/media/1"
 	}
 ]
 ```
 
 La URL de las imágenes deberá ser complementada con la [URL base][Peticiones] y por una API key con permisos para verlas. Por ejemplo:
 
-	<img src="http://sitio.gestii.com/cdn/images/1?apikey=123456">
+	<img src="http://sitio.gestii.com/cdn/media/1?apikey=123456">
 
 ~~~~visits-upload
 ### Importar visitas
@@ -440,7 +443,7 @@ Content-Type: application/json
 ```json
 {
 	"id": 1,
-	"name": "20140101140000_b7cfb.csv"
+	"name": "20140101140000_b7cfb.csv",
 	"status": 102,
 	"processed": 1000,
 	"geocoded": 1000,
@@ -495,7 +498,6 @@ Content-Type: application/json
 {
 	"id": 1,
 	"code": "ABC",
-	"subcode": "123",
 	"description": "",
 	"status": 3,
 	"type": 0,
@@ -506,13 +508,14 @@ Content-Type: application/json
 	"city": "Naucalpan",
 	"state": "México",
 	"country": "México",
-	"address": "Hda. Coaxamalucan #132, Hda. de Echegaray, 53300, Naucalpan, México, México",
 	"latitude": 19.492316,
 	"longitude": -99.234433,
 	"agent_id": 1,
 	"upload_id": 1,
 	"form_id": 1,
 	"group_id": 1,
+	"cluster": null,
+	"is_new": false,
 	"created_at": "2014-01-01T14:00:00Z",
 	"updated_at": "2014-01-01T14:30:00Z",
 	"available_at": "2014-01-01T14:00:00Z",
@@ -523,7 +526,7 @@ Content-Type: application/json
 	"location_id": null,
 	"distance": null,
 	"timespan": null,
-	"alarms": 0,
+	"alerts": 0,
 }
 ```
 
@@ -572,7 +575,6 @@ Content-Type: application/json
 {
 	"id": 1,
 	"code": "ABC",
-	"subcode": "123",
 	"description": "",
 	"status": 0,
 	"type": 0,
@@ -583,13 +585,14 @@ Content-Type: application/json
 	"city": "Naucalpan",
 	"state": "México",
 	"country": "México",
-	"address": "Hda. Coaxamalucan #132, Hda. de Echegaray, 53300, Naucalpan, México, México",
 	"latitude": 19.492316,
 	"longitude": -99.234433,
 	"agent_id": 3,
 	"upload_id": 1,
 	"form_id": 1,
 	"group_id": 1,
+	"cluster": null,
+	"is_new": false,
 	"created_at": "2014-01-01T14:00:00Z",
 	"updated_at": "2014-01-01T14:30:00Z",
 	"available_at": "2014-01-01T14:00:00Z",
@@ -600,7 +603,7 @@ Content-Type: application/json
 	"location_id": null,
 	"distance": null,
 	"timespan": null,
-	"alarms": 0,
+	"alerts": 0,
 }
 ```
 
@@ -617,7 +620,6 @@ Content-Type: application/json
 {
 	"id": 3,
 	"code": "ABC",
-	"subcode": "123",
 	"description": "",
 	"status": 0,
 	"type": 0,
@@ -628,13 +630,14 @@ Content-Type: application/json
 	"city": "Naucalpan",
 	"state": "México",
 	"country": "México",
-	"address": "Hda. Coaxamalucan #132, Hda. de Echegaray, 53300, Naucalpan, México, México",
 	"latitude": 19.492316,
 	"longitude": -99.234433,
 	"agent_id": 5,
 	"upload_id": 1,
 	"form_id": 1,
 	"group_id": 1,
+	"cluster": null,
+	"is_new": false,
 	"created_at": "2014-01-01T15:00:00Z",
 	"updated_at": "2014-01-01T15:00:00Z",
 	"available_at": "2014-01-01T15:00:00Z",
@@ -645,7 +648,7 @@ Content-Type: application/json
 	"location_id": null,
 	"distance": null,
 	"timespan": null,
-	"alarms": 0,
+	"alerts": 0,
 }
 ```
 
@@ -669,7 +672,6 @@ Content-Type: application/json
 {
 	"id": 4,
 	"code": "ABC",
-	"subcode": "123",
 	"description": "",
 	"status": 0,
 	"type": 0,
@@ -680,13 +682,14 @@ Content-Type: application/json
 	"city": "Naucalpan",
 	"state": "México",
 	"country": "México",
-	"address": "Hda. Coaxamalucan #132, Hda. de Echegaray, 53300, Naucalpan, México, México",
 	"latitude": 19.492316,
 	"longitude": -99.234433,
 	"agent_id": 5,
 	"upload_id": 1,
 	"form_id": 1,
 	"group_id": 1,
+	"cluster": null,
+	"is_new": false,
 	"created_at": "2014-01-01T15:00:00Z",
 	"updated_at": "2014-01-01T15:00:00Z",
 	"available_at": "2014-01-01T15:00:00Z",
@@ -697,9 +700,8 @@ Content-Type: application/json
 	"location_id": null,
 	"distance": null,
 	"timespan": null,
-	"alarms": 0,
+	"alerts": 0,
 	"supervising_id": 1,
-	"supervision": 0,
 	"version": 1
 }
 ```
@@ -737,9 +739,9 @@ Content-Type: application/json
 
 #### Generar un nuevo reporte
 
-Dado que la generación de un nuevo reporte es un proceso asíncrono, se realiza a través de la API de [Delayed Jobs][DelayedJob]. Dependiendo del tipo de reporte y de la cantidad de información, este proceso puede tardar algunos minutos en finalizar.
+Dado que la generación de un nuevo reporte es un proceso asíncrono, se realiza a través de la API de [Tasks][Tasks]. Dependiendo del tipo de reporte y de la cantidad de información, este proceso puede tardar algunos minutos en finalizar.
 
-Devuelve un objeto tipo [DelayedJob][] para monitorear el progreso de generación del reporte. Este método soporta las operaciones de [búsqueda][], [ordenación][] y [paginado][] de acuerdo a los mismos parámetros que el [listado de visitas][listar visitas].
+Devuelve un objeto tipo [Task][Tasks] para monitorear el progreso de generación del reporte. Este método soporta las operaciones de [búsqueda][], [ordenación][] y [paginado][] de acuerdo a los mismos parámetros que el [listado de visitas][listar visitas].
 
 	POST /api/v1/jobs
 
@@ -747,7 +749,7 @@ Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------------------------
 queue          | String    | Requerido | Debe ser: `reports`.
 generator      | String    | Requerido | Uno de la [lista de reportes][listar reportes].
-images         | Boolean   | Opcional  | Default: `false`.
+media          | Boolean   | Opcional  | Default: `false`.
 code           | String    | Opcional  | 
 status         | Integer   | Opcional  | 
 priority       | Integer   | Opcional  | 
@@ -761,7 +763,7 @@ available_at   | DateTime  | Opcional  |
 expires_at     | DateTime  | Opcional  | 
 finished_at    | DateTime  | Opcional  | 
 received_at    | DateTime  | Opcional  | 
-alarms         | Boolean   | Opcional  | 
+alerts         | Boolean   | Opcional  | 
 sort           | String    | Opcional  | Default: `-finished_at`.
 offset         | Integer   | Opcional  | 
 limit          | Integer   | Opcional  | 
@@ -785,7 +787,7 @@ Content-Type: application/json
 ~~~~visits-reports-status
 #### Monitorear estatus de generación
 
-Devuelve un objeto tipo [DelayedJob][] con el estatus de finalización del reporte.
+Devuelve un objeto tipo [Task][Tasks] con el estatus de finalización del reporte.
 
 	GET /api/v1/jobs/:id
 

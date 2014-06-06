@@ -12,7 +12,8 @@ Los grupos son utilizados para reprensentar divisiones organizacionales de [agen
 ```json
 {
 	"id": 1,
-	"name": "Oficina México DF"
+	"name": "Oficina México DF",
+	"licenses": 3
 }
 ```
 
@@ -20,8 +21,9 @@ Atributo       | Tipo      | Notas
 ---------------|-----------|------
 id             | Integer   | 
 name           | String    | 
+licenses       | Integer   | 
 
-El atributo `name` permite un formato especial donde es posible jerarquizar los grupos simplemente antecediendo su nombre con los nombres de sus niveles superiores separados por el caracter `|`. Es decir, si por ejemplo en tu organización existiera una región "Norte" con sucursales "Monterrey" y "Torreón", el nombre de dichos grupos debería ser `Norte|Monterrey` y `Norte|Torreón` respectivamente. Este formato es procesado por Gestii para extender algunas funcionalidades, principalmente en la interfaz web.
+El atributo `name` permite un formato especial donde es posible jerarquizar los grupos simplemente antecediendo su nombre con los nombres de sus niveles superiores separados por el caracter `|`. Es decir, si por ejemplo en tu organización existiera una región "Norte" con sucursales "Monterrey" y "Torreón", el nombre de dichos grupos debería ser `Norte|Monterrey` y `Norte|Torreón` respectivamente. Este formato es procesado por Gestii para extender algunas funcionalidades, principalmente en la interfaz web. Puede aprender más en [la página de nombres de grupos](/grupos/nombre).
 
 **Nota:** Es posible agregar hasta dos niveles de jerarquía al nombre de un grupo, por ejemplo: `Norte|Nuevo Leon|Monterrey`.
 
@@ -30,7 +32,9 @@ El atributo `name` permite un formato especial donde es posible jerarquizar los 
 
 Devuelve una colección de objetos tipo [Grupo][]. Este método soporta las operaciones de [búsqueda][], [ordenación][], [paginado][] y [extracción][].
 
-	GET /api/v1/groups
+````http-req
+GET /api/v1/groups
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|-------------------------------------
@@ -46,7 +50,9 @@ El parámetro `levels` normaliza el número de niveles que es devuelto en el nom
 
 Listar los grupos de la región "Nuevo Leon":
 
-	GET /api/v1/groups?name=Norte|Nuevo%20Leon|&apikey=123456
+````http-req
+GET /api/v1/groups?name=Norte|Nuevo%20Leon|&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -58,17 +64,21 @@ Content-Type: application/json
 	{
 		"id": 1,
 		"name": "Norte|Nuevo Leon|Monterrey"
+		"licenses": 4,
 	},
 	{
 		"id": 2,
 		"name": "Norte|Nuevo Leon|Apodaca"
+		"licenses": 2,
 	}
 ]
 ```
 
 Listar todos los grupos con nivel normalizado a "2":
 
-	GET /api/v1/groups?levels=2&apikey=123456
+````http-req
+GET /api/v1/groups?levels=2&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -80,14 +90,17 @@ Content-Type: application/json
 	{
 		"id": 1,
 		"name": "-|-|Casa Matriz"
+		"licenses": 4,
 	},
 	{
 		"id": 2,
 		"name": "-|Norte|Monterrey"
+		"licenses": 2,
 	},
 	{
 		"id": 3,
 		"name": "Sur|Yucatán|Mérida"
+		"licenses": 3,
 	}
 ]
 ```
@@ -97,7 +110,9 @@ Content-Type: application/json
 
 Devuelve un objeto tipo [Grupo][]. Este método soporta la operación [extracción][].
 
-	GET /api/v1/admins/:id
+````http-req
+GET /api/v1/admins/:id
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|-------------------------------------
@@ -106,7 +121,9 @@ fields         | CSV       | Opcional  |
 
 Mostrar la información del grupo con id "1":
 
-	GET /api/v1/groups/1?apikey=123456
+````http-req
+GET /api/v1/groups/1?apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -117,6 +134,7 @@ Content-Type: application/json
 {
 	"id": 1,
 	"name": "Norte|Nuevo Leon|Monterrey"
+	"licenses": 1,
 }
 ```
 
@@ -125,7 +143,9 @@ Content-Type: application/json
 
 Crea un grupo y devuelve un objeto tipo [Grupo][] representando el recurso creado.
 
-	POST /api/v1/admins
+````http-req
+POST /api/v1/admins
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------
@@ -133,7 +153,9 @@ name           | String    | Requerido |
 
 Crear una sucursal llamada "Ciudad de México" perteneciente a la sucursal "Centro":
 
-	POST /api/v1/groups?name=Centro|Ciudad%20de%20México&apikey=123456
+````http-req
+POST /api/v1/groups?name=Centro|Ciudad%20de%20México&apikey=123456
+````
 
 ```headers
 Status: 201 Created
@@ -144,6 +166,7 @@ Content-Type: application/json
 {
 	"id": 3,
 	"name": "Centro|Ciudad de México"
+	"licenses": 9,
 }
 ```
 
@@ -152,7 +175,9 @@ Content-Type: application/json
 
 Actualiza los datos de un grupo y devuelve un objeto tipo [Grupo][] con las modificaciones realizadas.
 
-	PUT /api/v1/groups/:id
+````http-req
+PUT /api/v1/groups/:id
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------
@@ -160,7 +185,9 @@ name           | String    | Requerido |
 
 Cambiar el nombre del grupo con id "3":
 
-	PUT /api/v1/groups/3?name=Centro|Mexico%20City&apikey=123456
+````http-req
+PUT /api/v1/groups/3?name=Centro|Mexico%20City&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -171,6 +198,7 @@ Content-Type: application/json
 {
 	"id": 3,
 	"name": "Mexico City"
+	"licenses": 8,
 }
 ```
 
@@ -179,7 +207,9 @@ Content-Type: application/json
 
 Elimina permanentemente un grupo. Si el grupo contiene [visitas][Visitas] y [agentes][Agentes], se permite mover ambos elementos a otro grupo o eliminarlos en cascada.
 
-	DELETE /api/v1/groups/:id
+````http-req
+DELETE /api/v1/groups/:id
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|----------------------------------------------------
@@ -188,7 +218,9 @@ to             | Integer   | Opcional  | Requerido si en `cascade` se seleccion�
 
 Eliminar el grupo con id "2" junto con los agente y las visitas que contenga:
 
-	DELETE /api/v1/groups/2?cascade=delete&apikey=123456
+````http-req
+DELETE /api/v1/groups/2?cascade=delete&apikey=123456
+````
 
 ```headers
 Status: 204 No Content
@@ -201,7 +233,9 @@ Content-Type: application/json
 
 Eliminar el grupo con id "1" y reubicar sus visitas y agentes al grupo con id "2":
 
-	DELETE /api/v1/groups/1?cascade=relocate&to=2&apikey=123456
+````http-req
+DELETE /api/v1/groups/1?cascade=relocate&to=2&apikey=123456
+````
 
 ```headers
 Status: 204 No Content

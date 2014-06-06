@@ -14,6 +14,7 @@ Por otro lado, en caso de error cualquier petición puede devolver alguno de los
 - `401 Unauthorized` - No se ha especificado una API key válida.
 - `403 Forbidden` - La API key especificada no cuenta con permisos para ejecutar el método llamado.
 - `404 Not Found` - El recurso solicitado no ha sido encontrado.
+- `409 Conflict` - Indica que la solicitud no pudo ser procesada debido a un conflicto con el estado actual del recurso que esta identifica.
 - `429 Too Many Requests` - La petición no ha sido procesada debido a que se ha alcanzado el [límite][límite de peticiones] permitido.
 - `500 Internal Server Error` - Ha ocurrido un error interno del servidor.
 

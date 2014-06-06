@@ -79,6 +79,7 @@ accuracy       | Integer   | Precisión en metros de la localización.
 created_at     | Timestamp | 
 
 ~~~~locations-events
+
 **Diccionario de eventos:**
 
 Evento | Mensaje
