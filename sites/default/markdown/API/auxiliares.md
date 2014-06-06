@@ -137,9 +137,9 @@ value          | String    | Este atributo es opcional.
 
 Al solicitar un reporte, el cuerpo de la petición debe contener los parámetros especificados con el mismo nombre.
 
-~~~~task
-Task
-----
+~~~~tasks
+Tasks
+-----
 
 Un task es un proceso que se ejecuta de forma asíncrona y en background en Gestii. Este tipo de operación se utiliza especialmente para realizar tareas que se espera que no terminen inmediatamente pero de las cuáles se necesita proveer un método de monitoreo de su finalización. En la API un task se encuentra representado por un objeto con la siguiente estructura:
 
