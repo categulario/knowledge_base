@@ -6,54 +6,9 @@ Auxiliares
 - [Feedback](#feedbacks)
 - [Location](#locations)
 - [Reporte](#reports)
-- [DelayedJob](#jobs)
+- [Tasks](#tasks)
 
 Los auxiliares son objetos de la API que no pueden ser consultados si no es mediante alguno de los métodos de los objetos principales. En general, se utilizan para representar información que no puede ser modificada.
-
-~~~~uploads
-Upload
-------
-
-Un upload representa un archivo de importación de visitas. En la API un upload se encuentra representado por un objeto con la siguiente estructura:
-
-```json
-{
-	"id": 1,
-	"name": "Visitas 01 enero 2014.csv",
-	"status": 101,
-	"processed": 1000,
-	"geocoded": 500,
-	"checksum": "dd57cb7057dbe4de7645bd273198aa92",
-	"created_at": "2014-01-01T14:00:00Z"
-}
-```
-
-Atributo       | Tipo      | Notas
----------------|-----------|-------------------------------------------------
-id             | Integer   | 
-name           | String    | 
-status         | Integer   | Ver el [diccionario de status](#uploads-status).
-processed      | Integer   | Número de visitas procesadas.
-geocoded       | Integer   | Número de visitas geolocalizadas.
-checksum       | String    | 
-created_at     | Timestamp | 
-
-El contador `processed` indica el número de visitas que se han leído correctamente del archivo. El contador `geocoded`, por su parte, comienza una vez que el anterior ha finalizado e indica el número de visitas que han geolocalizado con éxito. Es importante recalcar que la geolocalización no comienza hasta que todas las visitas del archivo hayan sido procesadas sin ningún error.
-
-~~~~uploads-codes
-**Diccionario de estatus:**
-
-Status | Mensaje
--------|--------------------------------------------------------------------------------------------
-100    | Esperando por una instancia de procesamiento.
-101    | El archivo está siendo procesado.
-102    | Proceso finalizado sin errores, las visitas han sido creadas.
-200    | La estructura del archivo no corresponde a la requerida por el layout.
-203    | Algunos encabezados requeridos no se han encontrado.
-204    | Un archivo exactamente igual se está siendo procesado.
-300    | Los errores se indican en archivo (ver [descargar errores de importación](#visits-errors)).
-
-**Nota:** Los códigos `1XX` indican que ningun error ha sido detectado, los `2XX` que se han encontrado errores globales y el `300` que han ocurrido múltiples errores distintos y es necesario descargar un archivo con la descripción de cada uno de ellos.
 
 ~~~~extradata
 Extradata
@@ -101,6 +56,7 @@ Una location representa un punto de ubicación geográfica y un evento de uno de
 
 ```json
 {
+	"visit_id": 1,
 	"id": 1,
 	"agent_id": 1,
 	"event": 1,
@@ -113,6 +69,7 @@ Una location representa un punto de ubicación geográfica y un evento de uno de
 
 Atributo       | Tipo      | Notas
 ---------------|-----------|----------------------------------------------------
+visit_id       | Integer   | 
 id             | Integer   | 
 agent_id       | Integer   | 
 event          | Integer   | Ver el [diccionario de eventos](#locations-events).
@@ -143,36 +100,75 @@ Un reporte representa un archivo comprimido que puede ser generado y descargado 
 
 ```json
 {
+	"id": 1,
 	"generator": "VISITS",
 	"name": "Reporte PDF",
 	"description": "Reporte en formato PDF estándar",
+	"params": [ ]
 }
 ```
 
 Atributo       | Tipo      | Notas
----------------|-----------|------
+---------------|-----------|---------------------------------
+id             | Integer   | 
 generator      | String    | 
 name           | String    | 
 description    | String    | 
+params         | [Params]  | Un array de objetos tipo params.
 
-~~~~jobs
-DelayedJob
-----------
+~~~~params
+Params
+------
+Un param es un parámetro que tiene que recibir un reporte para generarse. Tiene la siguiente estructura:
 
-Un delayed job es un proceso que se ejecuta de forma asíncrona y en background en Gestii. Este tipo de operación se utiliza especialmente para realizar tareas que se espera que no terminen inmediatamente pero de las cuáles se necesita proveer un método de monitoreo de su finalización. En la API un delayed job se encuentra representado por un objeto con la siguiente estructura:
+````json
+{
+	"name": "addimages",
+	"datatype": "bool",
+	"value": "true"
+}
+````
+
+Atributo       | Tipo      | Notas
+---------------|-----------|---------------------------
+name           | String    | 
+datatype       | String    | 
+value          | String    | Este atributo es opcional.
+
+Al solicitar un reporte, el cuerpo de la petición debe contener los parámetros especificados con el mismo nombre.
+
+~~~~task
+Task
+----
+
+Un task es un proceso que se ejecuta de forma asíncrona y en background en Gestii. Este tipo de operación se utiliza especialmente para realizar tareas que se espera que no terminen inmediatamente pero de las cuáles se necesita proveer un método de monitoreo de su finalización. En la API un task se encuentra representado por un objeto con la siguiente estructura:
 
 
 ```json
 {
-	"id": "b9iLXiAa",
-	"status": 0
+	"id": 1,
+	"caption": "Report: test1.pdf",
+	"status": 3,
+	"progress": 89,
+	"message": "",
+	"created_at": "2014-06-05T03:37:33+0000",
+	"admin_id": 1,
+	"item_id": 1,
+	"type":"report"
 }
 ```
 
 Atributo       | Tipo      | Notas
----------------|-----------|--------------------------------------------
+---------------|-----------|----------------------------------------------------------------------------------------------------------------------------
 id             | Integer   | 
-status         | Integer   | Uno de: `0` (procesando), `1` (finalizado).
+caption        | String    | Título del task
+status         | Integer   | Uno de: `0` (esperando), `1` (preprocesando), `2` (procesando), `3` (terminado), `4` o `5` (error), `6` (error de sistema).
+progress       | Integer   | Entero del 0 al 100.
+message        | String    | Mensaje de error, en caso de aplicar.
+created_at     | DateTime  |
+admin_id       | Integer   | id del administrador que mandó el task.
+item_id        | Integer   | id del objeto relacionado (upload, reporte).
+type           | String    | Uno de: `upload`, `report`.
 
 [Peticiones]: /API/peticiones
 [Respuestas]: /API/respuestas
@@ -184,7 +180,7 @@ status         | Integer   | Uno de: `0` (procesando), `1` (finalizado).
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
 [Alertas]: /API/alertas
-[Cuestionarios]: /API/cuestionarios
+[Cuestionarios]: /cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -199,7 +195,8 @@ status         | Integer   | Uno de: `0` (procesando), `1` (finalizado).
 [Feedback]: /API/auxiliares#feedbacks
 [Location]: /API/auxiliares#locations
 [Reporte]: /API/auxiliares#reports
-[DelayedJob]: /API/auxiliares#jobs
+[DelayedJob]: /API/auxiliares#tasks
+[Task]: /API/auxiliares#tasks
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 

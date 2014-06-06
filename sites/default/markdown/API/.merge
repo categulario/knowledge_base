@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 for f in *.md; do
-	ghead -n -73 $f > $f.bak
+	ghead -n -74 $f > $f.bak
 	cat $f.bak .common.md > $f
 	rm $f.bak
 done;

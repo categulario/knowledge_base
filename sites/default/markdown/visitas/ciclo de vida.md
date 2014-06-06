@@ -2,14 +2,7 @@
 
 Las visitas siguen una secuencia sencilla mientras son efectuadas.
 
-<pre>
-~ Diagrama feo ~
-
-Pendiente -> Disponible -> Terminada.
-Cancelada
-Expirada
-Actualizada
-</pre>
+<center><img src=/images/diagrams/visitcycle.png /></center>
 
 Todos los estatus salvo Pendiente y Disponible son estatus
 terminales: ya no se modificará el estatus de una visita

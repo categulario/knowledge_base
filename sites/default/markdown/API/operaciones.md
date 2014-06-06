@@ -185,7 +185,7 @@ Content-Type: application/json
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
 [Alertas]: /API/alertas
-[Cuestionarios]: /API/cuestionarios
+[Cuestionarios]: /cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -200,7 +200,8 @@ Content-Type: application/json
 [Feedback]: /API/auxiliares#feedbacks
 [Location]: /API/auxiliares#locations
 [Reporte]: /API/auxiliares#reports
-[DelayedJob]: /API/auxiliares#jobs
+[DelayedJob]: /API/auxiliares#tasks
+[Task]: /API/auxiliares#tasks
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 

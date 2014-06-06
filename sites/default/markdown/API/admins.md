@@ -37,7 +37,7 @@ type           | Integer   | 0: Usuario normal, 1: Administrador principal
 
 Devuelve una colección de objetos tipo [Admin][]. Este método soporta las operaciones de [búsqueda][], [ordenación][], [paginado][] y [extracción][].
 
-````
+````http-req
 GET /api/v1/admins
 ````
 
@@ -54,7 +54,7 @@ count          | Boolean   | Opcional  |
 
 Listar los ids y usuarios de los administradores activos, por ejemplo, para mostrar en un `<select>`:
 
-````http
+````http-req
 GET /api/v1/admins?active=true&fields=id,username&apikey=123456
 ````
 
@@ -81,7 +81,9 @@ Content-Type: application/json
 
 Devuelve un objeto tipo [Admin][]. Este método soporta la operación [extracción][].
 
-	GET /api/v1/admins/:id
+````http-req
+GET /api/v1/admins/:id
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------
@@ -89,7 +91,9 @@ fields         | CSV       | Opcional  |
 
 Mostrar la información del admin con id "2":
 
-	GET /api/v1/admins/2?apikey=123456
+````http-req
+GET /api/v1/admins/2?apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -112,7 +116,9 @@ Content-Type: application/json
 
 Crea un admin y devuelve un objeto tipo [Admin][] representando el recurso creado.
 
-	POST /api/v1/admins
+````http-req
+POST /api/v1/admins
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|---------------------------------
@@ -124,7 +130,9 @@ active         | Boolean   | Opcional  | Default: `true`.
 
 Crear un admin inactivo que no podrá iniciar sesión hasta que sea activado:
 
-	POST /api/v1/admins?username=admin3&password=secreto&name=Admin%203&email=admin3@gestii.com&active=false&apikey=123456
+````http-req
+POST /api/v1/admins?username=admin3&password=secreto&name=Admin%203&email=admin3@gestii.com&active=false&apikey=123456
+````
 
 ```headers
 Status: 201 Created
@@ -147,7 +155,9 @@ Content-Type: application/json
 
 Actualiza los datos de un admin y devuelve un objeto tipo [Admin][] con las modificaciones realizadas.
 
-	PUT /api/v1/admins/:id
+````http-req
+PUT /api/v1/admins/:id
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------------------
@@ -158,7 +168,9 @@ active         | Boolean   | Opcional  |
 
 Actualizar el admin con id "3" para concederle permisos de acceso:
 
-	PUT /api/v1/admins/3?active=true&apikey=123456
+````http-req
+PUT /api/v1/admins/3?active=true&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -178,7 +190,9 @@ Content-Type: application/json
 
 Cambiar a "nuevo@gestii.com" el correo electrónico del admin con id "1":
 
-	PUT /api/v1/admins/1?email=nuevo@gestii.com&name=Admin%201&apikey=123456
+````http-req
+PUT /api/v1/admins/1?email=nuevo@gestii.com&name=Admin%201&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -201,11 +215,15 @@ Content-Type: application/json
 
 Elimina permanentemente un admin. Este método no afecta otros objetos del sistema.
 
-	DELETE /api/v1/admins/:id
+````http-req
+DELETE /api/v1/admins/:id
+````
 
 Eliminar el admin con id "3":
 
-	DELETE /api/v1/admins/3&apikey=123456
+````http-req
+DELETE /api/v1/admins/3&apikey=123456
+````
 
 ```headers
 Status: 204 No Content
@@ -225,11 +243,15 @@ Los permisos son la [lista blanca](http://es.wikipedia.org/wiki/Lista_blanca) de
 
 Devuelve un array de `String` con la lista de permisos que el admin tiene asignados.
 
-	GET /api/v1/admins/:id/permissions
+````http-req
+GET /api/v1/admins/:id/permissions
+````
 
 Listar todos los permisos del admin con id "1":
 
-	GET /api/v1/admins/1/permissions
+````http-req
+GET /api/v1/admins/1/permissions
+````
 
 ```headers
 Status: 200 OK
@@ -250,7 +272,9 @@ Content-Type: application/json
 
 Sobreescribe los permisos de acceso que el admin tiene asignados.
 
-	PUT /api/v1/admins/:id/permissions
+````http-req
+PUT /api/v1/admins/:id/permissions
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------------------------
@@ -258,7 +282,9 @@ actions        | CSV       | Requerido | Ver el [catálogo de permisos](#admins-
 
 Asignar los permisos `groups_index` y `groups_show` al admin con id "1":
 
-	PUT /api/v1/admins/1/permissions?actions=groups_index,groups_show&apikey=123456
+````http-req
+PUT /api/v1/admins/1/permissions?actions=groups_index,groups_show&apikey=123456
+````
 
 ```headers
 Status: 204 No Content
@@ -274,13 +300,17 @@ Content-Type: application/json
 
 Devuelve un array de [strings][tipos de datos] con los permisos disponibles en la aplicación.
 
-	GET /api/v1/admins/permissions
+````http-req
+GET /api/v1/admins/permissions
+````
 
 En general los nombres de los permisos explican por sí mismos la acción que restringen y siguen la siguente convención: `modulo_acción`.
 
 Listar todos los permisos disponibles en Gestii:
 
-	GET /api/v1/admins/permissions?apikey=123456
+````http-req
+GET /api/v1/admins/permissions?apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -312,11 +342,15 @@ Los objetos son el subconjunto de datos que un admin tiene permitido visualizar 
 
 Devuelve una colección de objetos con los nombres de los objetos y los ids en `CSV` a los que el admin tiene permisos.
 
-	GET /api/v1/admins/:id/objects
+````http-req
+GET /api/v1/admins/:id/objects
+````
 
 Listar todos los objetos a los que tiene permiso el admin con id "1":
 
-	GET /api/v1/admins/1/objects
+````http-req
+GET /api/v1/admins/1/objects
+````
 
 ```headers
 Status: 200 OK
@@ -362,7 +396,9 @@ Content-Type: application/json
 
 Sobreescribe los objetos que el admin tiene permiso de visualizar.
 
-	PUT /api/v1/admins/:id/objects
+````http-req
+PUT /api/v1/admins/:id/objects
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------------------------------------------------------------
@@ -371,7 +407,9 @@ ids            | CSV       | Requerido |
 
 Asignar permisos para visualizar los grupos con ids "1", "2" y "3" al admin con id "1":
 
-	PUT /api/v1/admins/1/objects?object=groups&ids=1,2,3&apikey=123456
+````http-req
+PUT /api/v1/admins/1/objects?object=groups&ids=1,2,3&apikey=123456
+````
 
 ```headers
 Status: 204 No Content
@@ -395,11 +433,15 @@ Las API keys son el mecanismo de [autorización][] que utiliza esta API. Por def
 
 Devuelve un objeto con la API key del admin solicitado:
 
-	GET /api/v1/admins/:id/apikey
+````http-req
+GET /api/v1/admins/:id/apikey
+````
 
 Mostrar la API key del admin con id "1":
 
-	GET /api/v1/admins/1/apikey?apikey=123456
+````http-req
+GET /api/v1/admins/1/apikey?apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -418,11 +460,15 @@ Content-Type: application/json
 
 Devuelve un objeto con la API key generada para el admin. Por default los admins se crean sin API key. Cada que se llame este método para un admin específico, se generará una nueva API key y la anterior será invalidada.
 
-	POST /api/v1/admins/:id/apikey
+````http-req
+POST /api/v1/admins/:id/apikey
+````
 
 Generar una nueva API key para el admin con id "1":
 
-	POST /api/v1/admins/1/apikey?apikey=123456
+````http-req
+POST /api/v1/admins/1/apikey?apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -439,11 +485,15 @@ Content-Type: application/json
 
 Elimina la API key de un admin invalidando cualquier petición futura con dicha API key.
 
-	DELETE /api/v1/admins/:id/apikey
+````http-req
+DELETE /api/v1/admins/:id/apikey
+````
 
 Eliminar la API key del admin con id "1":
 
-	DELETE /api/v1/admins/1/apikey
+````http-req
+DELETE /api/v1/admins/1/apikey
+````
 
 ```headers
 Status: 204 No Content
@@ -464,7 +514,7 @@ Content-Type: application/json
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
 [Alertas]: /API/alertas
-[Cuestionarios]: /API/cuestionarios
+[Cuestionarios]: /cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -479,7 +529,8 @@ Content-Type: application/json
 [Feedback]: /API/auxiliares#feedbacks
 [Location]: /API/auxiliares#locations
 [Reporte]: /API/auxiliares#reports
-[DelayedJob]: /API/auxiliares#jobs
+[DelayedJob]: /API/auxiliares#tasks
+[Task]: /API/auxiliares#tasks
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 

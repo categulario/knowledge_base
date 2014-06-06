@@ -10,40 +10,48 @@ Agentes
 - [Mostrar la ubicación de los agentes](#agents-location)
 - [Generar reportes de agentes](#agents-reports)
 
-Un agente es un tipo de usuario con permisos para conectarse desde las apps móviles y realizar visitas directamente desde el campo. En la API un agente se encuentra representado por un objeto con la siguiente estructura:
+un agente es un tipo de usuario con permisos para conectarse desde las apps móviles y realizar visitas directamente desde el campo. en la api un agente se encuentra representado por un objeto con la siguiente estructura:
 
 ```json
 {
+	"first_event": null,
+	"last_event": null,
+	"visits": 0,
 	"id": 1,
-	"username": "agente1",
-	"status": 2,
+	"username": "test1",
+	"status": 0,
 	"license": true,
-	"battery": 80,
-	"name": "Agente 1",
-	"phone": "5512345678",
-	"token": "F0A19",
+	"battery": 0,
+	"name": "test1",
+	"phone": "123456789",
+	"token": "foo",
 	"group_id": 1
 }
 ```
 
-Atributo       | Tipo      | Notas
+atributo       | tipo      | notas
 ---------------|-----------|----------------------------------------------------------------------
-id             | Integer   | 
-username       | String    | 
-status         | Integer   | Uno de: `0` (desconectado), `1` (ausente), `2` (conectado).
-license        | Boolean   | Uno de: `true` si el agente tiene una licencia activa, `false` si no.
-battery        | Integer   | 
-name           | String    | 
-phone          | String    | 
-token          | String    | 
-group_id       | Integer   | 
+first_event    | datetime  | Puede ser null.
+last_event     | datetime  | Puede ser null.
+visits         | integer   | Cuántas visitas ha realizado hoy.
+id             | integer   | 
+username       | string    | 
+status         | integer   | uno de: `0` (desconectado), `1` (ausente), `2` (conectado).
+license        | boolean   | uno de: `true` si el agente tiene una licencia activa, `false` si no.
+battery        | integer   | 
+name           | string    | 
+phone          | string    | 
+token          | string    | 
+group_id       | integer   | 
 
 ~~~~agents-list
 ### Listar agentes
 
 Devuelve una colección de objetos tipo [Agente][]. Este método soporta las operaciones de [búsqueda][], [ordenación][], [paginado][], [extracción][] y [vinculación][].
 
-	GET /api/v1/agents
+````http-req
+GET /api/v1/agents
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|---------------------
@@ -61,7 +69,9 @@ count          | Boolean   | Opcional  |
 
 Listar agentes cuyo usuario comience por "test" ordenados descendentemente por nombre:
 
-	GET /api/v1/agents?username=test&sort=-name&apikey=123456
+````http-req
+GET /api/v1/agents?username=test&sort=-name&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -71,25 +81,30 @@ Content-Type: application/json
 ```json
 [
 	{
-		"id": 2,
-		"username": "test2",
-		"status": 2,
-		"license": true,
-		"battery": 60,
-		"name": "Tlacuache",
-		"phone": "5598765432",
-		"token": "78AC0",
-		"group_id": 1
-	},
-	{
+		"first_event": null,
+		"last_event": null,
+		"visits": 0,
 		"id": 1,
 		"username": "test1",
-		"status": 2,
+		"status": 0,
 		"license": true,
 		"battery": 80,
-		"name": "Armadillo",
-		"phone": "5512345678",
-		"token": "F0A19",
+		"name": "test1",
+		"phone": "123456789",
+		"token": "foo",
+		"group_id": 1
+	}, {
+		"first_event": null,
+		"last_event": null,
+		"visits": 0,
+		"id": 2,
+		"username": "test2",
+		"status": 0,
+		"license": true,
+		"battery": 100,
+		"name": "test2",
+		"phone": "987654321",
+		"token": "bar",
 		"group_id": 1
 	}
 ]
@@ -100,8 +115,9 @@ Content-Type: application/json
 
 Devuelve un objeto tipo [Agente][]. Este método soporta las operaciones de [extracción][] y [vinculación][].
 
-	GET /api/v1/agents/:id
-
+````http-req
+GET /api/v1/agents/:id
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|--------------------
@@ -110,7 +126,9 @@ embed          | CSV       | Opcional  | Aceptados: `group`.
 
 Mostrar el agente con id "1" y sus recursos vinculados:
 
-	GET /api/v1/agents/1?embed=group&apikey=123456
+````http-req
+GET /api/v1/agents/1?embed=group&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -119,6 +137,9 @@ Content-Type: application/json
 
 ```json
 {
+	"first_event": null,
+	"last_event": null,
+	"visits": 0,
 	"id": 1,
 	"username": "agente1",
 	"status": 2,
@@ -140,7 +161,9 @@ Content-Type: application/json
 
 Crea un agente y devuelve un objeto tipo [Agente][] representando el recurso creado.
 
-	POST /api/v1/agents
+````http-req
+POST /api/v1/agents
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|---------------------------------
@@ -153,7 +176,9 @@ group_id       | Integer   | Requerido |
 
 Crear un agente nuevo con licencia activada y sin número telefónico:
 
-	POST /api/v1/agents?username=agentenuevo&password=secreto&name=Agente%20Nuevo&group_id=1
+````http-req
+POST /api/v1/agents?username=agentenuevo&password=secreto&name=Agente%20Nuevo&group_id=1
+````
 
 ```headers
 Status: 201 Created
@@ -162,6 +187,9 @@ Content-Type: application/json
 
 ```json
 {
+	"first_event": null,
+	"last_event": null,
+	"visits": 0,
 	"id": 3,
 	"username": "agentenuevo",
 	"status": 0,
@@ -179,20 +207,23 @@ Content-Type: application/json
 
 Actualiza los datos de un agente y devuelve un objeto tipo [Agente][] con las modificaciones realizadas.
 
-	PUT /api/v1/agents/:id
+````http-req
+PUT /api/v1/agents/:id
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|----------------------------------------------
 password       | String    | Opcional  | Si existe, la contraseña será modificada.
-name           | String    | Opcional  | 
+name           | String    | Requerido | 
 phone          | String    | Opcional  | 
 license        | Boolean   | Opcional  | 
-token          | Boolean   | Opcional  | Enviar en `true` para generar un nuevo token.
-group_id       | Integer   | Opcional  | 
+group_id       | Integer   | Requerido | 
 
 Actualizar el nombre y número telefónico del agente con id "1":
 
-	PUT /api/v1/agents/1?name=Nuevo%20Nombre&phone=55456123778&apikey=123456
+````http-req
+PUT /api/v1/agents/1?name=Nuevo%20Nombre&phone=55456123778&apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -201,6 +232,9 @@ Content-Type: application/json
 
 ```json
 {
+	"first_event": null,
+	"last_event": null,
+	"visits": 0,
 	"id": 1,
 	"username": "agente1",
 	"status": 2,
@@ -215,7 +249,9 @@ Content-Type: application/json
 
 Generar un nuevo token para el agente con id "1":
 
-	PUT /api/v1/agents/1?token=true&apikey=123456
+````http-req
+PUT /api/v1/agents/1/token?apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -224,15 +260,7 @@ Content-Type: application/json
 
 ```json
 {
-	"id": 1,
-	"username": "agente1",
-	"status": 0,
-	"license": true,
-	"battery": 80,
-	"name": "Agente 1",
-	"phone": "55456123778",
-	"token": "8B59A",
-	"group_id": 1
+	"token": "8B59A"
 }
 ```
 
@@ -243,11 +271,15 @@ Content-Type: application/json
 
 Elimina permanentemente un agente. Como consecuencia, todas las [visitas][Visitas] no realizadas que dicho agente tuviera asignadas serán canceladas.
 
-	DELETE /api/v1/agents/:id
+````http-req
+DELETE /api/v1/agents/:id
+````
 
 Eliminar el agente con id "1":
 
-	DELETE /api/v1/agents/1&apikey=123456
+````http-req
+DELETE /api/v1/agents/1&apikey=123456
+````
 
 ```headers
 Status: 204 No Content
@@ -263,15 +295,19 @@ Content-Type: application/json
 
 Una encuesta es una visita que puede ser realizada en cualquier momento sin haber sido asignada previamente. Para que un agente pueda realizar encuestas es necesario asignarle los [cuestionarios][Cuestionarios] con los que podrá realizarlas. Cualquier cuestionario es válido para asignar como encuesta.
 
-#### Listas encuestas asignadas
+#### Listar encuestas asignadas
 
 Devuelve una colección de objetos tipo [Form][Cuestionarios]. Este método no soporta ninguna operación.
 
-	GET /api/v1/agents/:id/surveys
+````http-req
+GET /api/v1/agents/:id/surveys
+````
 
 Listar todos los cuestionarios para encuestas asignados al agente con id "1":
 
-	GET /api/v1/agents/1/surveys
+````http-req
+GET /api/v1/agents/1/surveys
+````
 
 ```headers
 Status: 200 OK
@@ -284,7 +320,9 @@ Content-Type: application/json
 		"id": 1,
 		"name": "Encuesta de Opinión",
 		"description": "Levantamiento Enero",
-		"version": 1
+		"version": 1,
+		"created_at": "2014-06-04T18:46:02+0000",
+		"backup": true
 	}
 ]
 ```
@@ -293,7 +331,9 @@ Content-Type: application/json
 
 Sobreescribe los [cuestionarios][Cuestionarios] que el agente tiene asignados para realizar encuestas. La respuesta se devuelve vacía en caso de éxito.
 
-	PUT /api/v1/agents/:id/surveys
+````http-req
+PUT /api/v1/agents/:id/surveys
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------------------------------
@@ -301,7 +341,9 @@ ids            | CSV       | Requerido | Los ids de los cuestionarios.
 
 Asignar los cuestionarios con ids "1" y "2" al agente con id "1":
 
-	PUT /api/v1/agents/1/surveys?ids=1,2&apikey=123456
+````http-req
+PUT /api/v1/agents/1/surveys?ids=1,2&apikey=123456
+````
 
 ```headers
 Status: 204 No Content
@@ -317,11 +359,15 @@ Content-Type: application/json
 
 Devuelve una colección de objetos tipo [Location][] con la ubicación actual de todos los agentes.
 
-	GET /api/v1/agents/now
+````http-req
+GET /api/v1/agents/now
+````
 
 Mostrar la ubicación de todos los agentes:
 
-	GET /api/v1/agents/now?apikey=123456
+````http-req
+GET /api/v1/agents/now?apikey=123456
+````
 
 ```headers
 Status: 200 OK
@@ -331,6 +377,7 @@ Content-Type: application/json
 ```json
 [
 	{
+		"visit_id": null,
 		"id": 1,
 		"agent_id": 1,
 		"event": 1,
@@ -340,6 +387,7 @@ Content-Type: application/json
 		"created_at": "2014-01-01T14:00:00Z"
 	},
 	{
+		"visit_id": null,
 		"id": 2,
 		"agent_id": 2,
 		"event": 1,
@@ -355,7 +403,9 @@ Content-Type: application/json
 
 Devuelve una colección de objetos tipo [Location][] con las ubicaciones de rastreo de un agente.
 
-	GET /api/v1/agents/:id/tracking/:date
+````http-req
+GET /api/v1/agents/:id/tracking/:date
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|------
@@ -364,7 +414,9 @@ date           | Date      | Requerido |
 
 Mostrar el rastreo del agente con id "1" para el 1 de enero de 2014:
 
-	GET /api/v1/agents/1/tracking/140101
+````http-req
+GET /api/v1/agents/1/tracking/140101
+````
 
 ```headers
 Status: 200 OK
@@ -374,6 +426,7 @@ Content-Type: application/json
 ```json
 [
 	{
+		"visit_id": null,
 		"id": 1,
 		"agent_id": 1,
 		"event": 1,
@@ -383,6 +436,7 @@ Content-Type: application/json
 		"created_at": "2014-01-01T14:00:00Z"
 	},
 	{
+		"visit_id": null,
 		"id": 5,
 		"agent_id": 1,
 		"event": 2,
@@ -392,6 +446,7 @@ Content-Type: application/json
 		"created_at": "2014-01-01T14:05:00Z"
 	},
 	{
+		"visit_id": null,
 		"id": 9,
 		"agent_id": 1,
 		"event": 1,
@@ -412,7 +467,9 @@ Como conveniencia, es posible descargar la información de los agentes en report
 
 Devuelve una colección de objetos tipo [Reporte][]. Este método no acepta ninguna operación.
 
-	GET /api/v1/agents/reports
+````http-req
+GET /api/v1/agents/reports
+````
 
 ```headers
 Status: 200 OK
@@ -422,30 +479,35 @@ Content-Type: application/json
 ```json
 [
 	{
+		"id": 0,
 		"generator": "PRODUCTIVITY",
 		"name": "Reporte de productividad",
 		"description": "Métricas de visitas por día y tiempo por visita",
+		"params": [ ]
 	},
 	{
+		"id": 1,
 		"generator": "LOGIN",
 		"name": "Reporte de login",
 		"description": "Tiempos de inicio se sesión de la semana",
+		"params": [ ]
 	}
 ]
 ```
 
 #### Generar un nuevo reporte
 
-Dado que la generación de un nuevo reporte es un proceso asíncrono, se realiza a través de la API de [Delayed Jobs][DelayedJob]. Dependiendo del tipo de reporte y de la cantidad de información, este proceso puede tardar algunos minutos en finalizar.
+Dado que la generación de un nuevo reporte es un proceso asíncrono, se realiza a través de la API de [Tasks][Task]. Dependiendo del tipo de reporte y de la cantidad de información, este proceso puede tardar algunos minutos en finalizar.
 
-Devuelve un objeto tipo [DelayedJob][] para monitorear el progreso de generación del reporte. Este método soporta las operaciones de [búsqueda][], [ordenación][] y [paginado][] de acuerdo a los mismos parámetros que el [listado de agentes][listar agentes].
+Devuelve un objeto tipo [Task][] para monitorear el progreso de generación del reporte. Este método soporta las operaciones de [búsqueda][], [ordenación][] y [paginado][] de acuerdo a los mismos parámetros que el [listado de agentes][listar agentes].
 
-	POST /api/v1/jobs
+````http-req
+POST /api/v1/jobs
+````
 
 Parámetro      | Tipo      | Estatus   | Notas
----------------|-----------|-----------|------------------------------------------------
-queue          | String    | Requerido | Debe ser: `reports`.
-generator      | String    | Requerido | Uno de la [lista de reportes][reporte agentes].
+---------------|-----------|-----------|--------------------------------------------------
+generator      | Integer   | Requerido | El id de la [lista de reportes][reporte agentes].
 username       | String    | Opcional  | 
 name           | String    | Opcional  | 
 status         | Integer   | Opcional  | 
@@ -457,7 +519,9 @@ limit          | Integer   | Opcional  |
 
 Generar un reporte de productividad del [grupo][Grupos] con id "1":
 
-	POST /api/v1/jobs?queue=reports&generator=PRODUCTIVITY&group_id=1&apikey=123456
+````http-req
+POST /api/v1/tasks/reports?generator=PRODUCTIVITY&group_id=1&apikey=123456
+````
 
 ```headers
 Status: 202 Accepted
@@ -466,8 +530,15 @@ Content-Type: application/json
 
 ```json
 {
-	"id": "Aaco9cy5",
-	"status": 0
+	"id": 7,
+	"caption": "Reporte: Reporte de visitas CSV de4cbd8.zip",
+	"status": 0,
+	"progress": 0,
+	"message": "",
+	"created_at": "2014-06-06T16:48:30+0000",
+	"admin_id": 1,
+	"item_id": 2,
+	"type": "report"
 }
 ```
 
@@ -485,7 +556,7 @@ Tanto el monitoreo como la descarga se realizan exactamente de la misma manera q
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
 [Alertas]: /API/alertas
-[Cuestionarios]: /API/cuestionarios
+[Cuestionarios]: /cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -500,7 +571,8 @@ Tanto el monitoreo como la descarga se realizan exactamente de la misma manera q
 [Feedback]: /API/auxiliares#feedbacks
 [Location]: /API/auxiliares#locations
 [Reporte]: /API/auxiliares#reports
-[DelayedJob]: /API/auxiliares#jobs
+[DelayedJob]: /API/auxiliares#tasks
+[Task]: /API/auxiliares#tasks
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 

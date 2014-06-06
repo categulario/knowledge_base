@@ -857,7 +857,7 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 [Auxiliares]: /API/auxiliares
 [Cookbook]: /API/cookbook
 [Alertas]: /API/alertas
-[Cuestionarios]: /API/cuestionarios
+[Cuestionarios]: /cuestionarios
 
 [Agente]: /API/agentes
 [Admin]: /API/admins
@@ -872,7 +872,8 @@ aa2b 727d c2c3 ac39 dea9 5258 cd58 ab3a
 [Feedback]: /API/auxiliares#feedbacks
 [Location]: /API/auxiliares#locations
 [Reporte]: /API/auxiliares#reports
-[DelayedJob]: /API/auxiliares#jobs
+[DelayedJob]: /API/auxiliares#tasks
+[Task]: /API/auxiliares#tasks
 
 [ISO 8601]: http://es.wikipedia.org/wiki/ISO_8601
 
