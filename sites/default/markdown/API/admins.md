@@ -234,7 +234,7 @@ Content-Type: application/json
 
 ```
 
-<#admins-permissions>
+~~~~admins-permissions
 ### Asignar permisos
 
 Los permisos son la [lista blanca](http://es.wikipedia.org/wiki/Lista_blanca) de métodos que un admin tiene permitido ejecutar ya sea desde la interfaz web o a través de una API key.

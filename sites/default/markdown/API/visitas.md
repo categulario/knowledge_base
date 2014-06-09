@@ -383,7 +383,7 @@ La URL de las imágenes deberá ser complementada con la [URL base][Peticiones] 
 
 Importa un archivo de visitas y devuelve un objeto tipo [Upload][] para monitorear el estatus de la importación.
 
-	POST /api/v1/visits/upload
+	POST /api/v1/tasks/upload
 
 Parámetro      | Tipo      | Estatus   | Notas
 ---------------|-----------|-----------|---------------------------------------------------------------------
@@ -395,7 +395,7 @@ name           | String    | Opcional  | Default: generado automáticamente.
 
 Importar dos visitas con cuestionarios distintos en el grupo con id "1" y layout "default":
 
-	POST /api/v1/visits/upload?form_id=0&group_id=1&apikey=123456
+	POST /api/v1/tasks/upload?form_id=0&group_id=1&apikey=123456
 
 ```
 file=Código, Calle, Colonia, CP, Municipio, Estado, Agente, Cuestionario
@@ -429,11 +429,11 @@ Puedes encontrar más información acerca de los layouts y formatos de archivos 
 
 Dependiendo de la cantidad de visitas importadas, el proceso puede tardar algunos minutos en publicar las visitas a las apps móviles de los agentes. Si necesitas monitorear el estatus del upload en lo que el proceso termina, puedes utilizar el siguiente método que devolverá un objeto [Upload][] con el estatus en que se encuentra el upload solicitado:
 
-	GET /api/v1/visits/upload/:id
+	GET /api/v1/tasks/upload/:id
 
 Consultar el estatus del upload con id "1":
 
-	GET /api/v1/visits/upload/1?apikey=123456
+	GET /api/v1/tasks/upload/1?apikey=123456
 
 ```headers
 Status: 200 OK
